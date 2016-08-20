@@ -1,3 +1,5 @@
+Ethereum Classic go-ethereum wiki, a client built to support the original untampered censorship resistant chain created to run unstoppable applications creating a neutral world computer.
+
 * User documentation can be found at our [Ethereum User Guide and reference manual](http://ethereum.gitbooks.io/frontier-guide/content/).
 * For the API reference and developer documentation head over to the auto generated [GoDoc](https://godoc.org/github.com/ethereumproject/go-ethereum) documentation.
 
