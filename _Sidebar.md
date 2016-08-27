@@ -1,4 +1,4 @@
-[Main Ethereum Wiki](https://github.com/ethereumproject/wiki/wiki)
+[Main Ethereum Wiki](https://github.com/ethereum/wiki/wiki)
 
 [Frontier Release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)
 
@@ -26,7 +26,7 @@
 
 [Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
 
-[JSON-RPC server](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+[JSON-RPC server](https://github.com/ethereum/wiki/wiki/JSON-RPC)
 
 ### Issues
 

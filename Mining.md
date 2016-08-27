@@ -1,4 +1,4 @@
-* [Introduction to Ethereum mining](https://github.com/ethereumproject/wiki/wiki/Mining#introduction) _(main wiki)_
+* [Introduction to Ethereum mining](https://github.com/ethereum/wiki/wiki/Mining#introduction) _(main wiki)_
 
 # CPU Mining with Geth
 
@@ -59,7 +59,7 @@ Header:
 }
 ```
 
-See also [this proposal](https://github.com/ethereumproject/wiki/wiki/Extra-Data)
+See also [this proposal](https://github.com/ethereum/wiki/wiki/Extra-Data)
 
 You can check your hashrate with [miner.hashrate](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminerhashrate), the result is in H/s (Hash operations per second). 
 
@@ -184,7 +184,7 @@ You check your cooling status:
 
 ## Mining Software
 
-The official Frontier release of `geth` only supports a CPU miner natively. We are working on a [GPU miner](https://github.com/ethereumproject/go-ethereum/tree/gpuminer), but it may not be available for the Frontier release. Geth however can be used in conjunction with `ethminer`, using the standalone miner as workers and `geth` as scheduler communicating via [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
+The official Frontier release of `geth` only supports a CPU miner natively. We are working on a [GPU miner](https://github.com/ethereumproject/go-ethereum/tree/gpuminer), but it may not be available for the Frontier release. Geth however can be used in conjunction with `ethminer`, using the standalone miner as workers and `geth` as scheduler communicating via [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC). 
 
 The [C++ implementation of Ethereum](https://github.com/ethereumproject/cpp-ethereum/) (not officially released) however has a GPU miner. It can be used from `eth`, `AlethZero` (GUI) and `ethMiner` (the standalone miner). 
 
@@ -284,7 +284,7 @@ eth -m on -G -a <coinbase> -i -v 8 //
 * https://blog.ethereum.org/2014/07/05/stake/
 * https://blog.ethereum.org/2014/10/03/slasher-ghost-developments-proof-stake/
 * https://blog.ethereum.org/2014/06/19/mining/
-* https://github.com/ethereumproject/wiki/wiki/Ethash
+* https://github.com/ethereum/wiki/wiki/Ethash
 * [Benchmarking results for GPU mining](https://forum.ethereum.org/discussion/2134/gpu-mining-is-out-come-and-let-us-know-of-your-bench-scores)
 * [historic moment](https://twitter.com/gavofyork/status/586623875577937922)
 * [live mining statistic](https://etherapps.info/stats/mining)

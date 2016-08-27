@@ -8,16 +8,16 @@
 
 ## Docs & specs
 - TODO: https://github.com/ethereumproject/go-ethereum/wiki/Swarm---TODO
-- Dani & Viktor on public wiki: https://github.com/ethereumproject/wiki/wiki/Distributed-Preimage-Archive
-- Dani on swarm hash: https://github.com/ethereumproject/wiki/wiki/Swarm-Hash
+- Dani & Viktor on public wiki: https://github.com/ethereum/wiki/wiki/Distributed-Preimage-Archive
+- Dani on swarm hash: https://github.com/ethereum/wiki/wiki/Swarm-Hash
 - Dani on incentive system: https://github.com/ethersphere/swarm/blob/master/doc/incentives.md 
 - The swarm smart contract: https://github.com/ethereumproject/go-ethereum/wiki/Swarm-Contract
-- gav on url-hint https://github.com/ethereumproject/wiki/wiki/URL-Hint-Protocol
+- gav on url-hint https://github.com/ethereum/wiki/wiki/URL-Hint-Protocol
 - Gav on public wiki: https://github.com/ethereumproject/cpp-ethereum/wiki/Swarm
 - network (DEVp2p)
   - https://github.com/ethereumproject/go-ethereum/wiki/Peer-to-Peer
   - Ethereum node discovery protocol on UDP: https://github.com/ethereumproject/go-ethereum/wiki/RLPx-----Node-Discovery-Protocol
-  - on kademlia: https://github.com/ethereumproject/wiki/wiki/Cademlia-Peer-Selection
+  - on kademlia: https://github.com/ethereum/wiki/wiki/Cademlia-Peer-Selection
   - Multi-protocol peer selection https://github.com/ethereumproject/go-ethereum/wiki/Multi-protocol-peer-selection
 
 ## Talks

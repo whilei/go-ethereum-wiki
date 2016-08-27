@@ -38,10 +38,10 @@ By [installing and running `geth`](https://github.com/ethereumproject/go-ethereu
 
 Apart from `geth`, the Go CLI, the Frontier release contains the following components:
 
-* `web3.js`  library implementing the [JavaScript API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) for Dapps to conveniently interact with an ethereum node
+* `web3.js`  library implementing the [JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API) for Dapps to conveniently interact with an ethereum node
 * `solc` a standalone solidity compiler. You only need this if you want to use your Dapp or [console to compile solidity code](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#compiling-a-contract).
 * `ethminer` a standalone miner for openCL [GPU mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining#gpu-mining)
-* `netstat`  a [network monitoring GUI](https://github.com/ethereumproject/wiki/wiki/Network-Status) allows you to add your node to the http://stats.ethdev.com page
+* `netstat`  a [network monitoring GUI](https://github.com/ethereum/wiki/wiki/Network-Status) allows you to add your node to the http://stats.ethdev.com page
 
 ## The actual launch process 
 
@@ -65,7 +65,7 @@ This process is centralized and will only run for the duration of Frontier. It h
 
 ## Stats, Status and Badblock websites
 
-You probably are already familiar with our network stats monitor, https://stats.ethdev.com/. It gives a quick overview of the health of the network, block resolution time and Gas statistics. Remember that participation in the stats page is voluntary, and nodes have to add themselves before they appear on the panel. See details on [network monitoring](https://github.com/ethereumproject/wiki/wiki/Network-Status)
+You probably are already familiar with our network stats monitor, https://stats.ethdev.com/. It gives a quick overview of the health of the network, block resolution time and Gas statistics. Remember that participation in the stats page is voluntary, and nodes have to add themselves before they appear on the panel. See details on [network monitoring](https://github.com/ethereum/wiki/wiki/Network-Status)
 
 In addition to the stats page, we will have a status page at https://status.ethereum.org/ (no link as the site is not live yet) which will gives a concise overview of any issue that might be affecting Frontier. Use it as your first port of call if you think something might not be right.
 

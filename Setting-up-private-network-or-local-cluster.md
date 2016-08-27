@@ -63,7 +63,7 @@ An ethereum network is a private network if the nodes are not connected to the m
 
 ## Monitoring your nodes
 
-[This page](https://github.com/ethereumproject/wiki/wiki/Network-Status) describes how to use the [The Ethereum (centralised) network status monitor (known sometimes as "eth-netstats")](http://stats.ethdev.com) to monitor your nodes.
+[This page](https://github.com/ethereum/wiki/wiki/Network-Status) describes how to use the [The Ethereum (centralised) network status monitor (known sometimes as "eth-netstats")](http://stats.ethdev.com) to monitor your nodes.
 
 [This page](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-monitoring-on-local-cluster) or [this README](https://github.com/ethersphere/eth-utils) 
 describes how you set up your own monitoring service for a (private or public) local cluster.
