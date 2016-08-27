@@ -46,7 +46,7 @@ you have a valid Go development environment set up, `godep` installed and the go
 repository checked out correctly, you can build the generator with:
 
 ```
-$ cd $GOPATH/src/github.com/ethereum/go-ethereum
+$ cd $GOPATH/src/github.com/ethereumproject/go-ethereum
 $ godep go install ./cmd/abigen
 ```
 
@@ -95,9 +95,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind/backends"
+	"github.com/ethereumproject/go-ethereum/common"
+	"github.com/ethereumproject/go-ethereum/rpc"
 )
 
 func main() {
@@ -143,7 +143,7 @@ kept private to DApps, and not shared (by default) between them.
 
 Thus to allow transacting with a contract, your code needs to implement a method that
 given an input transaction, signs it and returns an authorized output transaction. Since
-most users have their keys in the [Web3 Secret Storage](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) format, the `bind` package contains a small utility method 
+most users have their keys in the [Web3 Secret Storage](https://github.com/ethereumproject/wiki/wiki/Web3-Secret-Storage-Definition) format, the `bind` package contains a small utility method 
 (`bind.NewTransactor(keyjson, passphrase)`) that can create an authorized transactor from
 a key file and associated password, without the user needing to implement key signing himself.
 
@@ -158,10 +158,10 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind/backends"
+	"github.com/ethereumproject/go-ethereum/common"
+	"github.com/ethereumproject/go-ethereum/rpc"
 )
 
 const key = `paste the contents of your *testnet* key json here`
@@ -281,9 +281,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind/backends"
+	"github.com/ethereumproject/go-ethereum/rpc"
 )
 
 const key = `paste the contents of your *testnet* key json here`
@@ -391,10 +391,10 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind/backends"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind"
+	"github.com/ethereumproject/go-ethereum/accounts/abi/bind/backends"
+	"github.com/ethereumproject/go-ethereum/core"
+	"github.com/ethereumproject/go-ethereum/crypto"
 )
 
 func main() {

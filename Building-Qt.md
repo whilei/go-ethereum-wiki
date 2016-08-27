@@ -2,7 +2,7 @@ Ethereum(Go) Requires QML 5.4+
 
 ## Mac OS X
 
-Please see [build instruction for OSX](https://github.com/ethereum/go-ethereum/wiki/Building-Instructions-for-Mac)
+Please see [build instruction for OSX](https://github.com/ethereumproject/go-ethereum/wiki/Building-Instructions-for-Mac)
 
 ## Linux
 

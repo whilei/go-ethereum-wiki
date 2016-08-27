@@ -75,7 +75,7 @@ flags is required to satisfy the dependencies:
 Injecting the GNU Arithmetic Library dependency and selecting `geth` would be:
 
     $ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
-          github.com/ethereum/go-ethereum/cmd/geth
+          github.com/ethereumproject/go-ethereum/cmd/geth
     ...
 
     $ ls -al
@@ -106,7 +106,7 @@ command line flag (`--branch`):
 
     $ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
           --branch=develop                                          \
-          github.com/ethereum/go-ethereum/cmd/geth
+          github.com/ethereumproject/go-ethereum/cmd/geth
 
 Additionally, during development you will most probably want to not only build
 a custom branch, but also one originating from your own fork of the repository
@@ -115,7 +115,7 @@ instead of the upstream one. This can be done via the `--remote` flag:
     $ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
           --remote=https://github.com/karalabe/go-ethereum          \
           --branch=rpi-staging                                      \
-          github.com/ethereum/go-ethereum/cmd/geth
+          github.com/ethereumproject/go-ethereum/cmd/geth
 
 By default `xgo` builds binaries for all supported platforms and architectures,
 with Android binaries defaulting to the highest released Android NDK platform.
@@ -124,7 +124,7 @@ To limit the build targets or compile to a different Android platform, use the
 
     $ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
           --targets=android-16/arm,windows/*                        \
-          github.com/ethereum/go-ethereum/cmd/geth
+          github.com/ethereumproject/go-ethereum/cmd/geth
 
 ### Building locally
 
@@ -140,7 +140,7 @@ a local path (starting with `.` or `/`), and `xgo` will use all local code from
 
 Having understood the gist of `xgo` based cross compilation, you do not need to
 actually memorize and maintain these commands, as they have been incorporated into
-the official [Makefile](https://github.com/ethereum/go-ethereum/blob/master/Makefile)
+the official [Makefile](https://github.com/ethereumproject/go-ethereum/blob/master/Makefile)
 and can be invoked with a trivial `make` request:
 
  * `make geth-cross`: Cross compiles to every supported OS and architecture

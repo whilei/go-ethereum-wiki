@@ -1,10 +1,10 @@
-The peer to peer package ([go-ethereum/p2p](https://github.com/ethereum/go-ethereum/tree/develop/p2p)) allows you to rapidly and easily add peer to peer networking to any type of application. The p2p package is set up in a modular structure and extending the p2p with your own additional sub protocols is easy and straight forward.
+The peer to peer package ([go-ethereum/p2p](https://github.com/ethereumproject/go-ethereum/tree/develop/p2p)) allows you to rapidly and easily add peer to peer networking to any type of application. The p2p package is set up in a modular structure and extending the p2p with your own additional sub protocols is easy and straight forward.
 
 Starting the p2p service only requires you setup a `p2p.Server{}` with a few settings:
 
 ```go
-import "github.com/ethereum/go-ethereum/crypto"
-import "github.com/ethereum/go-ethereum/p2p"
+import "github.com/ethereumproject/go-ethereum/crypto"
+import "github.com/ethereumproject/go-ethereum/p2p"
 
 nodekey, _ := crypto.GenerateKey()
 srv := p2p.Server{
@@ -92,8 +92,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/ethereumproject/go-ethereum/crypto"
+	"github.com/ethereumproject/go-ethereum/p2p"
 )
 
 const messageId = 0

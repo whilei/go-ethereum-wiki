@@ -1,6 +1,6 @@
 Whisper is a pure identity-based messaging system. Whisper provides a low-level (non-application-specific) but easily-accessible API without being based upon or prejudiced by the low-level hardware attributes and characteristics, particularly the notion of singular endpoints.
 
-This tutorial assumes you've read [p2p 101](https://github.com/ethereum/go-ethereum/wiki/Peer-to-Peer). If you haven't read it I suggest you read it. This tutorial will guide you to setting up a full p2p server with whisper capabilities.
+This tutorial assumes you've read [p2p 101](https://github.com/ethereumproject/go-ethereum/wiki/Peer-to-Peer). If you haven't read it I suggest you read it. This tutorial will guide you to setting up a full p2p server with whisper capabilities.
 
 Let's quickly cover some of whisper's basic functionality and discuss it in greater detail later.
 
@@ -71,8 +71,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/whisper"
+	"github.com/ethereumproject/go-ethereum/p2p"
+	"github.com/ethereumproject/go-ethereum/whisper"
 	"github.com/obscuren/secp256k1-go"
 )
 

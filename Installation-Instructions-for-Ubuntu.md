@@ -25,11 +25,11 @@ You can alternatively install only the `geth` CLI with `apt-get install geth` if
 Clone the repository to a directory of your choosing:
 
 ```shell
-git clone https://github.com/ethereum/go-ethereum
+git clone https://github.com/ethereumproject/go-ethereum
 ```
 Install latest distribution of Go (v1.4) if you don't have it already:
 
-[See instructions](https://github.com/ethereum/go-ethereum/wiki/Installing-Go#ubuntu-1404)
+[See instructions](https://github.com/ethereumproject/go-ethereum/wiki/Installing-Go#ubuntu-1404)
 
 Building `geth` requires some external libraries to be installed:
 

@@ -22,7 +22,7 @@ You should now be able to run `geth` and connect to the network.
 
 Make sure to check the different options and commands with `geth --help`
 
-For options and patches, see: https://github.com/ethereum/homebrew-ethereum
+For options and patches, see: https://github.com/ethereumproject/homebrew-ethereum
 
 ## Building from source
 
@@ -31,7 +31,7 @@ For options and patches, see: https://github.com/ethereum/homebrew-ethereum
 Clone the repository to a directory of your choosing:
 
 ```shell
-git clone https://github.com/ethereum/go-ethereum
+git clone https://github.com/ethereumproject/go-ethereum
 ```
 
 Building `geth` requires some external libraries to be installed:

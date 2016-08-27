@@ -7,18 +7,18 @@
 - http://www.amazon.co.uk/Swarmwise-Tactical-Manual-Changing-World/dp/1463533152/
 
 ## Docs & specs
-- TODO: https://github.com/ethereum/go-ethereum/wiki/Swarm---TODO
-- Dani & Viktor on public wiki: https://github.com/ethereum/wiki/wiki/Distributed-Preimage-Archive
-- Dani on swarm hash: https://github.com/ethereum/wiki/wiki/Swarm-Hash
+- TODO: https://github.com/ethereumproject/go-ethereum/wiki/Swarm---TODO
+- Dani & Viktor on public wiki: https://github.com/ethereumproject/wiki/wiki/Distributed-Preimage-Archive
+- Dani on swarm hash: https://github.com/ethereumproject/wiki/wiki/Swarm-Hash
 - Dani on incentive system: https://github.com/ethersphere/swarm/blob/master/doc/incentives.md 
-- The swarm smart contract: https://github.com/ethereum/go-ethereum/wiki/Swarm-Contract
-- gav on url-hint https://github.com/ethereum/wiki/wiki/URL-Hint-Protocol
-- Gav on public wiki: https://github.com/ethereum/cpp-ethereum/wiki/Swarm
+- The swarm smart contract: https://github.com/ethereumproject/go-ethereum/wiki/Swarm-Contract
+- gav on url-hint https://github.com/ethereumproject/wiki/wiki/URL-Hint-Protocol
+- Gav on public wiki: https://github.com/ethereumproject/cpp-ethereum/wiki/Swarm
 - network (DEVp2p)
-  - https://github.com/ethereum/go-ethereum/wiki/Peer-to-Peer
-  - Ethereum node discovery protocol on UDP: https://github.com/ethereum/go-ethereum/wiki/RLPx-----Node-Discovery-Protocol
-  - on kademlia: https://github.com/ethereum/wiki/wiki/Cademlia-Peer-Selection
-  - Multi-protocol peer selection https://github.com/ethereum/go-ethereum/wiki/Multi-protocol-peer-selection
+  - https://github.com/ethereumproject/go-ethereum/wiki/Peer-to-Peer
+  - Ethereum node discovery protocol on UDP: https://github.com/ethereumproject/go-ethereum/wiki/RLPx-----Node-Discovery-Protocol
+  - on kademlia: https://github.com/ethereumproject/wiki/wiki/Cademlia-Peer-Selection
+  - Multi-protocol peer selection https://github.com/ethereumproject/go-ethereum/wiki/Multi-protocol-peer-selection
 
 ## Talks
 - https://twitter.com/ethereumproject/status/538030376858693633
@@ -45,12 +45,12 @@
 - https://forum.ethereum.org/discussion/comment/7593/#Comment_7593
 
 ## Code 
-- bzz PR: https://github.com/ethereum/go-ethereum/pull/255, 
+- bzz PR: https://github.com/ethereumproject/go-ethereum/pull/255, 
 - repo https://github.com/ethersphere/go-ethereum/tree/bzz/
-- ethereum p2p: https://github.com/ethereum/go-ethereum/p2p
-- peer selection, peer pool: https://github.com/ethereum/go-ethereum/pull/253 
+- ethereum p2p: https://github.com/ethereumproject/go-ethereum/p2p
+- peer selection, peer pool: https://github.com/ethereumproject/go-ethereum/pull/253 
 - p2p cademlia branch (discontinued): https://github.com/ethersphere/go-ethereum/tree/kademlia
-- Felix's node discovery code: https://github.com/ethereum/go-ethereum/tree/develop/p2p/discover
+- Felix's node discovery code: https://github.com/ethereumproject/go-ethereum/tree/develop/p2p/discover
 
 # Alternatives
 

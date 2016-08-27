@@ -1,7 +1,7 @@
 # Geth
 
 `geth` is the the command line interface for running a full ethereum node implemented in Go. 
-It is the main deliverable of the [Frontier Release](https://github.com/ethereum/go-ethereum/wiki/Frontier)
+It is the main deliverable of the [Frontier Release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)
 
 ## Capabilities
 
@@ -17,31 +17,31 @@ By installing and running `geth`, you can take part in the ethereum frontier liv
 Supported Platforms are Linux, Mac Os and Windows.
 
 We support two types of installation: binary or scripted install for users. 
-See [Install instructions](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum) for binary and scripted installs.
+See [Install instructions](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum) for binary and scripted installs.
 
-Developers and community enthusiast are advised to read the [Developers' Guide](https://github.com/ethereum/go-ethereum/wiki/Developers%27-Guide), which contains detailed instructions for manual build from source (on any platform) as well as detailed tips on testing, monitoring, contributing, debugging and submitting pull requests on github.
+Developers and community enthusiast are advised to read the [Developers' Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers%27-Guide), which contains detailed instructions for manual build from source (on any platform) as well as detailed tips on testing, monitoring, contributing, debugging and submitting pull requests on github.
 
 ## Interfaces
 
-* Javascript Console: `geth` can be launched with an interactive console, that provides a javascript runtime environment exposing a javascript API to interact with your node. [Javascript Console API](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) includes the `web3` javascript Ðapp API as well as an additional admin API. 
-* JSON-RPC server: `geth` can be launched with a json-rpc server that exposes the [JSON-RPC API](https://github.com/ethereum/wiki/wiki/JSON-RPC)
-* [Command line options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options) documents command line parameters as well as subcommands.
+* Javascript Console: `geth` can be launched with an interactive console, that provides a javascript runtime environment exposing a javascript API to interact with your node. [Javascript Console API](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) includes the `web3` javascript Ðapp API as well as an additional admin API. 
+* JSON-RPC server: `geth` can be launched with a json-rpc server that exposes the [JSON-RPC API](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+* [Command line options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options) documents command line parameters as well as subcommands.
 
 ## Basic Use Case Documentation
 
-* [Managing accounts](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts)
-* [Mining](https://github.com/ethereum/go-ethereum/wiki/mining)
-* [Contracts and Transactions](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions)
+* [Managing accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
+* [Mining](https://github.com/ethereumproject/go-ethereum/wiki/mining)
+* [Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
 
 **Note** buying and selling ether through exchanges is not discussed here. 
 
 ## License
 
-The Ethereum Core Protocol licensed under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html). All frontend client software (under [cmd](https://github.com/ethereum/go-ethereum/tree/develop/cmd)) is licensed under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html).
+The Ethereum Core Protocol licensed under the [GNU Lesser General Public License](https://www.gnu.org/licenses/lgpl.html). All frontend client software (under [cmd](https://github.com/ethereumproject/go-ethereum/tree/develop/cmd)) is licensed under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html).
 
 ## Troubleshooting
 
-If something went wrong first read our [Troubleshooting](https://github.com/ethereum/go-ethereum/wiki/Troubleshooting) checklist as well as the [FAQ](https://github.com/ethereum/go-ethereum/wiki/Troubleshooting). If you still didn't find your answer please open an issue on GitHub or contact our help desk on helpdesk@ethereum.org.
+If something went wrong first read our [Troubleshooting](https://github.com/ethereumproject/go-ethereum/wiki/Troubleshooting) checklist as well as the [FAQ](https://github.com/ethereumproject/go-ethereum/wiki/Troubleshooting). If you still didn't find your answer please open an issue on GitHub or contact our help desk on helpdesk@ethereum.org.
 
 ## Reporting 
 
@@ -54,10 +54,10 @@ Non-sensitive bug reports are welcome on github. Please always state the version
 Ethereum is joint work of ETHDEV and the community.
 
 Name or blame = list of contributors:
-* [go-ethereum](https://github.com/ethereum/go-ethereum/graphs/contributors)
-* [cpp-ethereum](https://github.com/ethereum/cpp-ethereum/graphs/contributors)
-* [web3.js](https://github.com/ethereum/web3.js/graphs/contributors)
-* [ethash](https://github.com/ethereum/ethash/graphs/contributors)
+* [go-ethereum](https://github.com/ethereumproject/go-ethereum/graphs/contributors)
+* [cpp-ethereum](https://github.com/ethereumproject/cpp-ethereum/graphs/contributors)
+* [web3.js](https://github.com/ethereumproject/web3.js/graphs/contributors)
+* [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
 * [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
 [netintelligence-api](https://github.com/cubedro/eth-net-intelligence-api/graphs/contributors)
 

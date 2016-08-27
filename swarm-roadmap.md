@@ -36,21 +36,21 @@ The features and enhancements below will be prioritised and for the basis of the
 * [x] algorithmic improvements in kademlia and hive peers manager 
 * [x] calibrating kademlia connectivity parameters to toynet scale
 * [ ]  adapt to [felix's rpc-client-as-eth-backend scheme](http://twurst.com/articles/geth-1.5-api.html) to run swarm as a separate daemon 
-* [ ] deliveries should not enter the sync pool - enhancement [#2046](https://github.com/ethereum/go-ethereum /issues/2046)
-* [ ] smart peer propagation enhancement feature [#2044](https://github.com/ethereum/go-ethereum/issues/2044)
-* [ ] IPFS integration: [IPFS & SWARM](https://github.com/ethereum/go-ethereum/wiki/IPFS-&-SWARM)  feature [#2050](https://github.com/ethereum/go-ethereum/issues/2050)
+* [ ] deliveries should not enter the sync pool - enhancement [#2046](https://github.com/ethereumproject/go-ethereum /issues/2046)
+* [ ] smart peer propagation enhancement feature [#2044](https://github.com/ethereumproject/go-ethereum/issues/2044)
+* [ ] IPFS integration: [IPFS & SWARM](https://github.com/ethereumproject/go-ethereum/wiki/IPFS-&-SWARM)  feature [#2050](https://github.com/ethereumproject/go-ethereum/issues/2050)
 * [ ] abstract out hive kademlia  routing from protocol
 * [ ] enhanced network monitoring, structured logging and stats aggregation
 * [ ] unicast/multicast messaging over swarm - pss 
-* [ ] improved peer propagation [#2044](https://github.com/ethereum/go-ethereum/issues/2044)
+* [ ] improved peer propagation [#2044](https://github.com/ethereumproject/go-ethereum/issues/2044)
 * [ ] protocol stack abstraction, pluggable subprotocol components - (swap, hive/protocol, syncer, peers) for pss
 * [ ] channels for live-streaming 
-* [ ] new p2p API integration - feature [#2060](https://github.com/ethereum/go-ethereum/issues/2060)
+* [ ] new p2p API integration - feature [#2060](https://github.com/ethereumproject/go-ethereum/issues/2060)
 
 ## storage
 * [ ] syncdb/netstore rewrite
 * [ ] pyramid chunker and channel support for live-streaming
-* [ ] push on delete - feature [#2045](https://github.com/ethereum/go-ethereum/issues/2045)
+* [ ] push on delete - feature [#2045](https://github.com/ethereumproject/go-ethereum/issues/2045)
 * [ ] storage parameters setting API
 * [ ] storage monitoring  for Mist swarm dashboard
 * [ ] integrate smash hash and swarm hash
@@ -61,7 +61,7 @@ The features and enhancements below will be prioritised and for the basis of the
 * [ ] 
 
 ## API
-* [ ] bzz protocol should implement info for reporting - feature [#2042](https://github.com/ethereum/go-ethereum/issues/2042)
+* [ ] bzz protocol should implement info for reporting - feature [#2042](https://github.com/ethereumproject/go-ethereum/issues/2042)
 * [ ] chunker and document level API improvements
   * [ ] manifest support for CRS and Encryption
   * [ ] poor man's DRM and copyright protection
@@ -69,18 +69,18 @@ The features and enhancements below will be prioritised and for the basis of the
   * [ ] swear registration API for Mist swarm dashboard
   * [ ] service management API for Mist swarm dashboard
 * [ ] improved file system support
-  * [ ] skeleton manifests [#2437](https://github.com/ethereum/go-ethereum/issues/2437)
+  * [ ] skeleton manifests [#2437](https://github.com/ethereumproject/go-ethereum/issues/2437)
   * [ ] file system watcher - dropbox backend API
-* [ ] remove [BZZ] tag from logs swarm - enhancement [#2345](https://github.com/ethereum/go-ethereum/issues/2345)
+* [ ] remove [BZZ] tag from logs swarm - enhancement [#2345](https://github.com/ethereumproject/go-ethereum/issues/2345)
 * [ ] support CBOR binary json
 
 ## services
 
 * [ ] ENS, ethereum name service
   * [x] [ENS ERC by @Arachnid](https://github.com/Arachnid/EIPs/blob/ens/EIPS/eip-draft-ens.md)
-  * [x] swarm ENS - enhancement [#2422](https://github.com/ethereum/go-ethereum/issues/2422)
-  * [ ] implementation for [EIP-26](https://github.com/ethereum/EIPs/issues/26)
-  * [ ] swarm namereg/natspec rewrite - enhancement [#2048](https://github.com/ethereum/go-ethereum/issues/2048)
+  * [x] swarm ENS - enhancement [#2422](https://github.com/ethereumproject/go-ethereum/issues/2422)
+  * [ ] implementation for [EIP-26](https://github.com/ethereumproject/EIPs/issues/26)
+  * [ ] swarm namereg/natspec rewrite - enhancement [#2048](https://github.com/ethereumproject/go-ethereum/issues/2048)
 * [ ] Incentives
   * [ ] improve [swap accounting](https://github.com/ethersphere/swarm/wiki/Swap) with debt swaps and liquidity check
   * [ ] implement storage insurance as per [_swap, swear and swindle_ incentive scheme](http://swarm-gateways.net/bzz:/swarm/ethersphere/orange-papers/1/sw^3.pdf)
@@ -91,7 +91,7 @@ The features and enhancements below will be prioritised and for the basis of the
   * [ ] price discovery and dynamic pricing 
 * [ ] sword
   * [ ] swarm DB support phase 0 - compact manifest trie and proof requests
-  * [ ] [SWarm On-demand Retrieval Daemon](https://gist.github.com/zelig/aa6eb43615e12d834d9f) - feature [#2049](https://github.com/ethereum/go-ethereum/issues/2049) = sword. ethereum state, contract storage, receipts, blocks on swarm
+  * [ ] [SWarm On-demand Retrieval Daemon](https://gist.github.com/zelig/aa6eb43615e12d834d9f) - feature [#2049](https://github.com/ethereumproject/go-ethereum/issues/2049) = sword. ethereum state, contract storage, receipts, blocks on swarm
 
 ## examples
 

@@ -121,12 +121,12 @@ MISCELLANEOUS OPTIONS:
   --help, -h		show help
 ```
 
-Note that the default for datadir is platform-specific. See [backup & restore](https://github.com/ethereum/go-ethereum/wiki/Backup-&-restore) for more information.
+Note that the default for datadir is platform-specific. See [backup & restore](https://github.com/ethereumproject/go-ethereum/wiki/Backup-&-restore) for more information.
 
 ## Examples
 
 ### Accounts
-See [Account management](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts)
+See [Account management](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
 
 Import ether presale wallet into your node (prompts for password):
 
@@ -138,7 +138,7 @@ Import an EC privatekey into an ethereum account (prompts for password):
 
 ### Geth JavaScript Runtime Environment 
 
-See [Geth javascript console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console)
+See [Geth javascript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
 
 Bring up the geth javascript console:
 

@@ -10,7 +10,7 @@ Both types of accounts have an ether balance.
 
 Transactions can be fired from from both types of accounts, though contracts only fire transactions in response to other transactions that they have received. Therefore, all action on ethereum block chain is set in motion by transactions fired from externally controlled accounts.
 
-The simplest transactions are ether transfer transactions. But before we go into that you should read up on [accounts](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts) and perhaps on [mining](https://github.com/ethereum/go-ethereum/wiki/Mining).
+The simplest transactions are ether transfer transactions. But before we go into that you should read up on [accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts) and perhaps on [mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining).
 
 ## Ether transfer
 
@@ -29,9 +29,9 @@ Contracts can receive transfers just like externally controlled accounts, but th
 # contract のコンパイル
 
 blockchain 上で有効となる contract は Ethereum 特別仕様の バイナリの形式で、EVM byte コード と呼ばれます。
-しかしながら、典型的には、contract は [solidity](https://github.com/ethereum/wiki/wiki/Solidity-Tutorial) のような高級言語で記述され、blockchain 上に upload するために、この byte コードへコンパイルされます。
+しかしながら、典型的には、contract は [solidity](https://github.com/ethereumproject/wiki/wiki/Solidity-Tutorial) のような高級言語で記述され、blockchain 上に upload するために、この byte コードへコンパイルされます。
 
-flontier リリースでは、geth は Christian R. と Lefteris K が手がけた、コマンドライン [solidity コンパイラ](https://github.com/ethereum/cpp-ethereum/tree/develop/solc) である `solc` をシステムコールで呼び出すことを通して、solidity コンパイルをサポートしています。
+flontier リリースでは、geth は Christian R. と Lefteris K が手がけた、コマンドライン [solidity コンパイラ](https://github.com/ethereumproject/cpp-ethereum/tree/develop/solc) である `solc` をシステムコールで呼び出すことを通して、solidity コンパイルをサポートしています。
 以下もお試しください。
 * [Solidity realtime compiler](https://chriseth.github.io/cpp-ethereum/) (by Christian R) 
 * [Cosmo](http://meteor-dapp-cosmo.meteor.com) 
@@ -52,7 +52,7 @@ error: eth_compileSolidity method not implemented
 Invalid JSON RPC response
 ```
 
-After you found a way to install `solc`, you make sure it's in the path, if [`eth.getCompilers()`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetcompilers) still does not find it (returns an empty array), you can set a custom path to the `sol` executable on the command line using th `solc` flag.
+After you found a way to install `solc`, you make sure it's in the path, if [`eth.getCompilers()`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetcompilers) still does not find it (returns an empty array), you can set a custom path to the `sol` executable on the command line using th `solc` flag.
 
 ```
 geth --datadir ~/frontier/00 --solc /usr/local/bin/solc --natspec
@@ -77,9 +77,9 @@ Let us take this simple contract source:
 This contract offers a unary method: called with a positive integer `a`, it returns `a * 7`. 
 Note that this document is not about writing interesting contracts or about the features of solidity.
 
-For more information on contract language, go through [solidity tutorial](https://github.com/ethereum/wiki/wiki/Solidity-Tutorial), browse the contracts in our [dapp-bin](https://github.com/ethereum/dapp-bin/wiki), see other solidity and dapp resources. 
+For more information on contract language, go through [solidity tutorial](https://github.com/ethereumproject/wiki/wiki/Solidity-Tutorial), browse the contracts in our [dapp-bin](https://github.com/ethereumproject/dapp-bin/wiki), see other solidity and dapp resources. 
 
-You are ready to compile solidity code in the `geth` JS console using [`eth.compile.solidity`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcompilesolidity):
+You are ready to compile solidity code in the `geth` JS console using [`eth.compile.solidity`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcompilesolidity):
 
 ```js
 > contract = eth.compile.solidity(source)
@@ -115,7 +115,7 @@ You are ready to compile solidity code in the `geth` JS console using [`eth.comp
 }
 ```
 
-The compiler is also available via [RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and therefore via [web3.js](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcompilesolidity) to any in-browser Ðapp connecting to `geth` via RPC.
+The compiler is also available via [RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) and therefore via [web3.js](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcompilesolidity) to any in-browser Ðapp connecting to `geth` via RPC.
 
 The following example shows how you interface `geth` via JSON-RPC to use the compiler.
 
@@ -131,16 +131,16 @@ The compiler output is combined into an object representing a single contract an
 * `language`: contract language (Solidity, Serpent, LLL)
 * `languageVersion`: contract language version
 * `compilerVersion`: compiler version 
-* `abiDefinition`: [Application Binary Interface Definition](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI)
-* `userDoc`: [NatSpec user Doc](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format)
-* `developerDoc`: [NatSpec developer Doc](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format)
+* `abiDefinition`: [Application Binary Interface Definition](https://github.com/ethereumproject/wiki/wiki/Ethereum-Contract-ABI)
+* `userDoc`: [NatSpec user Doc](https://github.com/ethereumproject/wiki/wiki/Ethereum-Natural-Specification-Format)
+* `developerDoc`: [NatSpec developer Doc](https://github.com/ethereumproject/wiki/wiki/Ethereum-Natural-Specification-Format)
 
 The immediate structuring of the compiler output (into `code` and `info`) reflects the two very different **paths of deployment**. 
 The compiled EVM code is sent off to the blockchain with a contract creation transaction while the rest (info) will ideally live on the decentralised cloud as publicly verifiable metadata complementing the code on the blockchain.
 
 # Creating and deploying a contract
 
-Now that you got both an unlocked account as well as some funds, you can create a contract on the blockchain by [sending a transaction](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsendtransaction) to the empty address with the evm code as data. Simple, eh?
+Now that you got both an unlocked account as well as some funds, you can create a contract on the blockchain by [sending a transaction](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethsendtransaction) to the empty address with the evm code as data. Simple, eh?
 
 ```js
 primaryAddress = eth.accounts[0]
@@ -166,9 +166,9 @@ So how did you pay for all this? Under the hood, the transaction specified a gas
 
 Gas limit is there to protect you from buggy code running until your funds are depleted. The product of `gasPrice` and `gas` represents the maximum amount of Wei that you are willing to pay for executing the transaction. What you specify as `gasPrice` is used by miners to rank transactions for inclusion in the blockchain. It is the price in Wei of one unit of gas, in which VM operations are priced.
 
-The gas expenditure incurred by running your contract will be bought by the ether you have in your account at a price you specified in the transaction with `gasPrice`. If you do not have the ether to cover all the gas requirements to complete running your code, the processing aborts and all intermediate state changes roll back to the pre-transaction snapshot. The gas used up to the point where execution stopped were used after all, so the ether balance of your account will be reduced. These parameters can be adjusted on the transaction object fields `gas` and `gasPrice`. The `value` field is used the same as in ether transfer transactions between normal accounts. In other words transferring funds is available between any two accounts, either normal (i.e. externally controlled) or contract. If your contract runs out of funds, you should see an insufficient funds error. Note that all funds on contract accounts will be irrecoverably lost, once we release [Homestead](https://github.com/ethereum/go-ethereum/wiki/Homestead) (see [the rules of the game](https://github.com/ethereum/go-ethereum/wiki/Frontier)).
+The gas expenditure incurred by running your contract will be bought by the ether you have in your account at a price you specified in the transaction with `gasPrice`. If you do not have the ether to cover all the gas requirements to complete running your code, the processing aborts and all intermediate state changes roll back to the pre-transaction snapshot. The gas used up to the point where execution stopped were used after all, so the ether balance of your account will be reduced. These parameters can be adjusted on the transaction object fields `gas` and `gasPrice`. The `value` field is used the same as in ether transfer transactions between normal accounts. In other words transferring funds is available between any two accounts, either normal (i.e. externally controlled) or contract. If your contract runs out of funds, you should see an insufficient funds error. Note that all funds on contract accounts will be irrecoverably lost, once we release [Homestead](https://github.com/ethereumproject/go-ethereum/wiki/Homestead) (see [the rules of the game](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)).
 
-For testing and playing with contracts you can use the test network or [set up a private node (or cluster)](https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-networklock-or-local-cluster) potentially isolated from all the other nodes. If you then mine, you can make sure that your transaction will be included in the next block. You can see the pending transactions with:
+For testing and playing with contracts you can use the test network or [set up a private node (or cluster)](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-private-networklock-or-local-cluster) potentially isolated from all the other nodes. If you then mine, you can make sure that your transaction will be included in the next block. You can see the pending transactions with:
 
 ```js
 eth.getBlock("pending", true).transactions
@@ -230,7 +230,7 @@ admin.contractInfo.registerUrl(primaryAccount, hash, url)
 
 # Interacting with contracts
 
-[`eth.contract`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcontract) can be used to define a contract _class_ that will comply with the contract interface as described in its [ABI definition](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI).
+[`eth.contract`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcontract) can be used to define a contract _class_ that will comply with the contract interface as described in its [ABI definition](https://github.com/ethereumproject/wiki/wiki/Ethereum-Contract-ABI).
 
 ```js
 var Multiply7 = eth.contract(contract.info.abiDefinition);
@@ -249,7 +249,7 @@ multiply7.multiply.call(6)
 Now suppose this contract is not yours, and you would like documentation or look at the source code. 
 This is made possible by making available the contract info bundle and register it in the blockchain.
 The `admin.contractInfo` API provides convenience methods to fetch this bundle for any contract that chose to register.
-To see how it works, read about [Contract Metadata](https://github.com/ethereum/wiki/wiki/Contract-metadata) or read the contract info deployment section of this document. 
+To see how it works, read about [Contract Metadata](https://github.com/ethereumproject/wiki/wiki/Contract-metadata) or read the contract info deployment section of this document. 
 
 ```js
 // get the contract info for contract address to do manual verification

@@ -1,5 +1,5 @@
 **NOTE: These instructions are for people who want to contribute Go source code changes.
-If you just want to run ethereum, use the normal [Installation Instructions](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum)**
+If you just want to run ethereum, use the normal [Installation Instructions](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum)**
 
 # Developers' guide 
 
@@ -9,16 +9,16 @@ This document is the entry point for developers of the etherum go implementation
 
 ### Go environment  
 
-We assume that you have [`go` v1.4 installed](https://github.com/ethereum/go-ethereum/wiki/Installing-Go), and `GOPATH` is set.
+We assume that you have [`go` v1.4 installed](https://github.com/ethereumproject/go-ethereum/wiki/Installing-Go), and `GOPATH` is set.
 
-**Note**:You must have your working copy under `$GOPATH/src/github.com/ethereum/go-ethereum`. You also usually want to checkout the `develop` branch (instead of master).
+**Note**:You must have your working copy under `$GOPATH/src/github.com/ethereumproject/go-ethereum`. You also usually want to checkout the `develop` branch (instead of master).
 
 Since `go` does not use relative path for import, working in any other directory will have no effect, since the import paths will be appended to `$GOPATH/src`, and if the lib does not exist, the version at master HEAD will be downloaded.
 
 Most likely you will be working from your fork of `go-ethereum`, let's say from `github.com/nirname/go-ethereum`. Clone or move your fork into the right place:
 
 ```
-git clone git@github.com:nirname/go-ethereum.git $GOPATH/src/github.com/ethereum/go-ethereum
+git clone git@github.com:nirname/go-ethereum.git $GOPATH/src/github.com/ethereumproject/go-ethereum
 ```
 
 ### Godep for dependency management
@@ -46,14 +46,14 @@ GOPATH=`godep path`:$GOPATH
 
 ### Building executables
 
-Switch to the go-ethereum repository root directory (Godep expects a local [Godeps folder](https://github.com/ethereum/go-ethereum/tree/develop/Godeps) ).
+Switch to the go-ethereum repository root directory (Godep expects a local [Godeps folder](https://github.com/ethereumproject/go-ethereum/tree/develop/Godeps) ).
 
 Each wrapper/executable found in 
-[the `cmd` directory](https://github.com/ethereum/go-ethereum/tree/develop/cmd) can be built individually.
+[the `cmd` directory](https://github.com/ethereumproject/go-ethereum/tree/develop/cmd) can be built individually.
 
 ### Building Geth (CLI)
 
-**Note**: Geth (the ethereum command line client) is the focus of the [Frontier release](https://github.com/ethereum/go-ethereum/wiki/Frontier).
+**Note**: Geth (the ethereum command line client) is the focus of the [Frontier release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier).
 
 To build the CLI:
 
@@ -61,9 +61,9 @@ To build the CLI:
 godep go install -v ./cmd/geth
 ```
 
-See the [documentation on how to use Geth](https://github.com/ethereum/go-ethereum/wiki/Geth)
+See the [documentation on how to use Geth](https://github.com/ethereumproject/go-ethereum/wiki/Geth)
 
-Read about cross compilation of go-ethereum [here](https://github.com/ethereum/go-ethereum/wiki/Cross-compiling-Ethereum).
+Read about cross compilation of go-ethereum [here](https://github.com/ethereumproject/go-ethereum/wiki/Cross-compiling-Ethereum).
 
 ### Git flow
 
@@ -96,12 +96,12 @@ godep go test -v -cpu 4 -bench . -run BenchmarkJoin
 
 for more see [go test flags](http://golang.org/cmd/go/#hdr-Description_of_testing_flags)
 
-See integration testing information on the [Testing wiki page](https://github.com/ethereum/go-ethereum/wiki/Testing)
+See integration testing information on the [Testing wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Testing)
 
 ### Metrics and monitoring
 
 `geth` can do node behaviour monitoring, aggregation and show performance metric charts. 
-Read about [metrics and monitoring](https://github.com/ethereum/go-ethereum/wiki/Metrics-and-Monitoring)
+Read about [metrics and monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-and-Monitoring)
 
 ### Add and update dependencies 
 
@@ -118,7 +118,7 @@ To track a new dependency, add it to the project as normal than run
 godep save ./...
 ```
 
-Changes to the [Godeps folder](https://github.com/ethereum/go-ethereum/tree/develop/Godeps) should be manually verified then committed.
+Changes to the [Godeps folder](https://github.com/ethereumproject/go-ethereum/tree/develop/Godeps) should be manually verified then committed.
 
 To make life easier try [git flow](http://nvie.com/posts/a-successful-git-branching-model/) it sets this all up and streamlines your work flow.
 
@@ -156,8 +156,8 @@ Style](http://golang.org/doc/effective_go.html#formatting).
 
 ## Dev Tutorials 
 
-* [Private networks, local clusters and monitoring](https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster)
+* [Private networks, local clusters and monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-private-network-or-local-cluster)
 
-* [P2P 101](https://github.com/ethereum/go-ethereum/wiki/Peer-to-Peer): a tutorial about setting up and creating a p2p server and p2p sub protocol.
+* [P2P 101](https://github.com/ethereumproject/go-ethereum/wiki/Peer-to-Peer): a tutorial about setting up and creating a p2p server and p2p sub protocol.
 
-* [How to Whisper](https://github.com/ethereum/go-ethereum/wiki/How-to-Whisper): an introduction to whisper.
+* [How to Whisper](https://github.com/ethereumproject/go-ethereum/wiki/How-to-Whisper): an introduction to whisper.

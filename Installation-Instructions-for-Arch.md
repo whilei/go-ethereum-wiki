@@ -6,7 +6,7 @@ pacman -S git go gcc gmp
 
 Download and build geth
 ```shell
-git clone https://github.com/ethereum/go-ethereum
+git clone https://github.com/ethereumproject/go-ethereum
 cd go-ethereum
 make geth
 ```

@@ -51,7 +51,7 @@ C:\Users\xxx> setx GOPATH "%GOPATH%"
 C:\Users\xxx> setx Path "%Path%"
 C:\Users\xxx> go get github.com/tools/godep
 C:\Users\xxx> mkdir src\github.com\ethereum
-C:\Users\xxx> git clone https://github.com/ethereum/go-ethereum src\github.com\ethereum\go-ethereum
+C:\Users\xxx> git clone https://github.com/ethereumproject/go-ethereum src\github.com\ethereum\go-ethereum
 C:\Users\xxx> cd src\github.com\ethereum\go-ethereum
 ```
 
@@ -77,7 +77,7 @@ https://gist.github.com/tgerring/79f018954aadfb3f406e
   1. Add `GOROOT` pointed to `c:\go` and `GOPATH` to `c:\godev` (you are free to pick these paths).
   1. Set `PATH` to `%PATH%;%GOROOT%\bin;%GOPATH%\bin;c:\winbuilds\bin`
 1. Open a terminal and install godep first: `go get -u github.com/tools/godep`
-1. Open a terminal and download go-ethereum `go get -d -u github.com/ethereum/go-ethereum`
+1. Open a terminal and download go-ethereum `go get -d -u github.com/ethereumproject/go-ethereum`
 1. Try building ethereum with go dep, navigate to `c:\godev\src\github.com\ethereum\go-ethereum\cmd\geth` and run `git checkout develop && godep go install`
 
 If you want to build from an other branch bypass `godep go install` for `go install` and checkout the dependencies manually.

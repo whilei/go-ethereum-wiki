@@ -1,6 +1,6 @@
-Building Geth for Android is a non trivial task, as it requires cross compiling external C dependencies ([GNU Arithmetic Library](https://gmplib.org/)); internal C dependencies ([ethash](https://github.com/ethereum/ethash)); as well as the entire CGO enabled Go code-base to Android. This is further complicated by the Position Independent Executables (PIE) security feature introduced since Android 4.1 Jelly Bean, requiring different compiler and linker options based on the target Android platform version.
+Building Geth for Android is a non trivial task, as it requires cross compiling external C dependencies ([GNU Arithmetic Library](https://gmplib.org/)); internal C dependencies ([ethash](https://github.com/ethereumproject/ethash)); as well as the entire CGO enabled Go code-base to Android. This is further complicated by the Position Independent Executables (PIE) security feature introduced since Android 4.1 Jelly Bean, requiring different compiler and linker options based on the target Android platform version.
 
-To cope with all the build issues, the [`xgo`](https://github.com/karalabe/xgo) CGO enabled Go cross compiler is used, which assembles an entire multi-platform cross compiler suite into a single mega docker container. Details about using `xgo` can be found in the project's [README](https://github.com/karalabe/xgo/blob/master/README.md), with Ethereum specifics on the go-ethereum cross compilation [wiki page](https://github.com/ethereum/go-ethereum/wiki/Cross-compiling-Ethereum).
+To cope with all the build issues, the [`xgo`](https://github.com/karalabe/xgo) CGO enabled Go cross compiler is used, which assembles an entire multi-platform cross compiler suite into a single mega docker container. Details about using `xgo` can be found in the project's [README](https://github.com/karalabe/xgo/blob/master/README.md), with Ethereum specifics on the go-ethereum cross compilation [wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Cross-compiling-Ethereum).
 
 TL;DR
 
@@ -9,7 +9,7 @@ $ go get -u github.com/karalabe/xgo
 $ xgo --deps=https://gmplib.org/download/gmp/gmp-6.0.0a.tar.bz2 \
       --branch=develop                                          \
       --targets=android-16/arm                                  \
-      github.com/ethereum/go-ethereum/cmd/geth
+      github.com/ethereumproject/go-ethereum/cmd/geth
 
 $ ls -al
   -rwxr-xr-x  1 root  root  23213348 Sep 14 19:35 geth-android-16-arm

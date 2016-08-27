@@ -96,7 +96,7 @@ If you have the SolC Solidity Compiler installed,  you need now reformat by remo
 
 #### Compile from source
 
-    git clone https://github.com/ethereum/cpp-ethereum.git
+    git clone https://github.com/ethereumproject/cpp-ethereum.git
     mkdir cpp-ethereum/build
     cd cpp-ethereum/build
     cmake -DJSONRPC=OFF -DMINER=OFF -DETHKEY=OFF -DSERPENT=OFF -DGUI=OFF -DTESTS=OFF -DJSCONSOLE=OFF ..
@@ -399,14 +399,14 @@ This should now return your token address, meaning that now the previous code to
 
 This also means that the owner of the coin can update the coin by pointing the registrar to the new contract. This would, of course, require the coin holders trust the owner set at  registrar.owner("MyFirstCoin")
 
-Of course this is a rather unpleasant big chunk of code just to allow others to interact with a contract. There are some avenues being investigated to upload the contract ABI to the network, so that all the user will need is the contract name. You can [read about these approaches](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#natspec) but they are very experimental and will certainly change in the future.
+Of course this is a rather unpleasant big chunk of code just to allow others to interact with a contract. There are some avenues being investigated to upload the contract ABI to the network, so that all the user will need is the contract name. You can [read about these approaches](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#natspec) but they are very experimental and will certainly change in the future.
 
 
 ### Learn More 
 
-* [Meta coin standard](https://github.com/ethereum/wiki/wiki/Standardized_Contract_APIs) is a proposed standardization of function names for coin and token contracts, to allow them to be automatically added to other ethereum contract that utilizes trading, like exchanges or escrow.
+* [Meta coin standard](https://github.com/ethereumproject/wiki/wiki/Standardized_Contract_APIs) is a proposed standardization of function names for coin and token contracts, to allow them to be automatically added to other ethereum contract that utilizes trading, like exchanges or escrow.
 
-* [Formal proofing](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format#documentation-output) is a way where the contract developer will be able to assert some invariant qualities of the contract, like the total cap of the coin. *Not yet implemented*.
+* [Formal proofing](https://github.com/ethereumproject/wiki/wiki/Ethereum-Natural-Specification-Format#documentation-output) is a way where the contract developer will be able to assert some invariant qualities of the contract, like the total cap of the coin. *Not yet implemented*.
 
 
 

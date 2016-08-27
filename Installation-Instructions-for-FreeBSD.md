@@ -5,7 +5,7 @@
 Clone the repository to a directory of your choosing:
 
 ```shell
-git clone https://github.com/ethereum/go-ethereum
+git clone https://github.com/ethereumproject/go-ethereum
 ```
 
 Building `geth` requires some external libraries to be installed:

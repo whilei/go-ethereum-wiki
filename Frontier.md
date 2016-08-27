@@ -17,7 +17,7 @@ The Ethereum network goes live when the clients consent on the **genesis block**
 
 In conjunction with the Frontier launch several exchanges will likely start enabling trade of Ether, which will provide necessary liquidity to the marketplace, allowing users and miners to transfer their holdings to other users requiring more or less Ether. As opposed to an earlier strategy, there is no plan to remove any contracts from the blockchain or otherwise alter the network to carry balances over to Homestead. In other words, the state in Homestead will be a direct and unmodified continuation of the state in Frontier. 
 
-Mining reward is the full amount of 5 ether per block (as opposed to our earlier proposal of a reduced amount). Mining rewards are discussed in detail [here](https://github.com/ethereum/go-ethereum/wiki/Mining#mining-rewards)
+Mining reward is the full amount of 5 ether per block (as opposed to our earlier proposal of a reduced amount). Mining rewards are discussed in detail [here](https://github.com/ethereumproject/go-ethereum/wiki/Mining#mining-rewards)
 
 ## Safety warnings
 
@@ -26,22 +26,22 @@ Mining reward is the full amount of 5 ether per block (as opposed to our earlier
 * **You are responsible for your own actions.** If you mess something up or break any laws while using this software, it's your fault, and your fault only.
 * **You are responsible for your own karma.** Don't be a jerk and respect others.
 
-**WARNING:** Before you interact with the ethereum Frontier network, make sure you read the documentation and understand the caveats and risks. Please read the [legal disclaimer](https://github.com/ethereum/go-ethereum/wiki/Disclaimer)
+**WARNING:** Before you interact with the ethereum Frontier network, make sure you read the documentation and understand the caveats and risks. Please read the [legal disclaimer](https://github.com/ethereumproject/go-ethereum/wiki/Disclaimer)
 
 ## Components released
 
 The focus of Frontier is the Go implementation of an ethereum full node, with a command line interface codenamed "Geth". 
 
-By [installing and running `geth`](https://github.com/ethereum/go-ethereum/wiki/Geth), you can take part in the ethereum live network, mine ether on the blockchain, transfer funds between addresses, create contracts and send transactions. 
+By [installing and running `geth`](https://github.com/ethereumproject/go-ethereum/wiki/Geth), you can take part in the ethereum live network, mine ether on the blockchain, transfer funds between addresses, create contracts and send transactions. 
 
-**WARNING**: before you use `geth` or interact with the ethereum Frontier live network, make sure you read the documentation and fully understand the [caveats and risks](https://github.com/ethereum/go-ethereum/wiki/Disclaimer). 
+**WARNING**: before you use `geth` or interact with the ethereum Frontier live network, make sure you read the documentation and fully understand the [caveats and risks](https://github.com/ethereumproject/go-ethereum/wiki/Disclaimer). 
 
 Apart from `geth`, the Go CLI, the Frontier release contains the following components:
 
-* `web3.js`  library implementing the [JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API) for Dapps to conveniently interact with an ethereum node
-* `solc` a standalone solidity compiler. You only need this if you want to use your Dapp or [console to compile solidity code](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#compiling-a-contract).
-* `ethminer` a standalone miner for openCL [GPU mining](https://github.com/ethereum/go-ethereum/wiki/Mining#gpu-mining)
-* `netstat`  a [network monitoring GUI](https://github.com/ethereum/wiki/wiki/Network-Status) allows you to add your node to the http://stats.ethdev.com page
+* `web3.js`  library implementing the [JavaScript API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) for Dapps to conveniently interact with an ethereum node
+* `solc` a standalone solidity compiler. You only need this if you want to use your Dapp or [console to compile solidity code](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#compiling-a-contract).
+* `ethminer` a standalone miner for openCL [GPU mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining#gpu-mining)
+* `netstat`  a [network monitoring GUI](https://github.com/ethereumproject/wiki/wiki/Network-Status) allows you to add your node to the http://stats.ethdev.com page
 
 ## The actual launch process 
 
@@ -65,7 +65,7 @@ This process is centralized and will only run for the duration of Frontier. It h
 
 ## Stats, Status and Badblock websites
 
-You probably are already familiar with our network stats monitor, https://stats.ethdev.com/. It gives a quick overview of the health of the network, block resolution time and Gas statistics. Remember that participation in the stats page is voluntary, and nodes have to add themselves before they appear on the panel. See details on [network monitoring](https://github.com/ethereum/wiki/wiki/Network-Status)
+You probably are already familiar with our network stats monitor, https://stats.ethdev.com/. It gives a quick overview of the health of the network, block resolution time and Gas statistics. Remember that participation in the stats page is voluntary, and nodes have to add themselves before they appear on the panel. See details on [network monitoring](https://github.com/ethereumproject/wiki/wiki/Network-Status)
 
 In addition to the stats page, we will have a status page at https://status.ethereum.org/ (no link as the site is not live yet) which will gives a concise overview of any issue that might be affecting Frontier. Use it as your first port of call if you think something might not be right.
 

@@ -5,8 +5,8 @@ In order to 'build edge', we need to switch 3 repos to their 'develop' branch
 * Begin by getting the newest version of the go client source and their dependencies:
 
         go get -u -d github.com/obscuren/serpent-go
-        go get -u -d github.com/ethereum/go-ethereum/ethereum
-        go get -u -d github.com/ethereum/go-ethereum/mist
+        go get -u -d github.com/ethereumproject/go-ethereum/ethereum
+        go get -u -d github.com/ethereumproject/go-ethereum/mist
 
 * Init the serpent submodule
 
@@ -16,10 +16,10 @@ In order to 'build edge', we need to switch 3 repos to their 'develop' branch
 
 * Switch to the `develop` branch the necessary repos:
 
-        cd $GOPATH/src/github.com/ethereum/go-ethereum
+        cd $GOPATH/src/github.com/ethereumproject/go-ethereum
         git checkout develop
 
-        cd $GOPATH/src/github.com/ethereum/eth-go
+        cd $GOPATH/src/github.com/ethereumproject/eth-go
         git checkout develop
 
         cd $GOPATH/src/github.com/obscuren/mutan
@@ -27,8 +27,8 @@ In order to 'build edge', we need to switch 3 repos to their 'develop' branch
 
 * Go forth and build away:
 
-        cd $GOPATH/src/github.com/ethereum/go-ethereum/ethereum
+        cd $GOPATH/src/github.com/ethereumproject/go-ethereum/ethereum
         go install -v
 
-        cd $GOPATH/src/github.com/ethereum/go-ethereum/mist
+        cd $GOPATH/src/github.com/ethereumproject/go-ethereum/mist
         go install -v

@@ -5,7 +5,7 @@ _**NOTE:** This documentation is out-of-date and in need of refresh against curr
 General, easy to use, ethereum query interface. This API allows you to easily interface with ethereum's state and their respective objects, create transactions and directly evaluate contract code.
 
 ```go
-import "github.com/ethereum/go-ethereum/xeth"
+import "github.com/ethereumproject/go-ethereum/xeth"
 ```
 
 Be aware that all methods return something. Nil isn't ever returned unless explicitly specified.
@@ -57,7 +57,7 @@ Be aware that all methods return something. Nil isn't ever returned unless expli
 ## Example
 
 ```go
-import "github.com/ethereum/go-ethereum/xeth"
+import "github.com/ethereumproject/go-ethereum/xeth"
 
 xeth := xeth.New(ethereum)
 

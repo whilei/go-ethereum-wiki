@@ -8,7 +8,7 @@
 
 * [x] rebase on geth 1.5 edge
 * [x] small toynet deployed, see [network monitor](http://146.185.130.117/)
-* [x] support for separate url schemes for dns enabled, immutable and raw manifest - feature [#2279](https://github.com/ethereum/go-ethereum/issues/2279)
+* [x] support for separate url schemes for dns enabled, immutable and raw manifest - feature [#2279](https://github.com/ethereumproject/go-ethereum/issues/2279)
 * [x] Ethereum name service integration
 * [x] scripted network tests, cluster control framework
 * [x] algorithmic improvements on chunker split/join
@@ -30,13 +30,13 @@ The following features are prioritised for POC 3 (subject to change)
 * [ ] syncer rewrite - syncdb refactor to storage
 * [ ] mist integration
 * [ ] storage monitoring and parameter setting API for Mist swarm dashboard
-* [ ] bzz protocol should implement info for reporting - feature [#2042](https://github.com/ethereum/go-ethereum/issues/2042)
-* [ ] implement (a reviewed version of) [EIP-26](https://github.com/ethereum/EIPs/issues/26)
-* [ ] swarm namereg/natspec rewrite - enhancement [#2048](https://github.com/ethereum/go-ethereum/issues/2048)
-* [ ] solidity [contractInfo standard](https://github.com/ethereum/solidity/pull/645) and contract source verification support
-* [ ] improved peer propagation [#2044](https://github.com/ethereum/go-ethereum/issues/2044)
+* [ ] bzz protocol should implement info for reporting - feature [#2042](https://github.com/ethereumproject/go-ethereum/issues/2042)
+* [ ] implement (a reviewed version of) [EIP-26](https://github.com/ethereumproject/EIPs/issues/26)
+* [ ] swarm namereg/natspec rewrite - enhancement [#2048](https://github.com/ethereumproject/go-ethereum/issues/2048)
+* [ ] solidity [contractInfo standard](https://github.com/ethereumproject/solidity/pull/645) and contract source verification support
+* [ ] improved peer propagation [#2044](https://github.com/ethereumproject/go-ethereum/issues/2044)
 * [ ] protocol stack abstraction, pluggable subprotocol components - (swap, hive/protocol, syncer, peers) for pss
-* [ ] new p2p API integration - feature [#2060](https://github.com/ethereum/go-ethereum/issues/2060)
+* [ ] new p2p API integration - feature [#2060](https://github.com/ethereumproject/go-ethereum/issues/2060)
 
 ## POC 0.4
 
@@ -44,5 +44,5 @@ The following features are prioritised for POC 3 (subject to change)
 * [ ] enhanced network monitoring, structured logging and stats aggregation
 * [ ] unicast/multicast messaging over swarm - pss 
 * [ ] swarm DB support phase 0 - compact manifest trie and proof requests
-* [ ] [SWarm On-demand Retrieval Daemon](https://gist.github.com/zelig/aa6eb43615e12d834d9f) - feature [#2049](https://github.com/ethereum/go-ethereum/issues/2049) = sword. ethereum state, contract storage, receipts, blocks on swarm
+* [ ] [SWarm On-demand Retrieval Daemon](https://gist.github.com/zelig/aa6eb43615e12d834d9f) - feature [#2049](https://github.com/ethereumproject/go-ethereum/issues/2049) = sword. ethereum state, contract storage, receipts, blocks on swarm
 

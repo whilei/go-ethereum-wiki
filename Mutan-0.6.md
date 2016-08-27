@@ -352,7 +352,7 @@ InlineAssembler = "asm" "{" Code "}" .
 Code            = "abcdefghijklmnopqrstuwvxyz" | "1234567890" .
 ```
 
-For a full list of `asm` opcodes see the [Assembler](https://github.com/ethereum/go-ethereum/wiki/Assembler) page.
+For a full list of `asm` opcodes see the [Assembler](https://github.com/ethereumproject/go-ethereum/wiki/Assembler) page.
 
 ## Pre processor
 

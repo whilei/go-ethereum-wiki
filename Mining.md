@@ -1,20 +1,20 @@
-* [Introduction to Ethereum mining](https://github.com/ethereum/wiki/wiki/Mining#introduction) _(main wiki)_
+* [Introduction to Ethereum mining](https://github.com/ethereumproject/wiki/wiki/Mining#introduction) _(main wiki)_
 
 # CPU Mining with Geth
 
 At Frontier, the first release of Ethereum, you'll just need a) a GPU and b) an Ethereum client, Geth. CPU mining will be possible but too inefficient to hold any value.
 
-At the moment, Geth only includes a CPU miner, and the team is testing a [GPU miner branch](https://github.com/ethereum/go-ethereum/tree/gpu_miner), but this won't be part of Frontier.
+At the moment, Geth only includes a CPU miner, and the team is testing a [GPU miner branch](https://github.com/ethereumproject/go-ethereum/tree/gpu_miner), but this won't be part of Frontier.
 
 The C++ implementation of Ethereum also offers a GPU miner, both as part of Eth (its CLI), AlethZero (its GUI) and EthMiner (the standalone miner). 
 
 _**NOTE:** Ensure your blockchain is fully synchronised with the main chain before starting to mine, otherwise you will not be mining on the main chain._
 
-When you start up your ethereum node with `geth` it is not mining by default. To start it in mining mode, you use the `--mine` [command line option](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options). The `-minerthreads` parameter can be used to set the number parallel mining threads (defaulting to the total number of processor cores). 
+When you start up your ethereum node with `geth` it is not mining by default. To start it in mining mode, you use the `--mine` [command line option](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options). The `-minerthreads` parameter can be used to set the number parallel mining threads (defaulting to the total number of processor cores). 
 
 `geth --mine --minerthreads=4`
 
-You can also start and stop CPU mining at runtime using the [console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminminerstart). `miner.start` takes an optional parameter for the number of miner threads. 
+You can also start and stop CPU mining at runtime using the [console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminerstart). `miner.start` takes an optional parameter for the number of miner threads. 
 
 ```
 > miner.start(8)
@@ -25,7 +25,7 @@ true
 
 Note that mining for real ether only makes sense if you are in sync with the network (since you mine on top of the consensus block). Therefore the eth blockchain downloader/synchroniser will delay mining until syncing is complete, and after that mining automatically starts unless you cancel your intention with `miner.stop()`.
 
-In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
+In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
 
 You can set your etherbase on the command line:
 
@@ -41,7 +41,7 @@ miner.setEtherbase(eth.accounts[2])
 
 Note that your etherbase does not need to be an address of a local account, just an existing one. 
 
-There is an option [to add extra Data](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminminersetextra) (32 bytes only) to your mined blocks. By convention this is interpreted as a unicode string, so you can set your short vanity tag.
+There is an option [to add extra Data](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminersetextra) (32 bytes only) to your mined blocks. By convention this is interpreted as a unicode string, so you can set your short vanity tag.
 
 ```
 miner.setExtra("ΞTHΞЯSPHΞЯΞ")
@@ -59,9 +59,9 @@ Header:
 }
 ```
 
-See also [this proposal](https://github.com/ethereum/wiki/wiki/Extra-Data)
+See also [this proposal](https://github.com/ethereumproject/wiki/wiki/Extra-Data)
 
-You can check your hashrate with [miner.hashrate](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminminerhashrate), the result is in H/s (Hash operations per second). 
+You can check your hashrate with [miner.hashrate](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminerhashrate), the result is in H/s (Hash operations per second). 
 
 ```
 > miner.hashrate
@@ -75,7 +75,7 @@ After you successfully mined some blocks, you can check the ether balance of you
 '34698870000000' 
 ```
 
-In order to spend your earnings [on gas to transact](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions), you will need to have this account unlocked. 
+In order to spend your earnings [on gas to transact](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions), you will need to have this account unlocked. 
 
 ```
 > personal.unlockAccount(eth.coinbase)
@@ -184,11 +184,11 @@ You check your cooling status:
 
 ## Mining Software
 
-The official Frontier release of `geth` only supports a CPU miner natively. We are working on a [GPU miner](https://github.com/ethereum/go-ethereum/tree/gpuminer), but it may not be available for the Frontier release. Geth however can be used in conjunction with `ethminer`, using the standalone miner as workers and `geth` as scheduler communicating via [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC). 
+The official Frontier release of `geth` only supports a CPU miner natively. We are working on a [GPU miner](https://github.com/ethereumproject/go-ethereum/tree/gpuminer), but it may not be available for the Frontier release. Geth however can be used in conjunction with `ethminer`, using the standalone miner as workers and `geth` as scheduler communicating via [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
 
-The [C++ implementation of Ethereum](https://github.com/ethereum/cpp-ethereum/) (not officially released) however has a GPU miner. It can be used from `eth`, `AlethZero` (GUI) and `ethMiner` (the standalone miner). 
+The [C++ implementation of Ethereum](https://github.com/ethereumproject/cpp-ethereum/) (not officially released) however has a GPU miner. It can be used from `eth`, `AlethZero` (GUI) and `ethMiner` (the standalone miner). 
 
-[You can install this](https://github.com/ethereum/cpp-ethereum/wiki/Installing-clients) via ppa on linux, brew tap on MacOS or from source. 
+[You can install this](https://github.com/ethereumproject/cpp-ethereum/wiki/Installing-clients) via ppa on linux, brew tap on MacOS or from source. 
 
 On MacOS:
 ```
@@ -201,7 +201,7 @@ apt-get install cpp-ethereum
 ```
 
 On Windows: 
-https://github.com/ethereum/cpp-ethereum/wiki/Building-on-Windows
+https://github.com/ethereumproject/cpp-ethereum/wiki/Building-on-Windows
 
 ## GPU mining with ethminer 
 To mine with `eth`:
@@ -230,7 +230,7 @@ ethminer -G  // -G for GPU, -M for benchmark
 tail -f geth.log
 ```
 
-`ethminer` communicates with geth on port 8545 (the default RPC port in geth). You can change this by giving the [`--rpcport` option](https://github.com/ethereum/go-ethereum/Command-Line-Options) to `geth`.
+`ethminer` communicates with geth on port 8545 (the default RPC port in geth). You can change this by giving the [`--rpcport` option](https://github.com/ethereumproject/go-ethereum/Command-Line-Options) to `geth`.
 Ethminer will find get on any port. Note that you need to set the CORS header with `--rpccorsdomain localhost`. You can also set port on `ethminer` with `-F http://127.0.0.1:3301`. Setting the ports is necessary if you want several instances mining on the same computer,  although this is somewhat pointless. If you are testing on a private cluster, we recommend you use CPU mining instead. 
 
 Also note that you do **not** need to give `geth` the `--mine` option or start the miner in the console unless you want to do CPU mining on TOP of GPU mining. 
@@ -284,7 +284,7 @@ eth -m on -G -a <coinbase> -i -v 8 //
 * https://blog.ethereum.org/2014/07/05/stake/
 * https://blog.ethereum.org/2014/10/03/slasher-ghost-developments-proof-stake/
 * https://blog.ethereum.org/2014/06/19/mining/
-* https://github.com/ethereum/wiki/wiki/Ethash
+* https://github.com/ethereumproject/wiki/wiki/Ethash
 * [Benchmarking results for GPU mining](https://forum.ethereum.org/discussion/2134/gpu-mining-is-out-come-and-let-us-know-of-your-bench-scores)
 * [historic moment](https://twitter.com/gavofyork/status/586623875577937922)
 * [live mining statistic](https://etherapps.info/stats/mining)

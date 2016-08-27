@@ -2,7 +2,7 @@
 
 Ethereum implements a **javascript runtime environment** (JSRE) that can be used in either interactive (console) or non-interactive (script) mode.
  
-Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https://github.com/ethereum/wiki/wiki/JavaScript-API) and the [admin API](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#javascript-console-api).
+Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) and the [admin API](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#javascript-console-api).
 
 ## Interactive use: the JSRE REPL  Console
 
@@ -50,7 +50,7 @@ Or execute a local script with more complex statements on a remote node over htt
     $ geth --exec 'loadScript("/tmp/checkbalances.js")' attach http://123.123.123.123:8545
     $ geth --jspath "/tmp" --exec 'loadScript("checkbalances.js")' attach http://123.123.123.123:8545
 
-Find an example script [here](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#example-script)
+Find an example script [here](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#example-script)
 
 Use the `--jspath <path/to/my/js/root>` to set a libdir for your js scripts. Parameters to `loadScript()` with no absolute path will be understood relative to this directory.
 
@@ -73,7 +73,7 @@ In addition to the full functionality of JS (as per ECMA5), the ethereum JSRE is
 
 # Management APIs
 
-Beside the official [DApp API](https://github.com/ethereum/wiki/wiki/JSON-RPC) interface the go ethereum node has support for additional management API's. These API's are offered using [JSON-RPC](http://www.jsonrpc.org/specification) and follow the same conventions as used in the DApp API. The go ethereum package comes with a console client which has support for all additional API's.
+Beside the official [DApp API](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) interface the go ethereum node has support for additional management API's. These API's are offered using [JSON-RPC](http://www.jsonrpc.org/specification) and follow the same conventions as used in the DApp API. The go ethereum package comes with a console client which has support for all additional API's.
 
 # How to
 It is possible to specify the set of API's which are offered over an interface with the `--${interface}api` command line argument for the go ethereum daemon. Where `${interface}` can be `rpc` for the `http` interface or `ipc` for an unix socket on unix or named pipe on Windows.
@@ -110,9 +110,9 @@ will give all enabled modules including the version number:
 ```
 
 ## Integration
-These additional API's follow the same conventions as the official DApp API. Web3 can be [extended](https://github.com/ethereum/web3.js/pull/229) and used to consume these additional API's. 
+These additional API's follow the same conventions as the official DApp API. Web3 can be [extended](https://github.com/ethereumproject/web3.js/pull/229) and used to consume these additional API's. 
 
-The different functions are split into multiple smaller logically grouped API's. Examples are given for the [Javascript console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) but can easily be converted to a rpc request.
+The different functions are split into multiple smaller logically grouped API's. Examples are given for the [Javascript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) but can easily be converted to a rpc request.
 
 **2 examples:**
 
@@ -289,7 +289,7 @@ information on the node.
 }
 ```
 
-To connect to a node, use the [enode-format](https://github.com/ethereum/wiki/wiki/enode-url-format) nodeUrl as an argument to [addPeer](#adminaddpeer) or with CLI param `bootnodes`.
+To connect to a node, use the [enode-format](https://github.com/ethereumproject/wiki/wiki/enode-url-format) nodeUrl as an argument to [addPeer](#adminaddpeer) or with CLI param `bootnodes`.
 
 ***
 
@@ -297,7 +297,7 @@ To connect to a node, use the [enode-format](https://github.com/ethereum/wiki/wi
 
     admin.addPeer(nodeURL)
 
-Pass a `nodeURL` to connect a to a peer on the network. The `nodeURL` needs to be in [enode URL format](https://github.com/ethereum/wiki/wiki/enode-url-format). geth will maintain the connection until it
+Pass a `nodeURL` to connect a to a peer on the network. The `nodeURL` needs to be in [enode URL format](https://github.com/ethereumproject/wiki/wiki/enode-url-format). geth will maintain the connection until it
 shuts down and attempt to reconnect if the connection drops intermittently.
 
 You can find out your own node URL by using [nodeInfo](#adminnodeinfo) or looking at the logs when the node boots up e.g.:
@@ -377,7 +377,7 @@ admin.exportChain('path/to/file')
 
      admin.startRPC(host, portNumber, corsheader, modules)
 
-Starts the HTTP server for the [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC). 
+Starts the HTTP server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
 
 ##### Returns
 
@@ -396,7 +396,7 @@ admin.startRPC("127.0.0.1", 8545, "*", "web3,net,eth")
 
     admin.stopRPC() 
 
-Stops the HTTP server for the [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC).
+Stops the HTTP server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
 ##### Returns
 
@@ -415,7 +415,7 @@ admin.stopRPC()
 
      admin.startWS(host, portNumber, allowedOrigins, modules)
 
-Starts the websocket server for the [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC). 
+Starts the websocket server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
 
 ##### Returns
 
@@ -434,7 +434,7 @@ admin.startWS("127.0.0.1", 8546, "*", "web3,net,eth")
 
     admin.stopWS() 
 
-Stops the websocket server for the [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC).
+Stops the websocket server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
 ##### Returns
 
@@ -526,7 +526,7 @@ deactivate NatSpec: when sending a transaction, the user  will be prompted with 
 
      admin.getContractInfo(address)
 
-this will retrieve the [contract info json](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) for a contract on the address
+this will retrieve the [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) for a contract on the address
 
 ##### Returns
 
@@ -545,7 +545,7 @@ returns the contract info object
 
     admin.saveInfo(contract.info, filename);
 
-will write [contract info json](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) into the target file, calculates its content hash. This content hash then can used to associate a public url with where the contract info is publicly available and verifiable. If you register the codehash (hash of the code of the contract on contractaddress).
+will write [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) into the target file, calculates its content hash. This content hash then can used to associate a public url with where the contract info is publicly available and verifiable. If you register the codehash (hash of the code of the contract on contractaddress).
 
 ##### Returns
 
@@ -603,7 +603,7 @@ admin.register(primary, contractaddress, contenthash);
 
     admin.registerUrl(address, codehash, contenthash);
 
-this will register a contant hash to the contract' codehash. This will be used to locate [contract info json](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata)
+this will register a contant hash to the contract' codehash. This will be used to locate [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata)
 files. Address in the first parameter will be used to send the transaction. 
 
 ##### Returns
@@ -639,7 +639,7 @@ admin.registerUrl(primary, contenthash, "file://"+filename);
 
     miner.start(threadCount)
 
-Starts [mining](see https://github.com/ethereum/go-ethereum/wiki/Mining) on with the given `threadNumber` of parallel threads. This is an optional argument.
+Starts [mining](see https://github.com/ethereumproject/go-ethereum/wiki/Mining) on with the given `threadNumber` of parallel threads. This is an optional argument.
 
 ##### Returns
 
@@ -676,7 +676,7 @@ miner.stop()
 
     miner.startAutoDAG()
 
-Starts automatic pregeneration of the [ethash DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG). This process make sure that the DAG for the subsequent epoch is available allowing mining right after the new epoch starts. If this is used by most network nodes, then blocktimes are expected to be normal at epoch transition. Auto DAG is switched on automatically when mining is started and switched off when the miner stops. 
+Starts automatic pregeneration of the [ethash DAG](https://github.com/ethereumproject/wiki/wiki/Ethash-DAG). This process make sure that the DAG for the subsequent epoch is available allowing mining right after the new epoch starts. If this is used by most network nodes, then blocktimes are expected to be normal at epoch transition. Auto DAG is switched on automatically when mining is started and switched off when the miner stops. 
 
 ##### Returns
 
@@ -688,7 +688,7 @@ Starts automatic pregeneration of the [ethash DAG](https://github.com/ethereum/w
 
     miner.stopAutoDAG()
 
-Stops automatic pregeneration of the [ethash DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG). Auto DAG is switched off automatically when mining is stops.
+Stops automatic pregeneration of the [ethash DAG](https://github.com/ethereumproject/wiki/wiki/Ethash-DAG). Auto DAG is switched off automatically when mining is stops.
 
 ##### Returns
 
@@ -744,7 +744,7 @@ If `dir` is the empty string, then ethash will use the default directories `~/.e
     debug.setHead(blockNumber)
 
 **Sets** the current head of the blockchain to the block referred to by _blockNumber_.
-See [web3.eth.getBlock](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
+See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
 ##### Returns 
 
@@ -778,7 +778,7 @@ hash in hex format
     debug.getBlockRlp(blockNumber)
 
 Returns the hexadecimal representation of the RLP encoding of the block.
-See [web3.eth.getBlock](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
+See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
 ##### Returns 
 
@@ -798,7 +798,7 @@ The hex representation of the RLP encoding of the block.
 
 Prints information about the block such as size, total difficulty, as well as header fields properly formatted.
 
-See [web3.eth.getBlock](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
+See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
 ##### Returns
 
@@ -849,7 +849,7 @@ Uncles:
 ##### Returns
 
 the raw dump of a block referred to by block number or block hash or undefined if the block is not found. 
-see [web3.eth.getBlock](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
+see [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
 ##### Example
 
@@ -867,7 +867,7 @@ see [web3.eth.getBlock](https://github.com/ethereum/wiki/wiki/JavaScript-API#web
 
 ##### Returns
 
-Collection of metrics, see for more information [this](https://github.com/ethereum/go-ethereum/wiki/Metrics-and-Monitoring) wiki page.
+Collection of metrics, see for more information [this](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-and-Monitoring) wiki page.
 
 ##### Example
 
@@ -884,7 +884,7 @@ Collection of metrics, see for more information [this](https://github.com/ethere
 
      loadScript('/path/to/myfile.js');
 
-Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options). 
+Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options). 
 
 #### setInterval
 
@@ -898,17 +898,17 @@ Loads a JavaScript file and executes it. Relative paths are interpreted as relat
 ***
 
 #### web3
-The `web3` exposes all methods of the [JavaScript API](https://github.com/ethereum/wiki/wiki/JavaScript-API).
+The `web3` exposes all methods of the [JavaScript API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API).
 
 ***
 
 #### net
-The `net` is a shortcut for [web3.net](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3net).
+The `net` is a shortcut for [web3.net](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3net).
 
 ***
 
 #### eth
-The `eth` is a shortcut for [web3.eth](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3eth). In addition to the `web3` and `eth` interfaces exposed by [web3.js](https://github.com/ethereum/web3.js) a few additional calls are exposed.
+The `eth` is a shortcut for [web3.eth](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3eth). In addition to the `web3` and `eth` interfaces exposed by [web3.js](https://github.com/ethereumproject/web3.js) a few additional calls are exposed.
 
 ***
 
@@ -942,7 +942,7 @@ eth.resend(tx, web3.toWei(10, "szabo"))
 
 
 #### shh
-The `shh` is a shortcut for [web3.shh](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3shh).
+The `shh` is a shortcut for [web3.shh](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3shh).
 
 ***
 

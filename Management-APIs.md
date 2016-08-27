@@ -1,4 +1,4 @@
-Beside the official [DApp APIs](https://github.com/ethereum/wiki/wiki/JSON-RPC) interface go-ethereum
+Beside the official [DApp APIs](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) interface go-ethereum
 has support for additional management APIs. Similar to the DApp APIs, these are also provided using
 [JSON-RPC](http://www.jsonrpc.org/specification) and follow exactly the same conventions. Geth comes
 with a console client which has support for all additional APIs described here.
@@ -52,10 +52,10 @@ will give all enabled modules including the version number:
 ## Consuming the management APIs
 
 These additional APIs follow the same conventions as the official DApp APIs. Web3 can be
-[extended](https://github.com/ethereum/web3.js/pull/229) and used to consume these additional APIs. 
+[extended](https://github.com/ethereumproject/web3.js/pull/229) and used to consume these additional APIs. 
 
 The different functions are split into multiple smaller logically grouped APIs. Examples are given
-for the [JavaScript console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) but
+for the [JavaScript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) but
 can easily be converted to an RPC request.
 
 **2 examples:**
@@ -81,7 +81,7 @@ extra management API namespaces:
 
 * `admin`: Geth node management
 * `debug`: Geth node debugging
-* `miner`: Miner and [DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG) management
+* `miner`: Miner and [DAG](https://github.com/ethereumproject/wiki/wiki/Ethash-DAG) management
 * `personal`: Account management
 * `txpool`: Transaction pool inspection
 
@@ -125,7 +125,7 @@ The `addPeer` administrative method requests adding a new remote node to the lis
 nodes. The node will try to maintain connectivity to these nodes at all times, reconnecting every
 once in a while if the remote connection goes down.
 
-The method accepts a single argument, the [`enode`](https://github.com/ethereum/wiki/wiki/enode-url-format)
+The method accepts a single argument, the [`enode`](https://github.com/ethereumproject/wiki/wiki/enode-url-format)
 URL of the remote peer to start tracking and returns a `BOOL` indicating whether the peer was accepted
 for tracking or some error occurred.
 
@@ -164,7 +164,7 @@ currently uses to store all its databases.
 
 The `nodeInfo` administrative property can be queried for all the information known about the running
 Geth node at the networking granularity. These include general information about the node itself as a
-participant of the [ÐΞVp2p](https://github.com/ethereum/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol) P2P
+participant of the [ÐΞVp2p](https://github.com/ethereumproject/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol) P2P
 overlay protocol, as well as specialized information added by each of the running application protocols
 (e.g. `eth`, `les`, `shh`, `bzz`).
 
@@ -203,7 +203,7 @@ overlay protocol, as well as specialized information added by each of the runnin
 
 The `peers` administrative property can be queried for all the information known about the connected
 remote nodes at the networking granularity. These include general information about the nodes themselves
-as participants of the [ÐΞVp2p](https://github.com/ethereum/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol)
+as participants of the [ÐΞVp2p](https://github.com/ethereumproject/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol)
 P2P overlay protocol, as well as specialized information added by each of the running application
 protocols (e.g. `eth`, `les`, `shh`, `bzz`).
 
@@ -464,7 +464,7 @@ Retrieves and returns the RLP encoded block by number.
 | Console | `debug.getBlockRlp(number, [options])`                |
 | RPC     | `{"method": "debug_getBlockRlp", "params": [number]}` |
 
-References: [RLP](https://github.com/ethereum/wiki/wiki/RLP)
+References: [RLP](https://github.com/ethereumproject/wiki/wiki/RLP)
 
 ### debug_goTrace
 
@@ -510,7 +510,7 @@ destructive action and may severely damage your chain. Use with *extreme* cautio
 | RPC     | `{"method": "debug_setHead", "params": [number]}` |
 
 References:
-[Ethash](https://github.com/ethereum/wiki/wiki/Mining#the-algorithm)
+[Ethash](https://github.com/ethereumproject/wiki/wiki/Mining#the-algorithm)
 
 ### debug_setBlockProfileRate
 
@@ -584,7 +584,7 @@ it will fail.
 | RPC     | `{"method": "debug_traceBlock", "params": [blockRlp, {}]}`               |
 
 References:
-[RLP](https://github.com/ethereum/wiki/wiki/RLP)
+[RLP](https://github.com/ethereumproject/wiki/wiki/RLP)
 
 #### Example
 
@@ -634,7 +634,7 @@ block that is already present in the database.
 | RPC     | `{"method": "debug_traceBlockByNumber", "params": [number, {}]}`               |
 
 References:
-[RLP](https://github.com/ethereum/wiki/wiki/RLP)
+[RLP](https://github.com/ethereumproject/wiki/wiki/RLP)
 
 ### debug_traceBlockByHash
 
@@ -648,7 +648,7 @@ block that is already present in the database.
 | RPC     | `{"method": "debug_traceBlockByHash", "params": [hash {}]}`                     |
 
 References:
-[RLP](https://github.com/ethereum/wiki/wiki/RLP)
+[RLP](https://github.com/ethereumproject/wiki/wiki/RLP)
 
 ### debug_traceBlockFromFile
 
@@ -661,7 +661,7 @@ Similar to [debug_traceBlock](#debug_traceBlock), `traceBlockFromFile` accepts a
 | RPC     | `{"method": "debug_traceBlockFromFile", "params": [fileName, {}]}`               |
 
 References:
-[RLP](https://github.com/ethereum/wiki/wiki/RLP)
+[RLP](https://github.com/ethereumproject/wiki/wiki/RLP)
 
 ### debug_traceTransaction
 

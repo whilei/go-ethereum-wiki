@@ -1,5 +1,5 @@
 # Running tests on go-ethereum
-This page assumes go-ethereum has been configured according to the [Developers Guide](https://github.com/ethereum/go-ethereum/wiki/Developers'-Guide). All commands (unless stated otherwise) are assumed to be run from `$GOPATH/src/github.com/ethereum/go-ethereum`
+This page assumes go-ethereum has been configured according to the [Developers Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers'-Guide). All commands (unless stated otherwise) are assumed to be run from `$GOPATH/src/github.com/ethereumproject/go-ethereum`
 
 ## Unit tests
 See [Travis](https://travis-ci.org/ethereum/go-ethereum/builds) or [Coveralls](https://coveralls.io/r/ethereum/go-ethereum) for status.
@@ -38,34 +38,34 @@ Flags:
 ```
 
 #### VM
-[VM Test wiki](https://github.com/ethereum/tests/wiki/VM-Tests)
+[VM Test wiki](https://github.com/ethereumproject/tests/wiki/VM-Tests)
 ```
 go test ./tests/vm_test.go
 ```
 
 #### State
-[State Test wiki](https://github.com/ethereum/tests/wiki/State-tests)
+[State Test wiki](https://github.com/ethereumproject/tests/wiki/State-tests)
 ```
 go test ./tests/state_test.go
 ```
 
 #### Transaction
-[Transaction Test wiki](https://github.com/ethereum/tests/wiki/Transaction-Tests)
+[Transaction Test wiki](https://github.com/ethereumproject/tests/wiki/Transaction-Tests)
 ```
 go test ./tests/transaction_test.go
 ```
 
 #### Blockchain
-[Blockchain Test wiki](https://github.com/ethereum/tests/wiki/Blockchain-Tests-II) 
+[Blockchain Test wiki](https://github.com/ethereumproject/tests/wiki/Blockchain-Tests-II) 
 ```
 go test ./tests/block_test.go
 ```
 
 ### RPC
-[RPC Tests repo](https://github.com/ethereum/rpc-tests)
+[RPC Tests repo](https://github.com/ethereumproject/rpc-tests)
 
 1. Load test JSON with
     ```
     geth blocktest <pathToTheTestRepo>/BlockTests/bcRPC_API_Test.json RPC_API_Test rpc
     ```
-2. Run rpc-tests (https://github.com/ethereum/rpc-tests#usage)
+2. Run rpc-tests (https://github.com/ethereumproject/rpc-tests#usage)
