@@ -6,7 +6,7 @@ An ethereum node needs to acquire the set of blocks from which the current conse
 
 **Goal**: The Blockpool needs to find the best chain to be inserted in the blockchain. 
 
-In order the achieve this, the blockpool can only rely on p2p communication using the [ethereum wire protocol](https://github.com/ethereum/wiki/wiki/Ethereum-Wire-Protocol).
+In order the achieve this, the blockpool can only rely on p2p communication using the [ethereum wire protocol](https://github.com/ethereumproject/wiki/wiki/Ethereum-Wire-Protocol).
 
 ## Terminology
 
@@ -22,7 +22,7 @@ The Blockpool stores a pool of blocks  which have not been processed yet, thus i
 
 ## Interface with network protocol and peers
 
-As a proper decentralised consensus system, Ethereum relies only on other peers to synchronise. The [eth wire protocol](https://github.com/ethereum/wiki/wiki/Ethereum-Wire-Protocol) defines the messages that the blockpool can use to communicate. For a naive new node, the only entry point to the blockchain is the head block advertised by a peer as part of their status message (`StatusMsg`, i.e., protocol handshake) or when a `NewBlockMsg` is received from a miner. A sequence of block hashes can be requested and received with `getBlockHashesMsg`/`BlockHashesMsg` message pair. A set of blocks can be requested and received with `getBlocksMsg`/`BlocksMsg` message pair. 
+As a proper decentralised consensus system, Ethereum relies only on other peers to synchronise. The [eth wire protocol](https://github.com/ethereumproject/wiki/wiki/Ethereum-Wire-Protocol) defines the messages that the blockpool can use to communicate. For a naive new node, the only entry point to the blockchain is the head block advertised by a peer as part of their status message (`StatusMsg`, i.e., protocol handshake) or when a `NewBlockMsg` is received from a miner. A sequence of block hashes can be requested and received with `getBlockHashesMsg`/`BlockHashesMsg` message pair. A set of blocks can be requested and received with `getBlocksMsg`/`BlocksMsg` message pair. 
 
 Although the exact way synchronisation is done is not specified by either the wire protocol or the block chain consensus protocol, the messages provided restrict the synchronisation process:
 

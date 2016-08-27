@@ -29,7 +29,7 @@ Contracts can receive transfers just like externally controlled accounts, but th
 # contract のコンパイル
 
 blockchain 上で有効となる contract は Ethereum 特別仕様の バイナリの形式で、EVM byte コード と呼ばれます。
-しかしながら、典型的には、contract は [solidity](https://github.com/ethereum/wiki/wiki/Solidity-Tutorial) のような高級言語で記述され、blockchain 上に upload するために、この byte コードへコンパイルされます。
+しかしながら、典型的には、contract は [solidity](https://github.com/ethereumproject/wiki/wiki/Solidity-Tutorial) のような高級言語で記述され、blockchain 上に upload するために、この byte コードへコンパイルされます。
 
 flontier リリースでは、geth は Christian R. と Lefteris K が手がけた、コマンドライン [solidity コンパイラ](https://github.com/ethereumproject/cpp-ethereum/tree/develop/solc) である `solc` をシステムコールで呼び出すことを通して、solidity コンパイルをサポートしています。
 以下もお試しください。
@@ -52,7 +52,7 @@ error: eth_compileSolidity method not implemented
 Invalid JSON RPC response
 ```
 
-After you found a way to install `solc`, you make sure it's in the path, if [`eth.getCompilers()`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgetcompilers) still does not find it (returns an empty array), you can set a custom path to the `sol` executable on the command line using th `solc` flag.
+After you found a way to install `solc`, you make sure it's in the path, if [`eth.getCompilers()`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetcompilers) still does not find it (returns an empty array), you can set a custom path to the `sol` executable on the command line using th `solc` flag.
 
 ```
 geth --datadir ~/frontier/00 --solc /usr/local/bin/solc --natspec
@@ -77,9 +77,9 @@ Let us take this simple contract source:
 This contract offers a unary method: called with a positive integer `a`, it returns `a * 7`. 
 Note that this document is not about writing interesting contracts or about the features of solidity.
 
-For more information on contract language, go through [solidity tutorial](https://github.com/ethereum/wiki/wiki/Solidity-Tutorial), browse the contracts in our [dapp-bin](https://github.com/ethereumproject/dapp-bin/wiki), see other solidity and dapp resources. 
+For more information on contract language, go through [solidity tutorial](https://github.com/ethereumproject/wiki/wiki/Solidity-Tutorial), browse the contracts in our [dapp-bin](https://github.com/ethereumproject/dapp-bin/wiki), see other solidity and dapp resources. 
 
-You are ready to compile solidity code in the `geth` JS console using [`eth.compile.solidity`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcompilesolidity):
+You are ready to compile solidity code in the `geth` JS console using [`eth.compile.solidity`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcompilesolidity):
 
 ```js
 > contract = eth.compile.solidity(source)
@@ -115,7 +115,7 @@ You are ready to compile solidity code in the `geth` JS console using [`eth.comp
 }
 ```
 
-The compiler is also available via [RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and therefore via [web3.js](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcompilesolidity) to any in-browser Ðapp connecting to `geth` via RPC.
+The compiler is also available via [RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) and therefore via [web3.js](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcompilesolidity) to any in-browser Ðapp connecting to `geth` via RPC.
 
 The following example shows how you interface `geth` via JSON-RPC to use the compiler.
 
@@ -131,16 +131,16 @@ The compiler output is combined into an object representing a single contract an
 * `language`: contract language (Solidity, Serpent, LLL)
 * `languageVersion`: contract language version
 * `compilerVersion`: compiler version 
-* `abiDefinition`: [Application Binary Interface Definition](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI)
-* `userDoc`: [NatSpec user Doc](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format)
-* `developerDoc`: [NatSpec developer Doc](https://github.com/ethereum/wiki/wiki/Ethereum-Natural-Specification-Format)
+* `abiDefinition`: [Application Binary Interface Definition](https://github.com/ethereumproject/wiki/wiki/Ethereum-Contract-ABI)
+* `userDoc`: [NatSpec user Doc](https://github.com/ethereumproject/wiki/wiki/Ethereum-Natural-Specification-Format)
+* `developerDoc`: [NatSpec developer Doc](https://github.com/ethereumproject/wiki/wiki/Ethereum-Natural-Specification-Format)
 
 The immediate structuring of the compiler output (into `code` and `info`) reflects the two very different **paths of deployment**. 
 The compiled EVM code is sent off to the blockchain with a contract creation transaction while the rest (info) will ideally live on the decentralised cloud as publicly verifiable metadata complementing the code on the blockchain.
 
 # Creating and deploying a contract
 
-Now that you got both an unlocked account as well as some funds, you can create a contract on the blockchain by [sending a transaction](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsendtransaction) to the empty address with the evm code as data. Simple, eh?
+Now that you got both an unlocked account as well as some funds, you can create a contract on the blockchain by [sending a transaction](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethsendtransaction) to the empty address with the evm code as data. Simple, eh?
 
 ```js
 primaryAddress = eth.accounts[0]
@@ -230,7 +230,7 @@ admin.contractInfo.registerUrl(primaryAccount, hash, url)
 
 # Interacting with contracts
 
-[`eth.contract`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcontract) can be used to define a contract _class_ that will comply with the contract interface as described in its [ABI definition](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI).
+[`eth.contract`](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethcontract) can be used to define a contract _class_ that will comply with the contract interface as described in its [ABI definition](https://github.com/ethereumproject/wiki/wiki/Ethereum-Contract-ABI).
 
 ```js
 var Multiply7 = eth.contract(contract.info.abiDefinition);
@@ -249,7 +249,7 @@ multiply7.multiply.call(6)
 Now suppose this contract is not yours, and you would like documentation or look at the source code. 
 This is made possible by making available the contract info bundle and register it in the blockchain.
 The `admin.contractInfo` API provides convenience methods to fetch this bundle for any contract that chose to register.
-To see how it works, read about [Contract Metadata](https://github.com/ethereum/wiki/wiki/Contract-metadata) or read the contract info deployment section of this document. 
+To see how it works, read about [Contract Metadata](https://github.com/ethereumproject/wiki/wiki/Contract-metadata) or read the contract info deployment section of this document. 
 
 ```js
 // get the contract info for contract address to do manual verification

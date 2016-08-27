@@ -10,7 +10,7 @@ your platform.
   * [Ubuntu](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)
   * [Arch](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-Arch)
   * [FreeBSD](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-FreeBSD)
-* [Setup for Raspberry Pi](https://github.com/ethereum/wiki/wiki/Raspberry-Pi-instructions)
+* [Setup for Raspberry Pi](https://github.com/ethereumproject/wiki/wiki/Raspberry-Pi-instructions)
  *  [ARM](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-ARM)
 * [Usage instructions for Docker](https://github.com/ethereumproject/go-ethereum/wiki/Running-in-Docker)
 

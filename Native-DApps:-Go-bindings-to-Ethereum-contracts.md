@@ -143,7 +143,7 @@ kept private to DApps, and not shared (by default) between them.
 
 Thus to allow transacting with a contract, your code needs to implement a method that
 given an input transaction, signs it and returns an authorized output transaction. Since
-most users have their keys in the [Web3 Secret Storage](https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition) format, the `bind` package contains a small utility method 
+most users have their keys in the [Web3 Secret Storage](https://github.com/ethereumproject/wiki/wiki/Web3-Secret-Storage-Definition) format, the `bind` package contains a small utility method 
 (`bind.NewTransactor(keyjson, passphrase)`) that can create an authorized transactor from
 a key file and associated password, without the user needing to implement key signing himself.
 
