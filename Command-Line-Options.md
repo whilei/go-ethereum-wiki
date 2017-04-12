@@ -33,7 +33,6 @@ ETHEREUM OPTIONS:
   --datadir "/home/karalabe/.ethereum"	Data directory for the databases and keystore
   --keystore 				Directory for the keystore (default = inside the datadir)
   --networkid value			Network identifier (integer, 0=Olympic, 1=Frontier, 2=Morden) (default: 1)
-  --olympic				Olympic network: pre-configured pre-release test network
   --testnet				Morden network: pre-configured test network with modified starting nonces (replay protection)
   --dev					Developer mode: pre-configured private network with several debugging flags
   --identity value			Custom node name
