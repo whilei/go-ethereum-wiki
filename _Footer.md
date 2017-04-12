@@ -1,1 +1,1 @@
-`golang <3`
+Stay Classy :heart:
