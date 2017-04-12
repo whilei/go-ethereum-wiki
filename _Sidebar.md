@@ -6,8 +6,6 @@
 
 [Installing Ethereum](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum)
 
-[Developers' Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers%27-Guide)
-
 ### Usage
 
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)

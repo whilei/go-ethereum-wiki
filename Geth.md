@@ -19,8 +19,6 @@ Supported Platforms are Linux, Mac Os and Windows.
 We support two types of installation: binary or scripted install for users. 
 See [Install instructions](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum) for binary and scripted installs.
 
-Developers and community enthusiast are advised to read the [Developers' Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers%27-Guide), which contains detailed instructions for manual build from source (on any platform) as well as detailed tips on testing, monitoring, contributing, debugging and submitting pull requests on github.
-
 ## Interfaces
 
 * Javascript Console: `geth` can be launched with an interactive console, that provides a javascript runtime environment exposing a javascript API to interact with your node. [Javascript Console API](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) includes the `web3` javascript Ðapp API as well as an additional admin API. 

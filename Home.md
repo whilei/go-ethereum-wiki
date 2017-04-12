@@ -15,6 +15,5 @@ Main entry points:
 * [Command Line Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
 * [JavaScript Console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
 * [Setting up private network or local cluster](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-private-network-or-local-cluster)
-* [Developers' Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers'-Guide)
 
 Sidebar lists all pages.

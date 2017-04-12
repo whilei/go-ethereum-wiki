@@ -1,5 +1,5 @@
 # Running tests on go-ethereum
-This page assumes go-ethereum has been configured according to the [Developers Guide](https://github.com/ethereumproject/go-ethereum/wiki/Developers'-Guide). All commands (unless stated otherwise) are assumed to be run from `$GOPATH/src/github.com/ethereumproject/go-ethereum`. You should have the latest Go installed (>= 1.8).
+All commands (unless stated otherwise) are assumed to be run from `$GOPATH/src/github.com/ethereumproject/go-ethereum`. You should have the latest Go installed (>= 1.8).
 
 ## Unit tests
 See [Travis](https://travis-ci.org/ethereum/go-ethereum/builds) or [Coveralls](https://coveralls.io/r/ethereum/go-ethereum) for status.
