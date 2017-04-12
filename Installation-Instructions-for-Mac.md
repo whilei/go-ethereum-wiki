@@ -43,10 +43,12 @@ Building `geth` requires some external libraries to be installed:
 brew install gmp go
 ```
 
+It's recommended to use the latest version of Go (>=1.8). To upgrade Go with Homebrew use `$ brew update go`.
+
 Finally, build the `geth` program using the following command.
 ```shell
 cd go-ethereum
-make geth
+go install cmd/geth # installs at $GOPATH/bin/geth
 ```
 
-You can now run `build/bin/geth` to start your node.
+You can now run `source $GOPATH/bin/geth` to start your node.

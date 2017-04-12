@@ -4,7 +4,7 @@ Download and run the installer found at http://golang.org/doc/install
 
 
 ### OS X
-Download an install the darwin binary from https://golang.org/dl/
+Download an install the darwin binary from https://golang.org/dl/. Or, use Homebrew with `$ brew install go`
 
 ### Linux
 
