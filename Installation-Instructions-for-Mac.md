@@ -1,32 +1,6 @@
-## Installing with Homebrew
-
-By far the easiest way to install go-ethereum is to use our
-Homebrew tap. If you don't have Homebrew, [install it first](http://brew.sh).
-
-Then run the following commands to add the tap and install `geth`:
-
-```shell
-brew tap ethereum/ethereum
-brew install ethereum
-```
-
-You can install the develop branch by running `--devel`:
-
-```shell
-brew install ethereum --devel
-```
-
-After installing, run `geth account new` to create an account on your node.
-
-You should now be able to run `geth` and connect to the network.
-
-Make sure to check the different options and commands with `geth --help`
-
-For options and patches, see: https://github.com/ethereumproject/homebrew-ethereum
-
 ## Building from source
 
-### Building Geth (command line client)
+### Building geth (command line client)
 
 Clone the repository to a directory of your choosing:
 
@@ -40,15 +14,18 @@ Building `geth` requires some external libraries to be installed:
 * [Go](https://golang.org)
 
 ```shell
-brew install gmp go
+$ brew install gmp go
 ```
 
 It's recommended to use the latest version of Go (>=1.8). To upgrade Go with Homebrew use `$ brew update go`.
 
 Finally, build the `geth` program using the following command.
 ```shell
-cd go-ethereum
-go install cmd/geth # installs at $GOPATH/bin/geth
+$ cd go-ethereum
+$ go install cmd/geth # installs at $GOPATH/bin/geth
+$ go install cmd/... # installs all command executables under `/cmd/`
 ```
 
-You can now run `source $GOPATH/bin/geth` to start your node.
+You can now run `source $GOPATH/bin/geth` to start your node. __Protip:__ If your `$GOPATH` is in your environment's `$PATH`, you'll be able to simply run `$ geth`.
+
+Run `$ geth --help` for an overview of options. To set up a new account, check out the [Managing Accounts page](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts).
