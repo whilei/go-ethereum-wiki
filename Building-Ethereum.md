@@ -4,7 +4,7 @@ These instructions are designed for developers building from source. If you'd ju
 Follow the appropriate link below to find installation instructions for
 your platform.
 
-* [Installation Instructions for Mac OS X](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-Mac)
+* [Installation Instructions for Mac OS X](/wiki/Installation-Instructions-for-Mac)
 * [Installation Instructions for Windows](https://github.com/ethereumproject/go-ethereum/wiki/Installation-instructions-for-Windows)
 * Installation Instructions for Linux/Unix
   * [Ubuntu](https://github.com/ethereumproject/go-ethereum/wiki/Installation-Instructions-for-Ubuntu)
