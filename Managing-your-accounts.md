@@ -1,12 +1,12 @@
 # Managing accounts
 
-**WARNING**
-Remember your password. 
+**WARNING:**
+:mortar_board: Remember your password. :bomb: 
 
 If you lose the password you use to encrypt your account, you will not be able to access that account.
-Repeat: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. Do not forget it.
+_Repeat_: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. __Do not forget it.__
 
-**Note**: the key file name naming convention changed as of `0.9.36`. This document is meant to reflect accurate information on accounts as used by the frontier release. 
+**Note**: the key file name naming convention changed as of `0.9.36`. This document is meant to reflect accurate information on accounts as used by the [Frontier release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier). 
 
 The ethereum CLI `geth` provides account management via the `account` subcommand:
 
@@ -28,7 +28,7 @@ The order of accounts when listing, is lexicographic, but as a consequence of th
 
 It is safe to transfer the entire directory or the individual keys therein between ethereum nodes. Note that in case you are adding keys to your node from a different node, the order of accounts may change. So make sure you do not rely or change the index in your scripts or code snippets.
 
-And finally. **DO NOT FORGET YOUR PASSWORD**
+And finally. **DO NOT FORGET YOUR PASSWORD** :non-potable_water:
 
 ```
 SUBCOMMANDS:
@@ -48,7 +48,7 @@ Accounts can also be managed via the [Javascript Console](https://github.com/eth
 ## Examples
 ### Interactive use
 
-#### creating an account 
+#### Creating an account 
 
 ```
 $ geth account new
