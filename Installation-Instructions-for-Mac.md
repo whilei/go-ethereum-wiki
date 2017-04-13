@@ -22,8 +22,8 @@ It's recommended to use the latest version of Go (>=1.8). To upgrade Go with Hom
 Finally, build the `geth` program using the following command.
 ```shell
 $ cd go-ethereum
-$ go install cmd/geth # installs at $GOPATH/bin/geth
-$ go install cmd/... # installs all command executables under `/cmd/`
+$ go install ./cmd/geth # installs at $GOPATH/bin/geth
+$ go install ./cmd/... # installs all command executables under `/cmd/`
 ```
 
 You can now run `source $GOPATH/bin/geth` to start your node. __Protip:__ If your `$GOPATH/bin` is in your environment's `$PATH`, you'll be able to simply run `$ geth`.
