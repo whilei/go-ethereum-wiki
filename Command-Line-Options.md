@@ -192,11 +192,20 @@ geth attach http://host:8545  # connect over HTTP
 geth attach ws://host:8546    # connect over websocket
 ```
 
-### External chain configuration
+### External chain configuration and handling multiple chains
+
+### --chain <kittyCoin>
+Will use sub-datadir at `<home>/EthereumClassic/kittyCoin/`. This command plays nicely with `--data-dir`, too.
+
+It does _not_ play nicely with `--testnet` or `--chain-config`, and there are a couple of chain ids that are blacklisted, like "morden", "nodes", "chaindata", and so forth.
+
 ```
-$ geth --chain-config path/to/customnet.json
+$ geth --chain kittyCoin [-flags] [command]
+
+$ geth --chain kittyCoin --data-dir path/to/etc/data [command]
 ```
 
+### --chain-config path/to/customnet.json
 Primarily for use in establishing and maintaining private blockchains and networks, configuration with an external JSON file allows fine-grained control over establishing a genesis block, implementing protocol upgrades (as fork features), and designating bootnodes.
 
 Please find below the default Testnet configuration with comments (non-JSON-friendly).
@@ -337,7 +346,7 @@ Bootnodes for establishing a connection to a network. In `enode` format.
 ```
 
 
-#### Dump-your-own external config
+#### dump-chain-config path/to/dump_customnet.json
 ```
 $ geth [-flags] dump-external-config put/it/here/customnet.json
 
@@ -347,15 +356,9 @@ $ geth --testnet dump-external-config put/it/here/customnet.json
 $ geth --bootnodes=enode://asdfasdf@12.123.12.12:12345 dump-external-config put/it/here/customnet.json
 ```
 
+### rollback 42
 
-### Rollback (Set Head)
-
-```
-$ geth rollback 123
-```
-> where 123 is the block number to rollback to.
-
-This is a destructive action! It will purge block data antecedent to the provided block; syncing will begin with your new head block. Probably mostly useful for development and testing.
+Where 42 is the _block number_ to rollback to. Uses `blockchain.SetHead()` method. __This is a destructive action!__ It will _purge block data_ antecedent to the provided block; syncing will begin with your new head block. Probably mostly useful for development and testing.
 
 
 

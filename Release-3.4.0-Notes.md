@@ -30,7 +30,7 @@ becomes:
 .../EthereumClassic/mainnet/keystore
 ```
 
-Geth will attempt to migrate (rename/`mv`) any relevant data from the old schema to the new, __unless__:
+Geth will attempt to migrate (rename,`mv`) any relevant data from the old schema to the new, __unless__:
  - it can't find _ETC (vs ETH)_ data in the old directories, 
  - the "old" data isn't in the _default locations_, 
  - or you _override_ the in-use defaults with the `--data-dir`, `--chain`, or `--external-config` flags.
