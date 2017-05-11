@@ -2,6 +2,8 @@
 
 [Frontier Release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)
 
+[3.4](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
+
 ### Install and build  
 
 [Installing Ethereum](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum)
