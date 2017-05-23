@@ -11,9 +11,11 @@ VERSION:
 COMMANDS:
    import         import a blockchain file
    export         export blockchain into file
+   dump-chain-config, dumpchainconfig   dump current chain configuration to JSON file [REQUIRED argument: filepath.json]
    upgrade-db, upgradedb      upgrade chainblock database
    remove-db, removedb        Remove blockchain and state databases
    dump           dump a specific block from storage
+   rollback, roll-back, set-head, sethead rollback [block index number] - set current head for blockchain
    monitor          Geth Monitor: node metrics monitoring and visualization
    account          manage accounts
    wallet         ethereum presale wallet
@@ -24,8 +26,6 @@ COMMANDS:
    gpu-info, gpuinfo        gpuinfo
    gpu-bench, gpubench        benchmark GPU
    version          print ethereum version numbers
-   dump-chain-config, dumpchainconfig   dump current chain configuration to JSON file [REQUIRED argument: filepath.json]
-   rollback, roll-back, set-head, sethead rollback [block index number] - set current head for blockchain
    help, h          Shows a list of commands or help for one command
    
 ETHEREUM OPTIONS:
@@ -45,8 +45,9 @@ ETHEREUM OPTIONS:
   --blockchain-version value, --blockchainversion value   Blockchain version (integer) (default: 3)
   
 ACCOUNT OPTIONS:
-  --unlock value  Comma separated list of accounts to unlock
-  --password value  Password file to use for non-inteactive password input
+  --unlock value      Comma separated list of accounts to unlock
+  --password value      Password file to use for non-inteactive password input
+  --index-accounts, --indexaccounts Enable key-value db store for indexing large amounts of key files
   
 API AND CONSOLE OPTIONS:
   --rpc             Enable the HTTP-RPC server
@@ -106,10 +107,14 @@ EXPERIMENTAL OPTIONS:
   --natspec Enable NatSpec confirmation notice
   
 MISCELLANEOUS OPTIONS:
-  --solc value        Solidity compiler command to be used (default: "solc")
-  --doc-root, --docroot "/Users/ia" Document Root for HTTPClient file scheme
-  --oppose-dao-fork     Use classic blockchain (always set, flag is unused and exists for compatibility only)
-  --help, -h        show help
+  --solc value              Solidity compiler command to be used (default: "solc")
+  --doc-root, --docroot "/Users/ia"       Document Root for HTTPClient file scheme
+  --log-dir, --logdir "/Users/ia/Library/EthereumClassic/logs"  Directory in which to write log files
+  --oppose-dao-fork           Use classic blockchain (always set, flag is unused and exists for compatibility only)
+  --help, -h              show help
+  
+
+
 ```
 
 Note that the default for datadir is platform-specific. See [backup & restore](https://github.com/ethereumproject/go-ethereum/wiki/Backup-&-restore) for more information.
