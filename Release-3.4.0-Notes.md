@@ -14,7 +14,7 @@ To learn more about these new features, check out the [Command Line Options wiki
 
 We've renamed the base default data directory from "Ethereum" to "EthereumClassic" (or OS-sensible variants). Along with this and the implementation of `--chain` flag, chain-based data are now stored by named _subdirectories_ under the parent data dir. This means
 
-out with the old:
+out with the **old**:
 
 ```bash
 # morden testnet defaults
@@ -27,7 +27,7 @@ out with the old:
 .../Ethereum/nodes
 .../Ethereum/keystore
 ```
-in with the new: 
+in with the **new**: 
 ```bash
 # morden testnet defaults
 .../EthereumClassic/morden/chaindata
