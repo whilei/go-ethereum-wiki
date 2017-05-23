@@ -28,6 +28,8 @@ The order of accounts when listing, is lexicographic, but as a consequence of th
 
 It is safe to transfer the entire directory or the individual keys therein between ethereum nodes. Note that in case you are adding keys to your node from a different node, the order of accounts may change. So make sure you do not rely or change the index in your scripts or code snippets.
 
+If you're interested in managing a large number (~100k+) accounts, please check out the [Indexing Accounts Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts), too.
+
 And finally. **DO NOT FORGET YOUR PASSWORD** :non-potable_water:
 
 ```
