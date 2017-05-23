@@ -28,7 +28,7 @@ The `--verbosity` flag in this example is optional, but may be desirable for mon
 
 ### Run with persistent indexed accounts
 
-Once you've built a index, running:
+Once you've built an index, running:
 
 ```shell
 $ geth --index-accounts
