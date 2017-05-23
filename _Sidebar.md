@@ -8,7 +8,7 @@
 
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
 
-[Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
+[Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
 
 [Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
 
