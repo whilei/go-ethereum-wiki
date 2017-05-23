@@ -12,7 +12,9 @@ To learn more about these new features, check out the [Command Line Options wiki
 
 ### Data directory migration
 
-We've renamed the base default data directory from "Ethereum" to "EthereumClassic" (or OS-sensible variants). Along with this and the implementation of `--chain` flag, chain-based data are now store by named _subdirectories_ under the parent data dir. This means
+We've renamed the base default data directory from "Ethereum" to "EthereumClassic" (or OS-sensible variants). Along with this and the implementation of `--chain` flag, chain-based data are now stored by named _subdirectories_ under the parent data dir. This means
+
+out with the old:
 
 ```bash
 # morden testnet defaults
@@ -25,7 +27,7 @@ We've renamed the base default data directory from "Ethereum" to "EthereumClassi
 .../Ethereum/nodes
 .../Ethereum/keystore
 ```
-becomes: 
+in with the new: 
 ```bash
 # morden testnet defaults
 .../EthereumClassic/morden/chaindata
