@@ -2,7 +2,7 @@
 
 If you're handling a large number of files (__~10k__ -> __~100k+__, depending on your system capacities) it becomes advantageous for geth to implement persistent indexing of the key files. 
 
-:rocket: This feature is currently available on the master branch, but has not been bundled into a release (yet!), and we'll be very happy to hear your feedback if you've taken advantage of this feature. :eyeglasses: 
+:rocket: This feature is currently available on the master branch, but has not been bundled into a release (yet!), and we'll be very happy to hear your feedback if you've taken advantage of it. :eyeglasses: 
 
 ### Overview
 
@@ -28,7 +28,7 @@ The `--verbosity` flag in this example is optional, but may be desirable for mon
 
 ### Run with persistent indexed accounts
 
-Once you've built a index, running:
+Once you've built an index, running:
 
 ```shell
 $ geth --index-accounts
@@ -46,6 +46,7 @@ _All measurements in nanoseconds/operation with watching disabled on *2.8 GHz In
 
 #### Create, Update, Sign, and Delete a new account
 This tests a bundled general suite of four interactions _without querying_. Here, in-memory is king, because the test essentially measures manipulations from memory vs. disk i/o. While persistent storage takes significantly more time (as high as 0.24 seconds for the suite), it's also worth noting that both rates behave approximately constantly across every tested number of key files.
+
 | Number of Accounts | In-memory caching | Persistent caching |
 | --- | --- | --- |
 | 100 | 29147464 | 88912525 |
@@ -60,6 +61,7 @@ This tests a bundled general suite of four interactions _without querying_. Here
 
 #### Sign a key given address and passphrase
 This tests a commonly used key transaction for a pre-existing key file/account. Here's where the payoff for persistent indexing comes; persisted key indexes must never be sorted or parsed entirely.
+
 | Number of Accounts | In-memory caching | Persistent caching |
 | --- | --- | --- |
 | 100 | 2963462 | 2923034 |
