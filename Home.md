@@ -16,11 +16,11 @@ __Common links__ and __main entry points__:
 * [Developer/Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
 * [Bitchin' Tricks](https://github.com/ethereumproject/go-ethereum/wiki/bitchin-tricks)
 
-For __general information__ related to Ethereum Classic including 
+For __general information__ related to Ethereum Classic including:
 - whitepaper 
 - yellow paper 
 - protocol and interface specs
 - affiliated APIs 
 - DAPP development guides
 
-see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki). 
+... please see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki). 
