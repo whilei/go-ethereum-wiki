@@ -22,6 +22,7 @@ COMMANDS:
    console          Geth Console: interactive JavaScript environment
    attach         Geth Console: interactive JavaScript environment (connect to node)
    js           executes the given JavaScript files in the Geth JavaScript VM
+   status         status - get the status of the current node
    make-dag, makedag        generate ethash dag (for testing)
    gpu-info, gpuinfo        gpuinfo
    gpu-bench, gpubench        benchmark GPU
@@ -32,8 +33,8 @@ ETHEREUM OPTIONS:
   --data-dir, --datadir "/Users/ia/Library/EthereumClassic" Data directory for the databases and keystore
   --chain value             Identifier of blockchain network to use (default='mainnet', test='morden').
                       Relevant data for this blockchain will correlate to subdirectories under your base data directory (--datadir), by ie $HOME/Library/EthereumClassic/mainnet/.
-                      This variable can also be configured from an external JSON chain configuration file by setting the 'id' key. (default: "mainnet")
-  --chain-config value, --chainconfig value     Specify a JSON format chain configuration file to use.
+                      If using a custom identity (i.e. --chain=custom), there must be a valid JSON chain configuration file at <datadir>/custom/chain.json
+                       (default: "mainnet")
   --keystore              Directory for the keystore (default = inside the datadir)
   --network-id value, --networkid value       Network identifier (integer, 0=Olympic, 1=Homestead, 2=Morden) (default: 1)
   --testnet             Morden network: pre-configured test network with modified starting nonces (replay protection)
@@ -112,9 +113,6 @@ MISCELLANEOUS OPTIONS:
   --log-dir, --logdir "/Users/ia/Library/EthereumClassic/logs"  Directory in which to write log files
   --oppose-dao-fork           Use classic blockchain (always set, flag is unused and exists for compatibility only)
   --help, -h              show help
-  
-
-
 ```
 
 Note that the default for datadir is platform-specific. See [backup & restore](https://github.com/ethereumproject/go-ethereum/wiki/Backup-&-restore) for more information.
@@ -199,26 +197,30 @@ geth attach ws://host:8546    # connect over websocket
 
 ### External chain configuration and handling multiple chains
 
-### --chain [kittyCoin]
-Will use sub-datadir at `<home>/EthereumClassic/kittyCoin/`. This command plays nicely with `--data-dir`, too. It does _not_ play nicely with `--chain-config`. 
+### --chain NAME
 
-This flag can also be used to activate the __Morden Testnet__ configuration via `--chain=morden` or `--chain=testnet`; both flag values will assume a default sub-datadir at _/morden_. If you'd like to use a Morden testnet configuration in a subdirectory other than _/morden_, you can use `--chain mycustomtestnet --testnet` to do so.
+This flag can also be used to activate the __Morden Testnet__ configuration via `--chain=morden` or `--chain=testnet`; both flag values will assume a default sub-datadir at _/morden_. This command plays nicely with `--data-dir`, too. 
 
 There are a couple of chain ids that are __blacklisted__, like "nodes", "chaindata", "dapp", and so forth, because they conflict with existing directory structure namespaces.
 
-```
-$ geth --chain kittyCoin [-flags] [command]
+Flagged values for `--chain=kittyCoin` must have a corresponding `<home>/EthereumClassic/kittyCoin/chain.json`. 
 
-$ geth --chain kittyCoin --data-dir path/to/etc/data [command]
-$ geth --chain fakeKittyCoin --testnet [command]
+```
+$ geth --chain morden [-flags] [command]
+$ geth --chain morden --data-dir path/to/etc/data [command]
+
+$ geth --chain kittyCoin [command]
 ```
 
-### --chain-config [path/to/customnet.json]
-Primarily for use in establishing and maintaining private blockchains and networks, configuration with an external JSON file allows fine-grained control over establishing a genesis block, implementing protocol upgrades (as fork features), and designating bootnodes.
+### Private network
+`--chain` can be used in establishing and maintaining private blockchains and networks; configuration with an external JSON file allows fine-grained control over establishing a genesis block, implementing protocol upgrades (as fork features), and designating bootnodes. 
+
+_Note:_ As of Geth 3.5, the chain configuration file for a private network must located at `<datadir>/custom/chain.json`.
+
 
 Please find below the default Testnet configuration with comments (non-JSON-friendly).
 
-Sets /subdir beneath parent `--data-dir`. In case of values "mainnet", "morden", and "testnet", it will _override_ the customization configuration and enable the respective defaults.
+The __identity__ (_not_ `chain ID`, like 61, 62, or 1) of the chain; this _must_ match the parent subdirectory.
 ```
 {
   "id": "morden", 
@@ -354,7 +356,11 @@ Bootnodes for establishing a connection to a network. In `enode` format.
 ```
 
 
-#### dump-chain-config [path/to/dump_customnet.json]
+#### dump-chain-config PATH
+Aids in establishing a base configuration file for a private network. 
+
+This command is only compatible with dumping _default_ configurations (currently Mainnet and Morden Testnet).
+
 ```
 $ geth [-flags] dump-external-config put/it/here/customnet.json
 
@@ -364,7 +370,7 @@ $ geth --chain=morden dump-external-config put/it/here/customnet.json
 $ geth --bootnodes=enode://asdfasdf@12.123.12.12:12345 dump-external-config put/it/here/customnet.json
 ```
 
-### rollback [42]
+### rollback NUMBER
 
 Where 42 is the _block number_ to rollback to. Uses `blockchain.SetHead()` method. __This is a destructive action!__ It will _purge block data_ antecedent to the provided block; syncing will begin with your new head block. Probably mostly useful for development and testing.
 

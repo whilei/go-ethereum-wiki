@@ -1,7 +1,6 @@
 [Main Ethereum Wiki](https://github.com/ethereumproject/wiki/wiki)
-
 [Frontier Release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)
-
+[Geth 3.5 Release](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
 [Geth 3.4 Release](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
 
 ### Usage
