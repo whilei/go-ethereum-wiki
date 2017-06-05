@@ -13,8 +13,8 @@
 - _Option__: `--chain` replaces `--chain-config` and expects consistent custom external chain config JSON path (`datadir/custom/chain.json`)
 
 #### Fixed
-- SIGSEGV crash on malformed ChainID signer for replay-protected blocks.
 - Hash map exploit opportunity (thanks @karalabe)
+- SIGSEGV crash on malformed ChainID signer for replay-protected blocks.
 
 #### Removed
 - _Option_: `--chain-config`, replaced by `--chain`

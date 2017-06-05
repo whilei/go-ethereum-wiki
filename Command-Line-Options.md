@@ -223,12 +223,12 @@ Please find below the default Testnet configuration with comments (non-JSON-frie
 The __identity__ (_not_ `chain ID`, like 61, 62, or 1) of the chain; this _must_ match the parent subdirectory.
 ```
 {
-  "id": "morden", 
+  "id": "kitty", 
 ```
 
 Human readable. The only optional key/value in the file.
 ```
-  "name": "Morden Testnet", 
+  "name": "Kitty Net", 
 ```
 
 Establish a genesis block. `alloc` is optional; it establishes starting accounts and balances. Blank values here are also optional. 
@@ -364,10 +364,9 @@ This command is only compatible with dumping _default_ configurations (currently
 ```
 $ geth [-flags] dump-external-config put/it/here/customnet.json
 
-$ geth --chain kittyCoin dump-external-config put/it/here/customnet.json
 $ geth --data-dir my/etc/data dump-external-config put/it/here/customnet.json
 $ geth --chain=morden dump-external-config put/it/here/customnet.json
-$ geth --bootnodes=enode://asdfasdf@12.123.12.12:12345 dump-external-config put/it/here/customnet.json
+$ geth --bootnodes=enode://asdfasdf@12.123.12.12:12345 dump-external-config ./put/it/here/customnet.json
 ```
 
 ### rollback NUMBER
