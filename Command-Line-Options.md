@@ -158,22 +158,26 @@ When the consensus algorithm is changed blocks in the blockchain must be reimpor
 
 Start two mining nodes using different data directories listening on ports 30303 and 30304, respectively:
 
-    geth --mine --minerthreads 4 --datadir /usr/local/share/ethereum/30303 --port 30303
-    geth --mine --minerthreads 4 --datadir /usr/local/share/ethereum/30304 --port 30304
+    geth --mine --miner-threads 4 --data-dir /usr/local/share/ethereum/30303 --port 30303
+    geth --mine --miner-threads 4 --data-dir /usr/local/share/ethereum/30304 --port 30304
     
 Start an rpc client on port 8000:
 
-    geth --rpc --rpcport 8000 --rpccorsdomain "*"
+    geth --rpc --rpc-port 8000 --rpccorsdomain "*"
 
 Launch the client without network:
 
-    geth --maxpeers 0 --nodiscover --networdid 3301 js justwannarunthis.js
+    geth --maxpeers 0 --no-discover --networdid 3301 js justwannarunthis.js
 
 #### Resetting the blockchain
 
-In the datadir, delete the blockchain directory.  For an example above:
+Use the `rollback` command to purge blocks antecedent to genesis.  For an example above:
 
-    rm -rf /usr/local/share/ethereum/30303/blockchain
+    geth --data-dir /usr/local/share/ethereum/30304 rollback 0
+
+To nuke the chaindata entirely (including genesis), you can use:
+
+    rm -rf --data-dir /usr/local/share/ethereum/30304/chaindata
 
 ### Sample usage in testing environment
 
@@ -182,7 +186,7 @@ The lines below are meant only for test network and safe environments for non-in
 ```
 geth --datadir /tmp/eth/42 --password <(echo -n notsosecret) account new 2>> /tmp/eth/42.log
 geth --datadir /tmp/eth/42 --port 30342  js <(echo 'console.log(admin.nodeInfo().NodeUrl)') > enode 2>> /tmp/eth/42.log
-geth --datadir /tmp/eth/42 --port 30342 --password <(echo -n notsosecret) --unlock primary --minerthreads 4 --mine 2>> /tmp/eth/42.log
+geth --datadir /tmp/eth/42 --port 30342 --password <(echo -n notsosecret) --unlock primary --miner-threads 4 --mine 2>> /tmp/eth/42.log
 ```
 
 ### Attach
@@ -191,6 +195,7 @@ Attach a console to a running geth instance. By default this happens over IPC on
 ```
 geth attach                   # connect over IPC on default endpoint
 geth attach ipc:/some/path    # connect over IPC on custom endpoint
+geth --chain=morden attach    # connect to default Morden IPC endpoint
 geth attach http://host:8545  # connect over HTTP
 geth attach ws://host:8546    # connect over websocket
 ```
