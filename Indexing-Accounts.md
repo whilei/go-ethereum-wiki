@@ -22,9 +22,9 @@ Before running geth with the indexed accounts option, you'll first need to build
 $ geth --verbosity 5 --index-accounts account index
 ```
 
-to create an index store (_accounts.db_).
+to create an index store (_accounts.db_). The `--verbosity` flag in this example is optional, but may be desirable for monitoring progress. 
 
-The `--verbosity` flag in this example is optional, but may be desirable for monitoring progress. You may additionally use `--data-dir`, `--chain`, and `--keystore` flags to specify custom base data directory, chain subdirectory, and keystore directory as well.
+You may additionally use `--data-dir`, `--chain`, and `--keystore` flags to specify custom base data directory, chain subdirectory, and keystore directory as well.
 
 ### Run with persistent indexed accounts
 
