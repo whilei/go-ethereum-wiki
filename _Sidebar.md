@@ -7,9 +7,9 @@
 
 [Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
 
-- [Blockchain Synchronisation Tech Overview](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
+[Blockchain Synchronisation Tech Overview](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
 
-- [Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
+[Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
 
 
 ### Reference
@@ -17,7 +17,6 @@
 [CLI Commands & Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
 
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
- - [Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
 
 [Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
 

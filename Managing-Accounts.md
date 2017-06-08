@@ -3,32 +3,30 @@
 **WARNING:**
 :mortar_board: Remember your password. :bomb: 
 
-If you lose the password you use to encrypt your account, you will not be able to access that account.
-_Repeat_: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. __Do not forget it.__
+If you lose the password you use to encrypt your account, you will not be able to access that account. _Repeat_: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. __Do not forget it.__
 
 **Note**: the key file name naming convention changed as of `0.9.36`. This document is meant to reflect accurate information on accounts as used by the [Frontier release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier). 
 
-The ethereum CLI `geth` provides account management via the `account` subcommand:
+**Note**: If you're interested in managing a large number (~100k+) accounts, please check out the [Indexing Accounts Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts).
+
+Geth provides account management via the `account` subcommand:
 
 ```
-account command [arguments...]
+geth account [subcommand] [arguments...]
 ```
 
-Manage accounts lets you create new accounts, list all existing accounts, import a private key into a new account, migrate to newest key format and change your password.
+The account manager allows you to create new accounts, list all existing accounts, import a private key into a new account, migrate to newest key format and change your password.
 
 It supports interactive mode, when you are prompted for password as well as non-interactive mode where passwords are supplied via a given password file. Non-interactive mode is only meant for scripted use on test networks or known safe environments.
 
-Make sure you remember the password you gave when creating a new account (with new, update or import). Without it you are not able to unlock your account.
+_Make sure you remember the password you gave when creating a new account (with new, update or import). Without it you are not able to unlock your account._
 
 Note that exporting your key in unencrypted format is NOT supported.
 
 Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly! See [DATADIR backup & restore](https://github.com/ethereumproject/go-ethereum/wiki/Backup-&-restore) for more information.
-The newest format of the keyfiles is: `UTC--<created_at UTC ISO8601>-<address hex>`.
-The order of accounts when listing, is lexicographic, but as a consequence of the timespamp format, it is actually order of creation 
+The newest format of the keyfiles is: `UTC--<created_at UTC ISO8601>-<address hex>`. The order of accounts when listing, is lexicographic, but as a consequence of the timespamp format, it is actually order of creation. 
 
 It is safe to transfer the entire directory or the individual keys therein between ethereum nodes. Note that in case you are adding keys to your node from a different node, the order of accounts may change. So make sure you do not rely or change the index in your scripts or code snippets.
-
-If you're interested in managing a large number (~100k+) accounts, please check out the [Indexing Accounts Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts), too.
 
 And finally. **DO NOT FORGET YOUR PASSWORD** :non-potable_water:
 
