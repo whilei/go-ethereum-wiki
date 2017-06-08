@@ -1,27 +1,37 @@
 :telescope: [Ethereum Project Wiki](https://github.com/ethereumproject/wiki/wiki)
 
-### Usage
+### Developers
+
+[![API Reference](https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
+)](https://godoc.org/github.com/ethereumproject/go-ethereum)
+
+[Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
+
+__Code Reviews:__
+- [Blockchain Synchronisation](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
+
+- [Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
+
+
+### Reference
 
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
  - [Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
-
-[Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
-
-[Contracts and transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
-
-
-### Interface Documentation
-
-[Command Line Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
 
 [JavaScript Console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
 
 [Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
 
-[JSON-RPC server](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+[JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+
+[Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
+
+[Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
+
+[CLI Commands & Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
 
 
-### Issues
+### FAQs, Issues, and Support
 
 [Troubleshooting](https://github.com/ethereumproject/go-ethereum/wiki/Troubleshooting)
 
@@ -39,22 +49,6 @@
 [Whisper](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
 
 [Local Cluster Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Local-Cluster-Monitoring-Tutorial)
-
-### Developers
-
-[![API Reference](https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
-)](https://godoc.org/github.com/ethereumproject/go-ethereum)
-
-[Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
-
-[Metrics and Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-And-Monitoring)
-
-
-#### Code Reviews
-
-[Blockchain Synchronisation](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
-
-[Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
 
 
 ### Release Notes
