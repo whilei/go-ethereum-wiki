@@ -1,10 +1,4 @@
-:telescope: [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki)
-
-### Releases
-
-[Geth 3.5](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
-
-[Geth 3.4](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
+:telescope: [Ethereum Project Wiki](https://github.com/ethereumproject/wiki/wiki)
 
 ### Usage
 
@@ -48,6 +42,9 @@
 
 ### Developers
 
+[![API Reference](https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
+)](https://godoc.org/github.com/ethereumproject/go-ethereum)
+
 [Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
 
 [Metrics and Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-And-Monitoring)
@@ -58,3 +55,10 @@
 [Blockchain Synchronisation](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
 
 [Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
+
+
+### Release Notes
+
+[Geth 3.5](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
+
+[Geth 3.4](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
