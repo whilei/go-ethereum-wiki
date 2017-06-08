@@ -8,8 +8,14 @@ Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https:
 
 The `ethereum CLI` executable `geth` has a JavaScript console (a **Read, Evaluate & Print Loop** = REPL exposing the JSRE), which can be started with the `console` or `attach` subcommand. The `console` subcommands starts the geth node and then opens the console. The `attach` subcommand will not start the geth node but instead tries to open the console on a running geth instance.
 
-    $ geth console
-    $ geth attach
+```shell
+$ geth 2>>out.log console # redirect logs to a file and begin interactive console session
+```
+
+```shell
+$ geth # terminal 1
+$ geth attach # terminal 2
+```
 
 The attach node accepts an endpoint in case the geth node is running with a non default ipc endpoint or you would like to connect over the rpc interface.
 

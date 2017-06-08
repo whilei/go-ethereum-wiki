@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/ethereumclassic/Media_Kit/blob/master//Classic_Logo_Solid/ETC_LOGO_Full_Color_Black.png" width="150"/>
+</p>
+
 __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications. 
 
 :telescope: For __general information__ related to Ethereum Classic including:
@@ -7,17 +11,17 @@ __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting 
 - affiliated APIs 
 - DAPP development guides
 
-... please see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki). 
+... please see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki) or visit [our website](https://ethereumclassic.github.io). 
 
 ### Geth
-The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node implemented in Go. It offers three interfaces: 
+The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node. It offers three interfaces: 
 - the [command line subcommands and options](./Command-Line-Options), 
 - a [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) server, and
 - an interactive [Javascript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console). 
 
-Supported Platforms are Linux, Mac, and Windows. In order to install Geth, please vist our [Releases Page](github.com/ethereumproject/go-ethereum/releases). Please consider reviewing our [Disclaimer Notice](./Disclaimer) before use.
+__Platforms:__ Supported Platforms are Linux, Mac, and Windows. In order to install Geth, please vist our [Releases Page](github.com/ethereumproject/go-ethereum/releases). Please consider reviewing our [Disclaimer Notice](./Disclaimer) before use.
 
-The Ethereum Classic Core Protocol licensed under the [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl.html). All frontend client software (under [cmd](https://github.com/ethereumproject/go-ethereum/tree/master/cmd)) is licensed under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html).
+__License:__ The Ethereum Classic Core Protocol licensed under the [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl.html). All frontend client software (under [cmd](https://github.com/ethereumproject/go-ethereum/tree/master/cmd)) is licensed under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html).
 
 By installing and running `geth`, you can take part in the Ethereum Classic live network and
 - mine real ether 
@@ -98,7 +102,6 @@ Name or blame = list of contributors:
 * [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
 * [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
 [netintelligence-api](https://github.com/cubedro/eth-net-intelligence-api/graphs/contributors)
-
 
 
 
