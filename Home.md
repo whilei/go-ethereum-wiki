@@ -59,19 +59,17 @@ geth --help
 #### Testing
 See the [Testing Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Testing) for information on unit, integration, and external tests. 
 
-#### Further
+#### Logging
 Geth outputs `stderr` to the console. Output from the console can be logged or redirected:
 ```
 geth 2>>geth.log
 ```
 
-Using standard tools, the log can be monitored in a separate window:
-```
-tail -f geth.log
-```
-
 Additionally, you may can use `--log-dir=PATH` to specify a directly in which geth will write it's logs to a timestamped file.
 
+You can also use `geth attach` to begin a Javascript console session with an already-running instance of geth; just use a second terminal.
+
+#### Further
 - If you're integrating another application or service with geth:
     + [Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
     + [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
@@ -79,15 +77,9 @@ Additionally, you may can use `--log-dir=PATH` to specify a directly in which ge
 - Interested in working with some associated packages?
     + [P2P](https://github.com/ethereumproject/go-ethereum/wiki/Peer-To-Peer)    
 
-### FAQs, Issues, and Support
+### Issues and Support
 
-I sent a transaction, but it's forever 'pending'. I see no errors, but geth doesn't seem to be processing the transaction.
-> Check your transaction's `nonce` value. If a transaction with a nonce is submitted with a "too high" nonce value, geth will hold the transaction in memory and wait until it receives a transaction with a correct nonce to insert before yours. Nodes can receive transactions asynchronously, so there is no way to check if a nonce is (or will be) missing completely.
-
-What is the difference between `chain id`, `chain identity`, and `network id`?
-> - `chain id` is used by the chain configuration for signing replay-protected (see [EIP155](todo)) transactions. It is configured in the "Diehard" upgrade fork.
-> - `chain identity` is a local value, and is not a part of the p2p or blockchain protocols, per se. With default values "mainnet" and "morden", it can be used as an argument to specify a custom chain. When doing so, the configuration file JSON key "identity" must match the containing subdirectory (`/datadir/customnet/chain.json`) to ensure your configurations are in proper order.
-> - `network id` is used in the p2p protocol to identify valid peers on a given network. Mainnet network id is 1, Morden is 2, and your private net can be any positive integer (although best not 1 or 2, to avoid trying unuseful peers). 
+Please browse our [FAQ Wiki page](./FAQ) to see if there's already an answer to your question. If there isn't, please file an issue or get [in touch with us on Slack](http://ethereumclassic.herokuapp.com/) (#help or #development channels, preferably).
 
 #### Reporting 
 
@@ -106,9 +98,6 @@ Name or blame = list of contributors:
 * [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
 * [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
 [netintelligence-api](https://github.com/cubedro/eth-net-intelligence-api/graphs/contributors)
-
-### License
-
 
 
 

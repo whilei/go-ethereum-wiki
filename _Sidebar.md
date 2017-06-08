@@ -19,13 +19,13 @@
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
  - [Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
 
+[Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
+
 [JavaScript Console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
 
 [Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
 
 [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
-
-[Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
 
 [Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
 
@@ -34,7 +34,9 @@
 
 [FAQ](https://github.com/ethereumproject/go-ethereum/wiki/FAQ)
 
-[Reporting Issues](https://github.com/ethereumproject/go-ethereum/wiki/geth#reporting)
+[Reporting Issues](https://github.com/ethereumproject/go-ethereum/wiki/Home#reporting)
+
+[Network Connection](./Connecting-to-the-network)
 
 [Backup and Restore](./Backup-And-Restore)
 
@@ -46,6 +48,8 @@
 [Contract Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
 
 [Whisper Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
+
+[Private Networking Tutorial](./Private-Networking-Tutorial)
 
 [Local Cluster Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Local-Cluster-Monitoring-Tutorial)
 
