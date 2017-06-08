@@ -2,7 +2,7 @@
 
 If you're handling a large number of files (__~10k__ -> __~100k+__, depending on your system capacities) it becomes advantageous for geth to implement persistent indexing of the key files. 
 
-:rocket: This feature is currently available on the master branch, but has not been bundled into a release (yet!), and we'll be very happy to hear your feedback if you've taken advantage of it. :eyeglasses: 
+:rocket: This feature relatively young -- having only been included in 3.5.0 -- and we'll be very happy to hear your feedback if you've taken advantage of it. :eyeglasses: 
 
 ### Overview
 
@@ -22,9 +22,9 @@ Before running geth with the indexed accounts option, you'll first need to build
 $ geth --verbosity 5 --index-accounts account index
 ```
 
-to create an index store (_accounts.db_).
+to create an index store (_accounts.db_). The `--verbosity` flag in this example is optional, but may be desirable for monitoring progress. 
 
-The `--verbosity` flag in this example is optional, but may be desirable for monitoring progress. You may additionally use `--data-dir`, `--chain`, and `--keystore` flags to specify custom base data directory, chain subdirectory, and keystore directory as well.
+You may additionally use `--data-dir`, `--chain`, and `--keystore` flags to specify custom base data directory, chain subdirectory, and keystore directory as well.
 
 ### Run with persistent indexed accounts
 
