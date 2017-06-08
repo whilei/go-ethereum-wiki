@@ -1,22 +1,20 @@
-[Main Ethereum Wiki](https://github.com/ethereumproject/wiki/wiki)
+:telescope: [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki)
 
-[Frontier Release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier)
+### Releases
 
-[Geth 3.5 Release](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
+[Geth 3.5](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
 
-[Geth 3.4 Release](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
+[Geth 3.4](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
 
 ### Usage
 
-[Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
-
-[Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
+[Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
+ - [Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
 
 [Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
 
 [Contracts and transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
 
-[Contract Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
 
 ### Interface Documentation
 
@@ -28,20 +26,35 @@
 
 [JSON-RPC server](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
 
+
 ### Issues
 
 [Troubleshooting](https://github.com/ethereumproject/go-ethereum/wiki/Troubleshooting)
 
 [FAQ](https://github.com/ethereumproject/go-ethereum/wiki/FAQ)
 
-[Reporting issues](https://github.com/ethereumproject/go-ethereum/wiki/geth#reporting)
+[Reporting Issues](https://github.com/ethereumproject/go-ethereum/wiki/geth#reporting)
 
-[Community and support](https://github.com/ethereumproject/go-ethereum/wiki/geth#community-and-support)
+[Community and Support](https://github.com/ethereumproject/go-ethereum/wiki/geth#community-and-support)
+
+
+### Tutorials
+
+[Contract](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
+
+[Whisper](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
+
+[Local Cluster Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Local-Cluster-Monitoring-Tutorial)
 
 ### Developers
 
-[Native DApps](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+[Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
 
-### Legacy
+[Metrics and Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-And-Monitoring)
 
-[Legacy pages](https://github.com/ethereumproject/go-ethereum/wiki/Legacy)
+
+#### Code Reviews
+
+[Blockchain Synchronisation](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
+
+[Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)

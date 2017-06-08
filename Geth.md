@@ -27,7 +27,7 @@ See [Install instructions](https://github.com/ethereumproject/go-ethereum/wiki/B
 
 ## Basic Use Case Documentation
 
-* [Managing accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
+* [Managing accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
 * [Mining](https://github.com/ethereumproject/go-ethereum/wiki/mining)
 * [Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
 

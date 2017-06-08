@@ -17,7 +17,7 @@ The Ethereum network goes live when the clients consent on the **genesis block**
 
 In conjunction with the Frontier launch several exchanges will likely start enabling trade of Ether, which will provide necessary liquidity to the marketplace, allowing users and miners to transfer their holdings to other users requiring more or less Ether. As opposed to an earlier strategy, there is no plan to remove any contracts from the blockchain or otherwise alter the network to carry balances over to Homestead. In other words, the state in Homestead will be a direct and unmodified continuation of the state in Frontier. 
 
-Mining reward is the full amount of 5 ether per block (as opposed to our earlier proposal of a reduced amount). Mining rewards are discussed in detail [here](https://github.com/ethereumproject/go-ethereum/wiki/Mining#mining-rewards)
+
 
 ## Safety warnings
 

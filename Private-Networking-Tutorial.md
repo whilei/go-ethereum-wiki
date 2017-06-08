@@ -10,6 +10,7 @@ In order to run multiple ethereum nodes locally, you have to make sure:
 - each instance runs on a different port (both eth and rpc) (`--port and --rpcport`)
 - in case of a cluster the instances must know about each other
 - the ipc endpoint is unique or the ipc interface is disabled (`--ipcpath or --ipcdisable`)
+- the chains are identical
 
 You start the first node (let's make port explicit and disable ipc interface)
 ```bash

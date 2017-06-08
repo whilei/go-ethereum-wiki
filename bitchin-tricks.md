@@ -1,4 +1,4 @@
-# Bitchin' tricks
+# Bitchin' Tricks
 
 ### Geth
 
@@ -34,7 +34,7 @@ eth.filter("pending", function(err, block) { checkWork(); });
 checkWork();
 ```
 
-Curtesy @chfast
+Courtesy @chfast
 
 #### Quick scripts
 
@@ -42,7 +42,6 @@ Curtesy @chfast
 
 ```
 $ geth --exec "eth.accounts" console 2>/dev/null
-
 ["0x0000000000000000000000000000000000000000"]
 ```
 
@@ -50,6 +49,5 @@ $ geth --exec "eth.accounts" console 2>/dev/null
 
 ```
 $ geth --exec "eth.accounts" attach
-
 ["0x0000000000000000000000000000000000000000"]
 ```

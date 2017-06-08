@@ -1,5 +1,7 @@
 * [Introduction to Ethereum mining](https://github.com/ethereumproject/wiki/wiki/Mining#introduction) _(main wiki)_
 
+Currently, mining reward is the full amount of 5 ether per block, with a small bonus for included uncles. Uncle miners can receive up to 7/8*5 ether. With the forthcoming ECIP-1017 changes, these rewards will change. Mining rewards are discussed in detail [here](https://github.com/ethereumproject/go-ethereum/wiki/Mining#mining-rewards). 
+
 # CPU Mining with Geth
 
 At Frontier, the first release of Ethereum, you'll just need a) a GPU and b) an Ethereum client, Geth. CPU mining will be possible but too inefficient to hold any value.
@@ -25,7 +27,7 @@ true
 
 Note that mining for real ether only makes sense if you are in sync with the network (since you mine on top of the consensus block). Therefore the eth blockchain downloader/synchroniser will delay mining until syncing is complete, and after that mining automatically starts unless you cancel your intention with `miner.stop()`.
 
-In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
+In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
 
 You can set your etherbase on the command line:
 

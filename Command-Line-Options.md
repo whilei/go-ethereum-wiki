@@ -120,7 +120,7 @@ Note that the default for datadir is platform-specific. See [backup & restore](h
 ## Examples
 
 ### Accounts
-See [Account management](https://github.com/ethereumproject/go-ethereum/wiki/Managing-your-accounts)
+See [Account management](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
 
 Import ether presale wallet into your node (prompts for password):
 
