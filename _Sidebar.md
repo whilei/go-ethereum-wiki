@@ -7,13 +7,14 @@
 
 [Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
 
-__Code Reviews:__
-- [Blockchain Synchronisation](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
+- [Blockchain Synchronisation Tech Overview](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
 
 - [Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
 
 
 ### Reference
+
+[CLI Commands & Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
 
 [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
  - [Indexing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts)
@@ -28,25 +29,23 @@ __Code Reviews:__
 
 [Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
 
-[CLI Commands & Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
-
 
 ### FAQs, Issues, and Support
-
-[Troubleshooting](https://github.com/ethereumproject/go-ethereum/wiki/Troubleshooting)
 
 [FAQ](https://github.com/ethereumproject/go-ethereum/wiki/FAQ)
 
 [Reporting Issues](https://github.com/ethereumproject/go-ethereum/wiki/geth#reporting)
 
-[Community and Support](https://github.com/ethereumproject/go-ethereum/wiki/geth#community-and-support)
+[Backup and Restore](./Backup-And-Restore)
 
 
 ### Tutorials
 
-[Contract](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
+[Sending Ether Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Sending-Ether-Tutorial)
 
-[Whisper](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
+[Contract Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
+
+[Whisper Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
 
 [Local Cluster Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Local-Cluster-Monitoring-Tutorial)
 

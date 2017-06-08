@@ -15,6 +15,25 @@ Integration tests for Go are included in the `tests` directory and can be run wi
 go test ./tests/
 ```
 
+Run a specific module with:
+```shell
+go test ./core/...
+```
+
+Or a specific test file:
+```shell
+go test ./core/config_test.go
+```
+
+### Bats
+Geth uses [sstephenson/bats: Bash Automated Testing System](sstephenson/bats: Bash Automated Testing System) to test command line integration.
+
+Run the bats tests with:
+```shell
+cd $GOPATH/src/github.com/ethereumproject/go-ethereum
+bats cmd/geth
+```
+
 ### Ethtest
 Alternatively, there is a CLI application, `ethtest` who can be used to run these tests without Go. The binary can be built from `./cmd/ethtest` and then run from anywhere (such as the root directory of the test files). Some examples:
 
