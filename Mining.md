@@ -1,6 +1,6 @@
 * [Introduction to Ethereum mining](https://github.com/ethereumproject/wiki/wiki/Mining#introduction) _(main wiki)_
 
-Currently, mining reward is the full amount of 5 ether per block, with a small bonus for included uncles. Uncle miners can receive up to 7/8*5 ether. With the forthcoming ECIP-1017 changes, these rewards will change. Mining rewards are discussed in detail [here](https://github.com/ethereumproject/go-ethereum/wiki/Mining#mining-rewards). 
+Currently, mining reward is the full amount of 5 ether per block, with a small bonus for included uncles. Uncle miners can receive up to 7/8*5 ether. With the forthcoming ECIP-1017 changes, these rewards will change. Mining rewards are discussed in detail [here](./Mining#mining-rewards). 
 
 # CPU Mining with Geth
 
@@ -12,11 +12,11 @@ The C++ implementation of Ethereum also offers a GPU miner, both as part of Eth 
 
 _**NOTE:** Ensure your blockchain is fully synchronised with the main chain before starting to mine, otherwise you will not be mining on the main chain._
 
-When you start up your ethereum node with `geth` it is not mining by default. To start it in mining mode, you use the `--mine` [command line option](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options). The `-minerthreads` parameter can be used to set the number parallel mining threads (defaulting to the total number of processor cores). 
+When you start up your ethereum node with `geth` it is not mining by default. To start it in mining mode, you use the `--mine` [command line option](./Command-Line-Options). The `-minerthreads` parameter can be used to set the number parallel mining threads (defaulting to the total number of processor cores). 
 
 `geth --mine --minerthreads=4`
 
-You can also start and stop CPU mining at runtime using the [console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminerstart). `miner.start` takes an optional parameter for the number of miner threads. 
+You can also start and stop CPU mining at runtime using the [console](./JavaScript-Console#adminminerstart). `miner.start` takes an optional parameter for the number of miner threads. 
 
 ```
 > miner.start(8)
@@ -27,7 +27,7 @@ true
 
 Note that mining for real ether only makes sense if you are in sync with the network (since you mine on top of the consensus block). Therefore the eth blockchain downloader/synchroniser will delay mining until syncing is complete, and after that mining automatically starts unless you cancel your intention with `miner.stop()`.
 
-In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
+In order to earn ether you must have your **etherbase** (or **coinbase**) address set. This etherbase defaults to your [primary account](./Managing-Accounts). If you don't have an etherbase address, then `geth --mine` will not start up.
 
 You can set your etherbase on the command line:
 
@@ -43,7 +43,7 @@ miner.setEtherbase(eth.accounts[2])
 
 Note that your etherbase does not need to be an address of a local account, just an existing one. 
 
-There is an option [to add extra Data](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminersetextra) (32 bytes only) to your mined blocks. By convention this is interpreted as a unicode string, so you can set your short vanity tag.
+There is an option [to add extra Data](./JavaScript-Console#adminminersetextra) (32 bytes only) to your mined blocks. By convention this is interpreted as a unicode string, so you can set your short vanity tag.
 
 ```
 miner.setExtra("ΞTHΞЯSPHΞЯΞ")
@@ -63,7 +63,7 @@ Header:
 
 See also [this proposal](https://github.com/ethereumproject/wiki/wiki/Extra-Data)
 
-You can check your hashrate with [miner.hashrate](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#adminminerhashrate), the result is in H/s (Hash operations per second). 
+You can check your hashrate with [miner.hashrate](./JavaScript-Console#adminminerhashrate), the result is in H/s (Hash operations per second). 
 
 ```
 > miner.hashrate
@@ -77,7 +77,7 @@ After you successfully mined some blocks, you can check the ether balance of you
 '34698870000000' 
 ```
 
-In order to spend your earnings [on gas to transact](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions), you will need to have this account unlocked. 
+In order to spend your earnings [on gas to transact](./Contracts-and-Transactions), you will need to have this account unlocked. 
 
 ```
 > personal.unlockAccount(eth.coinbase)

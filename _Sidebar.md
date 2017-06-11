@@ -5,35 +5,35 @@
 [![API Reference](https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
 )](https://godoc.org/github.com/ethereumproject/go-ethereum)
 
-[Native DApps w/ Go](https://github.com/ethereumproject/go-ethereum/wiki/Native-DApps-in-Go)
+[Native DApps w/ Go](./Native-DApps-in-Go)
 
-[Blockchain Synchronisation Tech Overview](https://github.com/ethereumproject/go-ethereum/wiki/Blockchain-Synchronisation)
+[Blockchain Synchronisation Tech Overview](./Blockchain-Synchronisation)
 
-[Block Processing Stepthrough](https://github.com/ethereumproject/go-ethereum/wiki/Block-Processing)
+[Block Processing Stepthrough](./Block-Processing)
 
 
 ### Reference
 
-[CLI Commands & Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options)
+[CLI Commands & Options](./Command-Line-Options)
 
-[Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
+[Managing Accounts](./Managing-Accounts)
 
-[Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining)
+[Mining](./Mining)
 
-[JavaScript Console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
+[JavaScript Console](./JavaScript-Console)
 
-[Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
+[Management API](./Management-APIs)
 
 [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
 
-[Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
+[Contracts and Transactions](./Contracts-and-Transactions)
 
 
 ### FAQs, Issues, and Support
 
-[FAQ](https://github.com/ethereumproject/go-ethereum/wiki/FAQ)
+[FAQ](./FAQ)
 
-[Reporting Issues](https://github.com/ethereumproject/go-ethereum/wiki/Home#reporting)
+[Reporting Issues](./Home#reporting)
 
 [Network Connection](./Connecting-to-the-network)
 
@@ -42,19 +42,19 @@
 
 ### Tutorials
 
-[Sending Ether Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Sending-Ether-Tutorial)
+[Sending Ether Tutorial](./Sending-Ether-Tutorial)
 
-[Contract Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Contract-Tutorial)
+[Contract Tutorial](./Contract-Tutorial)
 
-[Whisper Tutorial](https://github.com/ethereumproject/go-ethereum/wiki/Whisper-Tutorial)
+[Whisper Tutorial](./Whisper-Tutorial)
 
 [Private Networking Tutorial](./Private-Networking-Tutorial)
 
-[Local Cluster Monitoring](https://github.com/ethereumproject/go-ethereum/wiki/Local-Cluster-Monitoring-Tutorial)
+[Local Cluster Monitoring](./Local-Cluster-Monitoring-Tutorial)
 
 
 ### Release Notes
 
-[Geth 3.5](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.5.0-Notes)
+[Geth 3.5](./Release-3.5.0-Notes)
 
-[Geth 3.4](https://github.com/ethereumproject/go-ethereum/wiki/Release-3.4.0-Notes)
+[Geth 3.4](./Release-3.4.0-Notes)

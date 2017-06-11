@@ -8,7 +8,7 @@ Both types of accounts have an ether balance.
 
 Transactions can be fired from both types of accounts, though contracts only fire transactions in response to other transactions that they have received. Therefore, all action on the ethereum block chain is set in motion by transactions fired from externally-controlled accounts.
 
-The simplest transactions are ether transfer transactions. But before we go into that you should read up on [accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts) and perhaps on [mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining).
+The simplest transactions are ether transfer transactions. But before we go into that you should read up on [accounts](./Managing-Accounts) and perhaps on [mining](./Mining).
 
 # Ether transfer
 
@@ -213,7 +213,7 @@ Gas limit is there to protect you from buggy code running until your funds are d
 
 The gas expenditure incurred by running your contract will be bought by the ether you have in your account at a price you specified in the transaction with `gasPrice`. If you do not have the ether to cover all the gas requirements to complete running your code, the processing aborts and all intermediate state changes roll back to the pre-transaction snapshot. The gas used up to the point where execution stopped were used after all, so the ether balance of your account will be reduced. These parameters can be adjusted on the transaction object fields `gas` and `gasPrice`. The `value` field is used the same as in ether transfer transactions between normal accounts. In other words transferring funds is available between any two accounts, either normal (i.e. externally controlled) or contract. If your contract runs out of funds, you should see an insufficient funds error.
 
-For testing and playing with contracts you can use the test network or [set up a private node (or cluster)](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-private-network-or-local-cluster) potentially isolated from all the other nodes. If you then mine, you can make sure that your transaction will be included in the next block. You can see the pending transactions with:
+For testing and playing with contracts you can use the test network or [set up a private node (or cluster)](./Setting-up-private-network-or-local-cluster) potentially isolated from all the other nodes. If you then mine, you can make sure that your transaction will be included in the next block. You can see the pending transactions with:
 
 ```js
 eth.getBlock("pending", true).transactions
@@ -415,7 +415,7 @@ Starting your `geth` with in VM debug mode with profiling and highest logging ve
 geth --datadir ~/dapps/testing/00/ --port 30310 --rpcport 8110 --networkid 4567890 --nodiscover --maxpeers 0 --vmdebug --verbosity 6 --pprof --pprofport 6110 console 2>> ~/dapp/testint/00/00.log
 ```
 
-Before you can submit any transactions, you need mine some ether on your private chain and for that you need an account. See the sections on [Mining](https://github.com/ethereumproject/go-ethereum/wiki/Mining) and [Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Your-Accounts)
+Before you can submit any transactions, you need mine some ether on your private chain and for that you need an account. See the sections on [Mining](./Mining) and [Accounts](./Managing-Your-Accounts)
 
 ```js
 // create account. will prompt for password
@@ -604,7 +604,7 @@ url = urlHint._url(contenthash);
 
 # Example script
 
-The example script below demonstrates most features discussed in this tutorial. You can run it with the [JSRE](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) as `geth js script.js 2>>geth.log` . If you want to run this test on a local private chain, then start geth with:
+The example script below demonstrates most features discussed in this tutorial. You can run it with the [JSRE](./JavaScript-Console) as `geth js script.js 2>>geth.log` . If you want to run this test on a local private chain, then start geth with:
 
 ```
 geth --maxpeers 0 --networkid 123456 --nodiscover --unlock primary js script.js 2>> geth.log

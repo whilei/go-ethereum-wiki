@@ -2,7 +2,7 @@
 
 Ethereum implements a **javascript runtime environment** (JSRE) that can be used in either interactive (console) or non-interactive (script) mode.
  
-Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) and the [admin API](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#javascript-console-api).
+Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) and the [admin API](./JavaScript-Console#javascript-console-api).
 
 ## Interactive use: the JSRE REPL  Console
 
@@ -56,7 +56,7 @@ Or execute a local script with more complex statements on a remote node over htt
     $ geth --exec 'loadScript("/tmp/checkbalances.js")' attach http://123.123.123.123:8545
     $ geth --jspath "/tmp" --exec 'loadScript("checkbalances.js")' attach http://123.123.123.123:8545
 
-Find an example script [here](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#example-script)
+Find an example script [here](./Contracts-and-Transactions#example-script)
 
 Use the `--jspath <path/to/my/js/root>` to set a libdir for your js scripts. Parameters to `loadScript()` with no absolute path will be understood relative to this directory.
 
@@ -118,7 +118,7 @@ will give all enabled modules including the version number:
 ## Integration
 These additional API's follow the same conventions as the official DApp API. Web3 can be [extended](https://github.com/ethereumproject/web3.js/pull/229) and used to consume these additional API's. 
 
-The different functions are split into multiple smaller logically grouped API's. Examples are given for the [Javascript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) but can easily be converted to a rpc request.
+The different functions are split into multiple smaller logically grouped API's. Examples are given for the [Javascript console](./JavaScript-Console) but can easily be converted to a rpc request.
 
 **2 examples:**
 
@@ -532,7 +532,7 @@ deactivate NatSpec: when sending a transaction, the user  will be prompted with 
 
      admin.getContractInfo(address)
 
-this will retrieve the [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) for a contract on the address
+this will retrieve the [contract info json](./Contracts-and-Transactions#contract-info-metadata) for a contract on the address
 
 ##### Returns
 
@@ -551,7 +551,7 @@ returns the contract info object
 
     admin.saveInfo(contract.info, filename);
 
-will write [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata) into the target file, calculates its content hash. This content hash then can used to associate a public url with where the contract info is publicly available and verifiable. If you register the codehash (hash of the code of the contract on contractaddress).
+will write [contract info json](./Contracts-and-Transactions#contract-info-metadata) into the target file, calculates its content hash. This content hash then can used to associate a public url with where the contract info is publicly available and verifiable. If you register the codehash (hash of the code of the contract on contractaddress).
 
 ##### Returns
 
@@ -609,7 +609,7 @@ admin.register(primary, contractaddress, contenthash);
 
     admin.registerUrl(address, codehash, contenthash);
 
-this will register a contant hash to the contract' codehash. This will be used to locate [contract info json](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions#contract-info-metadata)
+this will register a contant hash to the contract' codehash. This will be used to locate [contract info json](./Contracts-and-Transactions#contract-info-metadata)
 files. Address in the first parameter will be used to send the transaction. 
 
 ##### Returns
@@ -645,7 +645,7 @@ admin.registerUrl(primary, contenthash, "file://"+filename);
 
     miner.start(threadCount)
 
-Starts [mining](see https://github.com/ethereumproject/go-ethereum/wiki/Mining) on with the given `threadNumber` of parallel threads. This is an optional argument.
+Starts [mining](see ./Mining) on with the given `threadNumber` of parallel threads. This is an optional argument.
 
 ##### Returns
 
@@ -873,7 +873,7 @@ see [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-
 
 ##### Returns
 
-Collection of metrics, see for more information [this](https://github.com/ethereumproject/go-ethereum/wiki/Metrics-and-Monitoring) wiki page.
+Collection of metrics, see for more information [this](./Metrics-and-Monitoring) wiki page.
 
 ##### Example
 
@@ -890,7 +890,7 @@ Collection of metrics, see for more information [this](https://github.com/ethere
 
      loadScript('/path/to/myfile.js');
 
-Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options). 
+Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](./Command-Line-Options). 
 
 #### setInterval
 

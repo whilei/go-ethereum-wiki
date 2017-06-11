@@ -7,7 +7,7 @@
 - `dump-chain-config` is useful for establishing starting-point `customnet.json` external chain configurations.
 - `--chain` allows you to specify chain to run by "chainID", ie "mainnet", "morden", and "customnet". Its value selects the _parent/chain_ subdirectory in which to store all chain and node data.
 
-To learn more about these new features, check out the [Command Line Options wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options) near the bottom.
+To learn more about these new features, check out the [Command Line Options wiki page](./Command-Line-Options) near the bottom.
 
 
 ### Data directory migration

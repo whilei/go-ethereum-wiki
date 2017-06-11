@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ethereumclassic/Media_Kit/blob/master//Classic_Logo_Solid/ETC_LOGO_Full_Color_Black.png" width="150"/>
+  <img src="./images/ETC_LOGO_Full_Color_Black.png" width="150"/>
 </p>
 
 __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications. 
@@ -17,7 +17,7 @@ __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting 
 The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node. It offers three interfaces: 
 - the [command line subcommands and options](./Command-Line-Options), 
 - a [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) server, and
-- an interactive [Javascript console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console). 
+- an interactive [Javascript console](./JavaScript-Console). 
 
 __Platforms:__ Supported Platforms are Linux, Mac, and Windows. In order to install Geth, please vist our [Releases Page](github.com/ethereumproject/go-ethereum/releases). Please consider reviewing our [Disclaimer Notice](./Disclaimer) before use.
 
@@ -31,16 +31,16 @@ By installing and running `geth`, you can take part in the Ethereum Classic live
 - and much, much more
 
 #### Basic Use Case Documentation
-- [Managing Accounts](https://github.com/ethereumproject/go-ethereum/wiki/Managing-Accounts)
-- [Mining](https://github.com/ethereumproject/go-ethereum/wiki/mining)
-- [Contracts and Transactions](https://github.com/ethereumproject/go-ethereum/wiki/Contracts-and-Transactions)
+- [Managing Accounts](./Managing-Accounts)
+- [Mining](./mining)
+- [Contracts and Transactions](./Contracts-and-Transactions)
 
 ### Developers
 This is an open source project made by and for a passionate and [welcoming community](https://github.com/ethereumproject/volunteer). The ETCDEV team is lead by @splix, and __Go-Ethereum__'s lead developer is @whilei (who goes by @ia on Slack). Get yourself [an invitation to Slack](http://ethereumclassic.herokuapp.com/), read the [Contributing Guidelines](https://github.com/ethereumproject/rfc/blob/master/1/README.md), and [find or make an issue](https://github.com/ethereumproject/go-ethereum/issues).
 
 #### Install dependencies and build
 Building and testing geth requires both Go >=1.8 and a C compiler.
-> [Installing Go Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Installing-Go)
+> [Installing Go Wiki page](./Installing-Go)
 
 Clone and set up:
 ```shell
@@ -61,7 +61,7 @@ geth --help
 ```
 
 #### Testing
-See the [Testing Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Testing) for information on unit, integration, and external tests. 
+See the [Testing Wiki page](./Testing) for information on unit, integration, and external tests. 
 
 #### Logging
 Geth outputs `stderr` to the console. Output from the console can be logged or redirected:
@@ -75,11 +75,11 @@ You can also use `geth attach` to begin a Javascript console session with an alr
 
 #### Further
 - If you're integrating another application or service with geth:
-    + [Management API](https://github.com/ethereumproject/go-ethereum/wiki/Management-APIs)
+    + [Management API](./Management-APIs)
     + [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
     + [Contracts and Transactions](https://github.com/ethereumproject/wiki/wiki/Contracts-and-Transactions)
 - Interested in working with some associated packages?
-    + [P2P](https://github.com/ethereumproject/go-ethereum/wiki/Peer-To-Peer)    
+    + [P2P](./Peer-To-Peer)    
 
 ### Issues and Support
 

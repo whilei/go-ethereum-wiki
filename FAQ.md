@@ -7,7 +7,7 @@ If this doesn't help, please review the [Connecting To the Network Wiki page](./
 ----
 ####  I would like to run multiple geth instances but got the error "Fatal: blockchain db err: resource temporarily unavailable".
 
-Geth uses a datadir to store the blockchain, accounts and some additional information. This directory cannot be shared between running instances. If you would like to run multiple instances follow [these](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-private-network-or-local-cluster) instructions.
+Geth uses a datadir to store the blockchain, accounts and some additional information. This directory cannot be shared between running instances. If you would like to run multiple instances follow [these](./Setting-up-private-network-or-local-cluster) instructions.
 
 ----
 #### I sent a transaction, but it's forever 'pending'. I see no errors, but geth doesn't seem to be processing the transaction.

@@ -5,9 +5,9 @@
 
 If you lose the password you use to encrypt your account, you will not be able to access that account. _Repeat_: It is NOT possible to access your account without a password and there is no _forgot my password_ option here. __Do not forget it.__
 
-**Note**: the key file name naming convention changed as of `0.9.36`. This document is meant to reflect accurate information on accounts as used by the [Frontier release](https://github.com/ethereumproject/go-ethereum/wiki/Frontier). 
+**Note**: the key file name naming convention changed as of `0.9.36`. This document is meant to reflect accurate information on accounts as used by the [Frontier release](./Frontier). 
 
-**Note**: If you're interested in managing a large number (~100k+) accounts, please check out the [Indexing Accounts Wiki page](https://github.com/ethereumproject/go-ethereum/wiki/Indexing-Accounts).
+**Note**: If you're interested in managing a large number (~100k+) accounts, please check out the [Indexing Accounts Wiki page](./Indexing-Accounts).
 
 Geth provides account management via the `account` subcommand:
 
@@ -23,7 +23,7 @@ _Make sure you remember the password you gave when creating a new account (with 
 
 Note that exporting your key in unencrypted format is NOT supported.
 
-Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly! See [DATADIR backup & restore](https://github.com/ethereumproject/go-ethereum/wiki/Backup-&-restore) for more information.
+Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly! See [DATADIR backup & restore](./Backup-&-restore) for more information.
 The newest format of the keyfiles is: `UTC--<created_at UTC ISO8601>-<address hex>`. The order of accounts when listing, is lexicographic, but as a consequence of the timespamp format, it is actually order of creation. 
 
 It is safe to transfer the entire directory or the individual keys therein between ethereum nodes. Note that in case you are adding keys to your node from a different node, the order of accounts may change. So make sure you do not rely or change the index in your scripts or code snippets.
@@ -43,7 +43,7 @@ SUBCOMMANDS:
 
 You can get info about further subcommands by `geth account help <subcommand>`
 
-Accounts can also be managed via the [Javascript Console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console)
+Accounts can also be managed via the [Javascript Console](./JavaScript-Console)
 
 ## Examples
 ### Interactive use
@@ -305,7 +305,7 @@ That can then be executed with:
   eth.accounts[3]: 0xf4dd5c3794f1fd0cdc0327a83aa472609c806e99 	balance: 6 ether
 ```
 
-Since this function will disappear after restarting geth, it can be helpful to store commonly used functions to be recalled later. The [loadScript](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console#loadscript) function makes this very easy.
+Since this function will disappear after restarting geth, it can be helpful to store commonly used functions to be recalled later. The [loadScript](./JavaScript-Console#loadscript) function makes this very easy.
 
 First, save the `checkAllBalances()` function definition to a file on your computer. For example, `/Users/username/gethload.js`. Then load the file from the interactive console:
 

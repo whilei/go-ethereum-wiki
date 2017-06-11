@@ -1,7 +1,7 @@
 This page describes how to set up a local cluster of nodes, advise how to make it private, and how to hook up your nodes on the eth-netstat network monitoring app. 
 A fully controlled ethereum network is useful as a backend for network integration testing (core developers working on issues related to networking/blockchain synching/message propagation, etc or DAPP developers testing multi-block and multi-user scenarios).
 
-We assume you are able to build `geth` following the [build instructions](https://github.com/ethereumproject/go-ethereum/wiki/Building-Ethereum)
+We assume you are able to build `geth` following the [build instructions](./Building-Ethereum)
 
 ## Setting up multiple nodes
 
@@ -62,11 +62,11 @@ See [`gethcluster.sh`](https://github.com/ethersphere/eth-utils) script, and the
 
 An ethereum network is a private network if the nodes are not connected to the main network nodes. In this context private only means reserved or isolated, rather than protected or secure. Since connections between nodes are valid only if peers have identical protocol version and network id, you can effectively isolate your network by setting either of these to a non default value. We recommend using the semantic `networkid` command line option for this. Its argument is an integer, the main network has id 1 (the default). So if you supply your own custom network id which is different than the main network your nodes will not connect to other nodes and form a private network.
 
-Please visit [Command Line Options](https://github.com/ethereumproject/go-ethereum/wiki/Command-Line-Options) for more information about using `--chain=custom` and configuring your chain.
+Please visit [Command Line Options](./Command-Line-Options) for more information about using `--chain=custom` and configuring your chain.
 
 ## Monitoring your nodes
 
 [This page](https://github.com/ethereumproject/wiki/wiki/Network-Status) describes how to use the [The Ethereum (centralised) network status monitor (known sometimes as "eth-netstats")](http://stats.ethdev.com) to monitor your nodes.
 
-[This page](https://github.com/ethereumproject/go-ethereum/wiki/Setting-up-monitoring-on-local-cluster) or [this README](https://github.com/ethersphere/eth-utils) 
+[This page](./Setting-up-monitoring-on-local-cluster) or [this README](https://github.com/ethersphere/eth-utils) 
 describes how you set up your own monitoring service for a (private or public) local cluster.
