@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/ETC_LOGO_Full_Color_Black.png" width="150"/>
+  <img src="./wiki/images/ETC_LOGO_Full_Color_Black.png" width="150"/>
 </p>
 
 __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications. 
