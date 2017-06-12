@@ -11,7 +11,7 @@ If you lose the password you use to encrypt your account, you will not be able t
 
 Geth provides account management via the `account` subcommand:
 
-```
+```shell
 geth account [subcommand] [arguments...]
 ```
 
@@ -24,6 +24,7 @@ _Make sure you remember the password you gave when creating a new account (with 
 Note that exporting your key in unencrypted format is NOT supported.
 
 Keys are stored under `<DATADIR>/keystore`. Make sure you backup your keys regularly! See [DATADIR backup & restore](./Backup-&-restore) for more information.
+
 The newest format of the keyfiles is: `UTC--<created_at UTC ISO8601>-<address hex>`. The order of accounts when listing, is lexicographic, but as a consequence of the timespamp format, it is actually order of creation. 
 
 It is safe to transfer the entire directory or the individual keys therein between ethereum nodes. Note that in case you are adding keys to your node from a different node, the order of accounts may change. So make sure you do not rely or change the index in your scripts or code snippets.

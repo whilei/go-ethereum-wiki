@@ -1,6 +1,8 @@
 # Command line options
 
-```
+```shell
+$ geth --help
+> 
 NAME:
    geth - the go-ethereum command line interface
 

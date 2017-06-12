@@ -5,6 +5,7 @@
 __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications. 
 
 :telescope: For __general information__ related to Ethereum Classic including:
+
 - whitepaper 
 - yellow paper 
 - protocol and interface specs
@@ -15,6 +16,7 @@ __Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting 
 
 ### Geth
 The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node. It offers three interfaces: 
+
 - the [command line subcommands and options](./Command-Line-Options), 
 - a [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) server, and
 - an interactive [Javascript console](./JavaScript-Console). 
@@ -40,21 +42,20 @@ This is an open source project made by and for a passionate and [welcoming commu
 
 #### Install dependencies and build
 Building and testing geth requires both Go >=1.8 and a C compiler.
+
 > [Installing Go Wiki page](./Installing-Go)
 
-Clone and set up:
-```shell
-mkdir -p $GOPATH/src/github.com/ethereumproject
-cd $GOPATH/src/github.com/ethereumproject
-git clone https://github.com/ethereumproject/go-ethereum.git
-git remote rename origin upstream
-git remote add origin https://github.com/YOU/go-ethereum.git
+Get set up:
+```bash
+# Go get it! (get it? ;-)
+go get github.com/ethereumproject/go-ethereum/...
 
-# install dependencies recursively
+# Install binary 'geth' to $GOPATH/bin:
+# Note: You can run this command from $cwd.
+# Note: Ensure $GOPATH/bin is added to your $PATH.
+go install github.com/ethereumproject/go-ethereum/cmd/geth
+# Or, install all executables, including geth:
 go install github.com/ethereumproject/go-ethereum/cmd/...
-
-# build binary 'geth' and place in $GOPATH/bin (you can run this from anywhere)
-go build github.com/ethereumproject/go-ethereum/cmd/geth
 
 # check it out!
 geth --help
@@ -96,11 +97,12 @@ Non-sensitive bug reports are welcome on Github. Please always state the version
 Ethereum is joint work of ETCDEV and the community.
 
 Name or blame = list of contributors:
-* [go-ethereum](https://github.com/ethereumproject/go-ethereum/graphs/contributors)
-* [cpp-ethereum](https://github.com/ethereumproject/cpp-ethereum/graphs/contributors)
-* [web3.js](https://github.com/ethereumproject/web3.js/graphs/contributors)
-* [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
-* [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
+
+- [go-ethereum](https://github.com/ethereumproject/go-ethereum/graphs/contributors)
+- [cpp-ethereum](https://github.com/ethereumproject/cpp-ethereum/graphs/contributors)
+- [web3.js](https://github.com/ethereumproject/web3.js/graphs/contributors)
+- [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
+- [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
 [netintelligence-api](https://github.com/cubedro/eth-net-intelligence-api/graphs/contributors)
 
 
