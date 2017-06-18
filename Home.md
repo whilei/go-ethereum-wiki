@@ -2,31 +2,31 @@
   <img src="./wiki/images/ETC_LOGO_Full_Color_Black.png" width="150"/>
 </p>
 
-__Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications. 
+__Go-Ethereum__ is a Go language implementation of Ethereum Classic, supporting the _original_ blockchain and its philosophy of immutability,  censorship-resistance, and resilient distributed applications.
 
 :telescope: For __general information__ related to Ethereum Classic including:
 
-- whitepaper 
-- yellow paper 
+- whitepaper
+- yellow paper
 - protocol and interface specs
-- affiliated APIs 
+- affiliated APIs
 - DAPP development guides
 
-... please see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki) or visit [our website](https://ethereumclassic.github.io). 
+... please see our [Ethereum Project Main Wiki](https://github.com/ethereumproject/wiki/wiki) or visit [our website](https://ethereumclassic.github.io).
 
 ### Geth
-The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node. It offers three interfaces: 
+The main Ethereum Classic client is called Geth (the old english third person singular conjugation of "to go". Quite appropriate given geth is written in [Go](https://golang.org/). Geth is a multipurpose command line tool that runs a full Ethereum Classic node. It offers three interfaces:
 
-- the [command line subcommands and options](./Command-Line-Options), 
-- a [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC) server, and
-- an interactive [Javascript console](./JavaScript-Console). 
+- the [command line subcommands and options](./Command-Line-Options),
+- a [JSON-RPC](./JSON-RPC) server, and
+- an interactive [Javascript console](./JavaScript-Console).
 
 __Platforms:__ Supported Platforms are Linux, Mac, and Windows. In order to install Geth, please vist our [Releases Page](github.com/ethereumproject/go-ethereum/releases). Please consider reviewing our [Disclaimer Notice](./Disclaimer) before use.
 
 __License:__ The Ethereum Classic Core Protocol licensed under the [GNU Lesser General Public License 3.0](https://www.gnu.org/licenses/lgpl.html). All frontend client software (under [cmd](https://github.com/ethereumproject/go-ethereum/tree/master/cmd)) is licensed under the [GNU General Public License](https://www.gnu.org/copyleft/gpl.html).
 
 By installing and running `geth`, you can take part in the Ethereum Classic live network and
-- mine real ether 
+- mine real ether
 - transfer funds between addresses
 - create contracts and send transactions
 - explore block history
@@ -62,7 +62,7 @@ geth --help
 ```
 
 #### Testing
-See the [Testing Wiki page](./Testing) for information on unit, integration, and external tests. 
+See the [Testing Wiki page](./Testing) for information on unit, integration, and external tests.
 
 #### Logging
 Geth outputs `stderr` to the console. Output from the console can be logged or redirected:
@@ -77,16 +77,16 @@ You can also use `geth attach` to begin a Javascript console session with an alr
 #### Further
 - If you're integrating another application or service with geth:
     + [Management API](./Management-APIs)
-    + [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+    + [JSON-RPC](./JSON-RPC)
     + [Contracts and Transactions](https://github.com/ethereumproject/wiki/wiki/Contracts-and-Transactions)
 - Interested in working with some associated packages?
-    + [P2P](./Peer-To-Peer)    
+    + [P2P](./Peer-To-Peer)
 
 ### Issues and Support
 
 Please browse our [FAQ Wiki page](./FAQ) to see if there's already an answer to your question. If there isn't, please file an issue or get [in touch with us on Slack](http://ethereumclassic.herokuapp.com/) (#help or #development channels, preferably).
 
-#### Reporting 
+#### Reporting
 
 Security issues are best sent to splix@etcdevteam.org, isaac.ardis@gmail.com, or shared in PM with devs on one of the Slack channels.
 
@@ -102,7 +102,7 @@ Name or blame = list of contributors:
 - [cpp-ethereum](https://github.com/ethereumproject/cpp-ethereum/graphs/contributors)
 - [web3.js](https://github.com/ethereumproject/web3.js/graphs/contributors)
 - [ethash](https://github.com/ethereumproject/ethash/graphs/contributors)
-- [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors), 
+- [netstats](https://github.com/cubedro/eth-netstats/graphs/contributors),
 [netintelligence-api](https://github.com/cubedro/eth-net-intelligence-api/graphs/contributors)
 
 

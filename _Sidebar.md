@@ -25,7 +25,7 @@
 
 [Management API](./Management-APIs)
 
-[JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC)
+[JSON-RPC](./JSON-RPC)
 
 [Contracts and Transactions](./Contracts-and-Transactions)
 
