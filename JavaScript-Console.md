@@ -1,7 +1,7 @@
 # JavaScript Runtime Environment
 
 Ethereum implements a **javascript runtime environment** (JSRE) that can be used in either interactive (console) or non-interactive (script) mode.
- 
+
 Ethereum's Javascript console exposes the full [web3 JavaScript Dapp API](https://github.com/ethereumproject/wiki/wiki/JavaScript-API) and the [admin API](./JavaScript-Console#javascript-console-api).
 
 ## Interactive use: the JSRE REPL  Console
@@ -33,7 +33,7 @@ Otherwise mute your logs, so that it does not pollute your console:
 
     $ geth console 2>> /dev/null
 
-or 
+or
 
     $ geth --verbosity 0 console
 
@@ -45,7 +45,7 @@ geth --preload "/my/scripts/folder/utils.js,/my/scripts/folder/contracts.js" con
 
 ## Non-interactive use: JSRE script mode
 
-It's also possible to execute files to the JavaScript interpreter. The `console` and `attach` subcommand accept the `--exec` argument which is a javascript statement. 
+It's also possible to execute files to the JavaScript interpreter. The `console` and `attach` subcommand accept the `--exec` argument which is a javascript statement.
 
     $ geth --exec "eth.blockNumber" attach
 
@@ -62,20 +62,20 @@ Use the `--jspath <path/to/my/js/root>` to set a libdir for your js scripts. Par
 
 You can exit the console cleanly by typing `exit` or simply with `CTRL-C`.
 
-## Caveat 
+## Caveat
 
 The go-ethereum JSRE uses the [Otto JS VM](https://github.com/robertkrimen/otto) which has some limitations:
 
 * "use strict" will parse, but does nothing.
 * The regular expression engine (re2/regexp) is not fully compatible with the ECMA5 specification.
 
-Note that the other known limitation of Otto (namely the lack of timers) is taken care of. Ethereum JSRE implements both `setTimeout` and `setInterval`. In addition to this, the console provides `admin.sleep(seconds)` as well as a "blocktime sleep" method `admin.sleepBlocks(number)`. 
+Note that the other known limitation of Otto (namely the lack of timers) is taken care of. Ethereum JSRE implements both `setTimeout` and `setInterval`. In addition to this, the console provides `admin.sleep(seconds)` as well as a "blocktime sleep" method `admin.sleepBlocks(number)`.
 
 Since `web3.js` uses the [`bignumber.js`](https://github.com/MikeMcl/bignumber.js) library (MIT Expat Licence), it is also autoloded.
 
 ## Timers
 
-In addition to the full functionality of JS (as per ECMA5), the ethereum JSRE is augmented with various timers. It implements `setInterval`, `clearInterval`, `setTimeout`, `clearTimeout` you may be used to using in browser windows. It also provides implementation for `admin.sleep(seconds)` and a block based timer, `admin.sleepBlocks(n)` which sleeps till the number of new blocks added is equal to or greater than `n`, think "wait for n confirmations". 
+In addition to the full functionality of JS (as per ECMA5), the ethereum JSRE is augmented with various timers. It implements `setInterval`, `clearInterval`, `setTimeout`, `clearTimeout` you may be used to using in browser windows. It also provides implementation for `admin.sleep(seconds)` and a block based timer, `admin.sleepBlocks(n)` which sleeps till the number of new blocks added is equal to or greater than `n`, think "wait for n confirmations".
 
 # Management APIs
 
@@ -116,7 +116,7 @@ will give all enabled modules including the version number:
 ```
 
 ## Integration
-These additional API's follow the same conventions as the official DApp API. Web3 can be [extended](https://github.com/ethereumproject/web3.js/pull/229) and used to consume these additional API's. 
+These additional API's follow the same conventions as the official DApp API. Web3 can be [extended](https://github.com/ethereumproject/web3.js/pull/229) and used to consume these additional API's.
 
 The different functions are split into multiple smaller logically grouped API's. Examples are given for the [Javascript console](./JavaScript-Console) but can easily be converted to a rpc request.
 
@@ -139,53 +139,54 @@ With the number of THREADS as an arguments:
 ## Management API Reference
 
 * [eth](#eth)
-  * [sign](#ethsign)
-  * [pendingTransactions](#ethpendingtransactions)
-  * [resend](#ethresend)
+  * [sign](#eth-sign)
+  * [pendingTransactions](#eth-pendingtransactions)
+  * [resend](#eth-resend)
 * [admin](#admin)
-  * [addPeer](#adminaddpeer)
-  * [peers](#adminpeers)  
-  * [nodeInfo](#adminnodeinfo)
-  * [datadir](#admindatadir)
-  * [importChain](#adminimportchain)
-  * [exportChain](#adminexportchain)
-  * [chainSyncStatus](#adminchainsyncstatus)
-  * [startRPC](#adminstartrpc)
-  * [stopRPC](#adminstoprpc)
-  * [startWS](#adminstartws)
-  * [stopWS](#adminstopws)
-  * [verbosity](#adminverbosity)
-  * [setSolc](#adminsetsolc)
-  * [sleep](#adminsleep)
-  * [sleepBlocks](#adminsleepblocks)
-  * [startNatSpec](#adminstartnatspec)
-  * [stopNatSpec](#adminstopnatspec)
-  * [getContractInfo](#admingetcontractinfo)
-  * [register](#adminregister)
-  * [registerUrl](#adminregisterurl)
+  * [addPeer](#admin-addpeer)
+  * [peers](#admin-peers)
+  * [nodeInfo](#admin-nodeinfo)
+  * [datadir](#admin-datadir)
+  * [importChain](#admin-importchain)
+  * [exportChain](#admin-exportchain)
+  * [chainSyncStatus](#admin-chainsyncstatus)
+  * [startRPC](#admin-startrpc)
+  * [stopRPC](#admin-stoprpc)
+  * [startWS](#admin-startws)
+  * [stopWS](#admin-stopws)
+  * [verbosity](#admin-verbosity)
+  * [setSolc](#admin-setsolc)
+  * [sleep](#admin-sleep)
+  * [sleepBlocks](#admin-sleepblocks)
+  * [startNatSpec](#admin-startnatspec)
+  * [stopNatSpec](#admin-stopnatspec)
+  * [getContractInfo](#admin-getcontractinfo)
+  * [register](#admin-register)
+  * [registerUrl](#admin-registerurl)
 * [miner](#miner)
-  * [start](#minerstart)
-  * [stop](#minerstop)
-  * [startAutoDAG](#minerstartautodag)
-  * [stopAutoDAG](#minerstopautodag)
-  * [makeDAG](#minermakedag)
-  * [setExtra](#minersetextra) 
-  * [setGasPrice] (#minersetgasprice)
-  * [setEtherbase] (#minersetetherbase)
+  * [start](#miner-start)
+  * [stop](#miner-stop)
+  * [startAutoDAG](#miner-startautodag)
+  * [stopAutoDAG](#miner-stopautodag)
+  * [makeDAG](#miner-makedag)
+  * [setExtra](#miner-setextra)
+  * [setGasPrice] (#miner-setgasprice)
+  * [setEtherbase] (#miner-setetherbase)
 * [personal](#personal)
-  * [newAccount](#personalnewaccount)
-  * [listAccounts](#personallistaccounts)
-  * [deleteAccount](#personaldeleteaccount)
-  * [unlockAccount](#personalunlockaccount)
+  * [newAccount](#personal-newaccount)
+  * [listAccounts](#personal-listaccounts)
+  * [deleteAccount](#personal-deleteaccount)
+  * [unlockAccount](#personal-unlockaccount)
 * [txpool](#txpool)
-  * [status](#txpoolstatus)
+  * [status](#txpool-status)
 * [debug](#debug)
-  * [setHead](#debugsethead)
-  * [seedHash](#debugseedhash)
-  * [getBlockRlp](#debuggetblockrlp)
-  * [printBlock](#debugprintblock)
-  * [dumpBlock](#debugdumpblock)
-  * [metrics](#debugmetrics)
+  * [setHead](#debug-sethead)
+  * [seedHash](#debug-seedhash)
+  * [getBlockRlp](#debug-getblockrlp)
+  * [printBlock](#debug-printblock)
+  * [dumpBlock](#debug-dumpblock)
+  * [metrics](#debug-metrics)
+  * [accountExist](#debug-accountexist)
 * [loadScript](#loadscript)
 * [setInterval](#setInterval)
 * [clearInterval](#clearInterval)
@@ -200,7 +201,7 @@ With the number of THREADS as an arguments:
 ***
 
 #### Personal
-The `personal` api exposes method for personal  the methods to manage, control or monitor your node. It allows for limited file system access. 
+The `personal` api exposes method for personal  the methods to manage, control or monitor your node. It allows for limited file system access.
 
 ***
 
@@ -266,7 +267,7 @@ Number of pending/queued transactions
 
 
 #### admin
-The `admin` exposes the methods to manage, control or monitor your node. It allows for limited file system access. 
+The `admin` exposes the methods to manage, control or monitor your node. It allows for limited file system access.
 
 ***
 
@@ -383,7 +384,7 @@ admin.exportChain('path/to/file')
 
      admin.startRPC(host, portNumber, corsheader, modules)
 
-Starts the HTTP server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
+Starts the HTTP server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
 ##### Returns
 
@@ -400,7 +401,7 @@ admin.startRPC("127.0.0.1", 8545, "*", "web3,net,eth")
 
 #### admin.stopRPC
 
-    admin.stopRPC() 
+    admin.stopRPC()
 
 Stops the HTTP server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
@@ -421,7 +422,7 @@ admin.stopRPC()
 
      admin.startWS(host, portNumber, allowedOrigins, modules)
 
-Starts the websocket server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC). 
+Starts the websocket server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
 ##### Returns
 
@@ -438,7 +439,7 @@ admin.startWS("127.0.0.1", 8546, "*", "web3,net,eth")
 
 #### admin.stopWS
 
-    admin.stopWS() 
+    admin.stopWS()
 
 Stops the websocket server for the [JSON-RPC](https://github.com/ethereumproject/wiki/wiki/JSON-RPC).
 
@@ -453,21 +454,21 @@ admin.stopWS()
 // true
 ```
 
-*** 
+***
 
 #### admin.sleep
 
     admin.sleep(s)
 
-Sleeps for s seconds. 
+Sleeps for s seconds.
 
 ***
 
-#### admin.sleepBlocks 
+#### admin.sleepBlocks
 
     admin.sleepBlocks(n)
 
-Sleeps for n blocks. 
+Sleeps for n blocks.
 
 ***
 
@@ -515,7 +516,7 @@ Solidity Compiler: /some/path/solc
 
      admin.startNatSpec()
 
-activate NatSpec: when sending a transaction to a contract, 
+activate NatSpec: when sending a transaction to a contract,
 Registry lookup and url fetching is used to retrieve authentic contract Info for it. It allows for prompting a user with authentic contract-specific confirmation messages.
 
 ***
@@ -536,7 +537,7 @@ this will retrieve the [contract info json](./Contracts-and-Transactions#contrac
 
 ##### Returns
 
-returns the contract info object 
+returns the contract info object
 
 ##### Examples
 
@@ -610,7 +611,7 @@ admin.register(primary, contractaddress, contenthash);
     admin.registerUrl(address, codehash, contenthash);
 
 this will register a contant hash to the contract' codehash. This will be used to locate [contract info json](./Contracts-and-Transactions#contract-info-metadata)
-files. Address in the first parameter will be used to send the transaction. 
+files. Address in the first parameter will be used to send the transaction.
 
 ##### Returns
 
@@ -682,7 +683,7 @@ miner.stop()
 
     miner.startAutoDAG()
 
-Starts automatic pregeneration of the [ethash DAG](https://github.com/ethereumproject/wiki/wiki/Ethash-DAG). This process make sure that the DAG for the subsequent epoch is available allowing mining right after the new epoch starts. If this is used by most network nodes, then blocktimes are expected to be normal at epoch transition. Auto DAG is switched on automatically when mining is started and switched off when the miner stops. 
+Starts automatic pregeneration of the [ethash DAG](https://github.com/ethereumproject/wiki/wiki/Ethash-DAG). This process make sure that the DAG for the subsequent epoch is available allowing mining right after the new epoch starts. If this is used by most network nodes, then blocktimes are expected to be normal at epoch transition. Auto DAG is switched on automatically when mining is started and switched off when the miner stops.
 
 ##### Returns
 
@@ -752,11 +753,11 @@ If `dir` is the empty string, then ethash will use the default directories `~/.e
 **Sets** the current head of the blockchain to the block referred to by _blockNumber_.
 See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
-##### Returns 
+##### Returns
 
 `true` on success, otherwise `false`.
 
-##### Example 
+##### Example
 
     debug.setHead(eth.blockNumber-1000)
 
@@ -768,11 +769,11 @@ See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-
 
 Returns the hash for the epoch the given block is in.
 
-##### Returns 
+##### Returns
 
 hash in hex format
 
-##### Example 
+##### Example
 
     > debug.seedHash(eth.blockNumber)
     '0xf2e59013a0a379837166b59f871b20a8a0d101d1c355ea85d35329360e69c000'
@@ -786,7 +787,7 @@ hash in hex format
 Returns the hexadecimal representation of the RLP encoding of the block.
 See [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
-##### Returns 
+##### Returns
 
 The hex representation of the RLP encoding of the block.
 
@@ -854,7 +855,7 @@ Uncles:
 
 ##### Returns
 
-the raw dump of a block referred to by block number or block hash or undefined if the block is not found. 
+the raw dump of a block referred to by block number or block hash or undefined if the block is not found.
 see [web3.eth.getBlock](https://github.com/ethereumproject/wiki/wiki/JavaScript-API#web3ethgetblock) for more details on block fields and lookup by number or hash.
 
 ##### Example
@@ -885,12 +886,38 @@ Collection of metrics, see for more information [this](./Metrics-and-Monitoring)
 
 ***
 
+#### debug.accountExist
+
+Returns if a given account exists at a given block. Whether an account
+exists effects the gas cost of a transaction.
+
+
+##### Parameters
+
+1. `String` - Account address.
+2. `Uint64` - Block number.
+
+
+##### Returns
+
+`BOOL` - If the account exists.
+
+
+##### Example
+```js
+debug.accountExist("0x102e61f5d8f9bc71d0ad4a084df4e65e05ce0e1c", 1000)
+> true
+```
+
+
+***
+
 
 #### loadScript
 
      loadScript('/path/to/myfile.js');
 
-Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](./Command-Line-Options). 
+Loads a JavaScript file and executes it. Relative paths are interpreted as relative to `jspath` which is specified as a command line flag, see [Command Line Options](./Command-Line-Options).
 
 #### setInterval
 
