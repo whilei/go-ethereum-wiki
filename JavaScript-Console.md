@@ -888,19 +888,14 @@ Collection of metrics, see for more information [this](./Metrics-and-Monitoring)
 
 #### debug.accountExist
 
-Returns if a given account exists at a given block. Whether an account
-exists effects the gas cost of a transaction.
-
-
-##### Parameters
-
-1. `String` - Account address.
-2. `Uint64` - Block number.
-
+```
+debug.accountExist(address, blockNumber)
+```
 
 ##### Returns
 
-`BOOL` - If the account exists.
+Returns `BOOL` if a given account exists at a given block. Whether an account
+exists affects the gas cost of a transaction.
 
 
 ##### Example
