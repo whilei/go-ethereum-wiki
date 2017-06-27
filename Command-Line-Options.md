@@ -4,117 +4,118 @@
 $ geth --help
 > 
 NAME:
-   geth - the go-ethereum command line interface
+   gethc3.5 - the go-ethereum command line interface
 
 USAGE:
-   geth [options] command [command options] [arguments...]
+   gethc3.5 [options] command [command options] [arguments...]
 VERSION:
-   source
+   v3.5.0
 COMMANDS:
-   import         import a blockchain file
-   export         export blockchain into file
-   dump-chain-config, dumpchainconfig   dump current chain configuration to JSON file [REQUIRED argument: filepath.json]
-   upgrade-db, upgradedb      upgrade chainblock database
-   remove-db, removedb        Remove blockchain and state databases
-   dump           dump a specific block from storage
-   rollback, roll-back, set-head, sethead rollback [block index number] - set current head for blockchain
-   monitor          Geth Monitor: node metrics monitoring and visualization
-   account          manage accounts
-   wallet         ethereum presale wallet
-   console          Geth Console: interactive JavaScript environment
-   attach         Geth Console: interactive JavaScript environment (connect to node)
-   js           executes the given JavaScript files in the Geth JavaScript VM
-   status         status - get the status of the current node
-   make-dag, makedag        generate ethash dag (for testing)
-   gpu-info, gpuinfo        gpuinfo
-   gpu-bench, gpubench        benchmark GPU
-   version          print ethereum version numbers
-   help, h          Shows a list of commands or help for one command
+   import					import a blockchain file
+   export					export blockchain into file
+   dump-chain-config, dumpchainconfig		dump current chain configuration to JSON file [REQUIRED argument: filepath.json]
+   upgrade-db, upgradedb			upgrade chainblock database
+   remove-db, removedb				Remove blockchain and state databases
+   dump						dump a specific block from storage
+   rollback, roll-back, set-head, sethead	rollback [block index number] - set current head for blockchain
+   monitor					Geth Monitor: node metrics monitoring and visualization
+   account					manage accounts
+   wallet					ethereum presale wallet
+   console					Geth Console: interactive JavaScript environment
+   attach					Geth Console: interactive JavaScript environment (connect to node)
+   js						executes the given JavaScript files in the Geth JavaScript VM
+   status					status - get the status of the current node
+   make-dag, makedag				generate ethash dag (for testing)
+   gpu-info, gpuinfo				gpuinfo
+   gpu-bench, gpubench				benchmark GPU
+   version					print ethereum version numbers
+   help, h					Shows a list of commands or help for one command
    
 ETHEREUM OPTIONS:
-  --data-dir, --datadir "/Users/ia/Library/EthereumClassic" Data directory for the databases and keystore
-  --chain value             Identifier of blockchain network to use (default='mainnet', test='morden').
-                      Relevant data for this blockchain will correlate to subdirectories under your base data directory (--datadir), by ie $HOME/Library/EthereumClassic/mainnet/.
-                      If using a custom identity (i.e. --chain=custom), there must be a valid JSON chain configuration file at <datadir>/custom/chain.json
-                       (default: "mainnet")
-  --keystore              Directory for the keystore (default = inside the datadir)
-  --network-id value, --networkid value       Network identifier (integer, 0=Olympic, 1=Homestead, 2=Morden) (default: 1)
-  --testnet             Morden network: pre-configured test network with modified starting nonces (replay protection)
-  --dev               Developer mode: pre-configured private network with several debugging flags
-  --identity value            Custom node name
-  --fast              Enable fast syncing through state downloads
-  --light-kdf, --lightkdf         Reduce key-derivation RAM & CPU usage at some expense of KDF strength
-  --cache value             Megabytes of memory allocated to internal caching (min 16MB / database forced) (default: 128)
-  --blockchain-version value, --blockchainversion value   Blockchain version (integer) (default: 3)
+  --data-dir, --datadir "/Users/ia/Library/EthereumClassic"	Data directory for the databases and keystore
+  --chain value							Identifier of blockchain network to use (default='mainnet', test='morden').
+											Relevant data for this blockchain will correlate to subdirectories under your base data directory (--datadir), by ie $HOME/Library/EthereumClassic/mainnet/.
+											If using a custom identity (i.e. --chain=custom), there must be a valid JSON chain configuration file at <datadir>/custom/chain.json
+											 (default: "mainnet")
+  --keystore 							Directory for the keystore (default = inside the datadir)
+  --network-id value, --networkid value				Network identifier (integer, 0=Olympic, 1=Homestead, 2=Morden) (default: 1)
+  --testnet							Morden network: pre-configured test network with modified starting nonces (replay protection)
+  --dev								Developer mode: pre-configured private network with several debugging flags
+  --identity value						Custom node name
+  --fast							Enable fast syncing through state downloads
+  --light-kdf, --lightkdf					Reduce key-derivation RAM & CPU usage at some expense of KDF strength
+  --cache value							Megabytes of memory allocated to internal caching (min 16MB / database forced) (default: 128)
+  --blockchain-version value, --blockchainversion value		Blockchain version (integer) (default: 3)
   
 ACCOUNT OPTIONS:
-  --unlock value      Comma separated list of accounts to unlock
-  --password value      Password file to use for non-inteactive password input
-  --index-accounts, --indexaccounts Enable key-value db store for indexing large amounts of key files
+  --unlock value			Comma separated list of accounts to unlock
+  --password value			Password file to use for non-inteactive password input
+  --index-accounts, --indexaccounts	Enable key-value db store for indexing large amounts of key files
   
 API AND CONSOLE OPTIONS:
-  --rpc             Enable the HTTP-RPC server
-  --rpc-addr value, --rpcaddr value     HTTP-RPC server listening interface (default: "localhost")
-  --rpc-port value, --rpcport value     HTTP-RPC server listening port (default: 8545)
-  --rpc-api value, --rpcapi value     API's offered over the HTTP-RPC interface (default: "eth,net,web3")
-  --ws              Enable the WS-RPC server
-  --ws-addr value, --wsaddr value     WS-RPC server listening interface (default: "localhost")
-  --ws-port value, --wsport value     WS-RPC server listening port (default: 8546)
-  --ws-api value, --wsapi value       API's offered over the WS-RPC interface (default: "eth,net,web3")
-  --ws-origins value, --wsorigins value     Origins from which to accept websockets requests
-  --ipc-disable, --ipcdisable       Disable the IPC-RPC server
-  --ipc-api value, --ipcapi value     API's offered over the IPC-RPC interface (default: "admin,debug,eth,miner,net,personal,shh,txpool,web3")
-  --ipc-path, --ipcpath "geth.ipc"      Filename for IPC socket/pipe within the datadir (explicit paths escape it)
-  --rpc-cors-domain value, --rpccorsdomain value  Comma separated list of domains from which to accept cross origin requests (browser enforced)
-  --js-path loadScript, --jspath loadScript   JavaScript root path for loadScript and document root for `admin.httpGet` (default: ".")
-  --exec value            Execute JavaScript statement (only in combination with console/attach)
-  --preload value         Comma separated list of JavaScript files to preload into the console
+  --rpc							Enable the HTTP-RPC server
+  --rpc-addr value, --rpcaddr value			HTTP-RPC server listening interface (default: "localhost")
+  --rpc-port value, --rpcport value			HTTP-RPC server listening port (default: 8545)
+  --rpc-api value, --rpcapi value			API's offered over the HTTP-RPC interface (default: "eth,net,web3")
+  --ws							Enable the WS-RPC server
+  --ws-addr value, --wsaddr value			WS-RPC server listening interface (default: "localhost")
+  --ws-port value, --wsport value			WS-RPC server listening port (default: 8546)
+  --ws-api value, --wsapi value				API's offered over the WS-RPC interface (default: "eth,net,web3")
+  --ws-origins value, --wsorigins value			Origins from which to accept websockets requests
+  --ipc-disable, --ipcdisable				Disable the IPC-RPC server
+  --ipc-api value, --ipcapi value			API's offered over the IPC-RPC interface (default: "admin,debug,eth,miner,net,personal,shh,txpool,web3")
+  --ipc-path, --ipcpath "geth.ipc"			Filename for IPC socket/pipe within the datadir (explicit paths escape it)
+  --rpc-cors-domain value, --rpccorsdomain value	Comma separated list of domains from which to accept cross origin requests (browser enforced)
+  --js-path loadScript, --jspath loadScript		JavaScript root path for loadScript and document root for `admin.httpGet` (default: ".")
+  --exec value						Execute JavaScript statement (only in combination with console/attach)
+  --preload value					Comma separated list of JavaScript files to preload into the console
   
 NETWORKING OPTIONS:
-  --bootnodes value       Comma separated enode URLs for P2P discovery bootstrap
-  --port value          Network listening port (default: 30303)
-  --max-peers value, --maxpeers value   Maximum number of network peers (network disabled if set to 0) (default: 25)
-  --max-pend-peers value, --maxpendpeers value  Maximum number of pending connection attempts (defaults used if set to 0) (default: 0)
-  --nat value         NAT port mapping mechanism (any|none|upnp|pmp|extip:<IP>) (default: "any")
-  --no-discover, --nodiscover     Disables the peer discovery mechanism (manual peer addition)
-  --nodekey value       P2P node key file
-  --nodekey-hex value, --nodekeyhex value P2P node key as hex (for testing)
+  --bootnodes value				Comma separated enode URLs for P2P discovery bootstrap
+  --port value					Network listening port (default: 30303)
+  --max-peers value, --maxpeers value		Maximum number of network peers (network disabled if set to 0) (default: 25)
+  --max-pend-peers value, --maxpendpeers value	Maximum number of pending connection attempts (defaults used if set to 0) (default: 0)
+  --nat value					NAT port mapping mechanism (any|none|upnp|pmp|extip:<IP>) (default: "any")
+  --no-discover, --nodiscover			Disables the peer discovery mechanism (manual peer addition)
+  --nodekey value				P2P node key file
+  --nodekey-hex value, --nodekeyhex value	P2P node key as hex (for testing)
   
 MINER OPTIONS:
-  --mine            Enable mining
-  --miner-threads value, --minerthreads value   Number of CPU threads to use for mining (default: 2)
-  --miner-gpus value, --minergpus value     List of GPUs to use for mining (e.g. '0,1' will use the first two GPUs found)
-  --auto-dag, --autodag         Enable automatic DAG pregeneration
-  --etherbase value         Public address for block mining rewards (default = first account created) (default: "0")
-  --target-gas-limit value, --targetgaslimit value  Target gas limit sets the artificial target gas floor for the blocks to mine (default: "4712388")
-  --gas-price value, --gasprice value     Minimal gas price to accept for mining a transactions (default: "20000000000")
-  --extra-data value, --extradata value     Freeform header field set by the miner
+  --mine						Enable mining
+  --miner-threads value, --minerthreads value		Number of CPU threads to use for mining (default: 2)
+  --miner-gpus value, --minergpus value			List of GPUs to use for mining (e.g. '0,1' will use the first two GPUs found)
+  --auto-dag, --autodag					Enable automatic DAG pregeneration
+  --etherbase value					Public address for block mining rewards (default = first account created) (default: "0")
+  --target-gas-limit value, --targetgaslimit value	Target gas limit sets the artificial target gas floor for the blocks to mine (default: "4712388")
+  --gas-price value, --gasprice value			Minimal gas price to accept for mining a transactions (default: "20000000000")
+  --extra-data value, --extradata value			Freeform header field set by the miner
   
 GAS PRICE ORACLE OPTIONS:
-  --gpo-min value, --gpomin value   Minimum suggested gas price (default: "20000000000")
-  --gpo-max value, --gpomax value   Maximum suggested gas price (default: "500000000000")
-  --gpo-full value, --gpofull value   Full block threshold for gas price calculation (%) (default: 80)
-  --gpo-base-down value, --gpobasedown value  Suggested gas price base step down ratio (1/1000) (default: 10)
-  --gpo-base-up value, --gpobaseup value  Suggested gas price base step up ratio (1/1000) (default: 100)
-  --gpo-base-cf value, --gpobasecf value  Suggested gas price base correction factor (%) (default: 110)
+  --gpo-min value, --gpomin value		Minimum suggested gas price (default: "20000000000")
+  --gpo-max value, --gpomax value		Maximum suggested gas price (default: "500000000000")
+  --gpo-full value, --gpofull value		Full block threshold for gas price calculation (%) (default: 80)
+  --gpo-base-down value, --gpobasedown value	Suggested gas price base step down ratio (1/1000) (default: 10)
+  --gpo-base-up value, --gpobaseup value	Suggested gas price base step up ratio (1/1000) (default: 100)
+  --gpo-base-cf value, --gpobasecf value	Suggested gas price base correction factor (%) (default: 110)
   
 LOGGING AND DEBUGGING OPTIONS:
-  --verbosity value Logging verbosity: 0=silent, 1=error, 2=warn, 3=info, 4=core, 5=debug, 6=detail (default: 3)
-  --vmodule value Per-module verbosity: comma-separated list of <pattern>=<level> (e.g. eth/*=6,p2p=5)
-  --backtrace value Request a stack trace at a specific logging statement (e.g. "block.go:271") (default: :0)
-  --metrics value Enables metrics reporting. When the value is a path, either relative or absolute, then a log is written to the respective file.
-  --fake-pow, --fakepow Disables proof-of-work verification
+  --verbosity value	Logging verbosity: 0=silent, 1=error, 2=warn, 3=info, 4=core, 5=debug, 6=detail (default: 3)
+  --vmodule value	Per-module verbosity: comma-separated list of <pattern>=<level> (e.g. eth/*=6,p2p=5)
+  --backtrace value	Request a stack trace at a specific logging statement (e.g. "block.go:271") (default: :0)
+  --metrics value	Enables metrics reporting. When the value is a path, either relative or absolute, then a log is written to the respective file.
+  --fake-pow, --fakepow	Disables proof-of-work verification
   
 EXPERIMENTAL OPTIONS:
-  --shh   Enable Whisper
-  --natspec Enable NatSpec confirmation notice
+  --shh		Enable Whisper
+  --natspec	Enable NatSpec confirmation notice
   
 MISCELLANEOUS OPTIONS:
-  --solc value              Solidity compiler command to be used (default: "solc")
-  --doc-root, --docroot "/Users/ia"       Document Root for HTTPClient file scheme
-  --log-dir, --logdir "/Users/ia/Library/EthereumClassic/logs"  Directory in which to write log files
-  --oppose-dao-fork           Use classic blockchain (always set, flag is unused and exists for compatibility only)
-  --help, -h              show help
+  --solc value							Solidity compiler command to be used (default: "solc")
+  --doc-root, --docroot "/Users/ia"				Document Root for HTTPClient file scheme
+  --log-dir, --logdir "/Users/ia/Library/EthereumClassic/logs"	Directory in which to write log files
+  --oppose-dao-fork						Use classic blockchain (always set, flag is unused and exists for compatibility only)
+  --help, -h							show help
+  
 ```
 
 Note that the default for datadir is platform-specific. See [backup & restore](./Backup-&-restore) for more information.
