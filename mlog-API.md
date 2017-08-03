@@ -23,7 +23,7 @@ $HOME/Library/EthereumClassic/mlogs/
 
 To customize this location, use flag `--mlog-dir=/path/to/mlogs`, where `/path/to/mlogs` may be an absolute or relative path to a directory. If the directory or any of it's parents do not exist, they will be created, _ala_ `mkdir -p`.
 
-mlog files are programmatically named based on context and time. The latest
+mlog files are named based on context and time. The latest
 mlog file will be symlinked as `<programname>.log`. For example:
 
 ```
@@ -73,7 +73,7 @@ are _not_ prefixed.
 A LINE variable representing a DETAIL (eg. `$NODE:IP`) represents a dynamic attribute
 variable IP belonging to the NODE data.
 
-## LINES
+# LINES
 
 | Component | Tag | Description |
 | --- | --- | --- |
