@@ -91,17 +91,17 @@ to keep packet size small enough.
 
 
 - PING
-  + [PING HANDLE FROM](#PING-HANDLE-FROM)
-  + [PING SEND TO](#PING-SEND-TO)
+  + [PING HANDLE FROM](#ping-handle-from)
+  + [PING SEND TO](#ping-send-to)
 - PONG
-  + [PONG HANDLE FROM](#PONG-HANDLE-FROM)
-  + [PONG SEND TO](#PONG-SEND-TO)
+  + [PONG HANDLE FROM](#pong-handle-from)
+  + [PONG SEND TO](#pong-send-to)
 - FINDNODE
-  + [FINDNODE HANDLE FROM](#FINDNODE-HANDLE-FROM)
-  + [FINDNODE SEND TO](#FINDNODE-SEND-TO)
+  + [FINDNODE HANDLE FROM](#findnode-handle-from)
+  + [FINDNODE SEND TO](#findnode-send-to)
 - NEIGHBORS
-  + [NEIGHBORS HANDLE FROM](#NEIGHBORS-HANDLE-FROM)
-  + [NEIGHBORS SEND TO](#NEIGHBORS-SEND-TO)
+  + [NEIGHBORS HANDLE FROM](#neighbors-handle-from)
+  + [NEIGHBORS SEND TO](#neighbors-send-to)
 
 
 ## LINE documentation
