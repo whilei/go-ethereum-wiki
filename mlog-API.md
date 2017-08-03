@@ -134,7 +134,7 @@ Called once for each outgoing PING request to peer TO.
 #### PONG HANDLE FROM
 Called once for each received PONG request from peer FROM.
 
-`$DATE` `$TIME` `discover` `PONG` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$PONG:EXPIRED`
+`$DATE` `$TIME` `discover` `PONG` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$PONG:BYTES_TRANSFERRED`
 
 ```
 2017/08/02 12:05:18 [discover] PONG HANDLE FROM 81.225.200.55:30303 7c8a5fe77a58127815fd450b443be0129846a83dffab2c3c4d9577f5a6cdfdab96973492b31c0c5183ece6ff98247a45ad1228917ed886c64af3f16859d6ff05 159
@@ -159,7 +159,7 @@ Called once for each outgoing PONG request to peer TO.
 #### FINDNODE HANDLE FROM
 Called once for each received FINDNODE request from peer FROM.
 
-`$DATE` `$TIME` `discover` `FINDNODE` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$FINDNODE:EXPIRED`
+`$DATE` `$TIME` `discover` `FINDNODE` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$FINDNODE:BYTES_TRANSFERRED`
 
 ```
 2017/08/02 12:05:18 [discover] FINDNODE HANDLE FROM 81.225.200.55:30303 7c8a5fe77a58127815fd450b443be0129846a83dffab2c3c4d9577f5a6cdfdab96973492b31c0c5183ece6ff98247a45ad1228917ed886c64af3f16859d6ff05 159
@@ -184,7 +184,7 @@ Called once for each outgoing FINDNODE request to peer TO.
 #### NEIGHBORS HANDLE FROM
 Called once for each received NEIGHBORS request from peer FROM.
 
-`$DATE` `$TIME` `discover` `NEIGHBORS` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$NEIGHBORS:EXPIRED`
+`$DATE` `$TIME` `discover` `NEIGHBORS` `HANDLE` `FROM` `$FROM:IP` `$FROM:ID` `$NEIGHBORS:BYTES_TRANSFERRED`
 
 ```
 2017/08/03 09:32:08 [discover] NEIGHBORS HANDLE FROM 159.122.120.218:30303 eea24304e967589f557916716464dd388746a51456b906576aabfe1cc13789f458cddaf92c3e7d391a74f4c8499589f2adab1aa37d436c2b07afafb50e78f399 425
