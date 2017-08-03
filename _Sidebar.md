@@ -27,8 +27,6 @@
 
 [JSON-RPC](./JSON-RPC)
 
-[mlog API](./mlog-API)
-
 [Contracts and Transactions](./Contracts-and-Transactions)
 
 
