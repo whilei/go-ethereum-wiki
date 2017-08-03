@@ -1,7 +1,7 @@
 # mlog API
 
 `mlog` stands for "machine logging." To read the spec for mlog implementation
-and documenation, please visit the [mlog spec](./Mlog-Spec.md) page.
+and documenation, please visit the [mlog spec](./mlog-Spec) page.
 
 Related option flags:
 
