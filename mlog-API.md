@@ -5,15 +5,14 @@ and documenation, please visit the [mlog spec](./mlog-Spec) page.
 
 mlog has the following option flags:
 
-
-
 - `--mlog` (default:`kv`): specifies format in which mlog LINES should be structured; possible format values are `kv` (key-value), `json`, and `plain` (same as key-value, but with just values), as well as `off` to disable mlog entirely
 - `--mlog-dir` (default: `<datadir>/<chain-identity/mlogs`): directory to hold mlogs
 - `--mlog-components` (default: all available): comma-separated list of components which should be logged. For a list of available components, please see the [LINES reference section](#lines).
 
-#### Overview
-
 Machine logging is enabled by default. To disable it, use `--mlog=off`.
+
+
+#### Directory and files
 
 Machine log files are automatically generated in the `/mlogs` subdirectory of the chain data directory of the running geth instance, for example:
 
@@ -53,7 +52,7 @@ For example:
 2017/08/01 13:50:23 [discover] PING HANDLE FROM 123.45.67.89:30303 7909d51011d8a153 252
 ```
 
-LINE structure can be understood in parts:
+LINE structure can be understood in three parts:
 
 __Header__: `2017/08/01 13:50:23 [discover]`
 
@@ -67,13 +66,19 @@ For `json`-formatted LINES, this pattern will be present within the logged json 
 `"event": "receiver.subject.verb"`.
 
 
-__Details__: `123.45.67.89:30303 7909d51011d8a153 252`
-
-_Note_: In this documentation, LINE variable names which represent dynamic values (eg. "$DATE")
-are prefixed with `$`, while _constant_ values (eg. "SEND")
-are _not_ prefixed.
+__Details__: `[123.45.67.89:30303] [7909d51011d8a153] [252]`
 
 All DETAIL values are wrapped in brackets to improve ease of parsing, especially when the value is a string that may contain spaces, eg. `[empty header received]`.
+
+If formatting is set to __key-value__, DETAILS will include `owner.key=[$SOMEVALUE]`, eg:
+
+```
+from.udp_address=[123.45.67.89:30303] from.id=[7909d51011d8a153] ping.bytes_transferred=[252]
+```
+
+_Note_: In this documentation, LINE variable names which represent dynamic values (eg. `$STRING`)
+are prefixed with `$`, while _constant_ values (eg. `SEND`) are _not_ prefixed.
+
 
 #### JSON-formatted LINE structure
 
