@@ -71,7 +71,7 @@ geth.mh.ia.mlog.20170731-154537.76710
 ```
 
 Log files should automatically include a header detailing
-available runtime and geth context information, eg.
+available runtime and geth context information, for example:
 
 ```
 Log file created at: 2017/08/03 09:30:36
@@ -162,9 +162,10 @@ _Generally_:
 `$<VAL_NAME>` `<VAL_NAME>` `$<VAL_NAME>`
 
  > Space-separated list of arbitrary values by name. Use `$DOLLAR_PREFIXED_VARS` to signify variable values, and `NONPREFIXED_VARS` to signify literal constants.
+ > Each detail should be surrounded by brackets. This improves ease of parsing for strings that contains spaces, like error messages.
 
 ```
-$DATE $TIME [$cmp] RECEIVER VERB SUBJECT $RECEIVER:DETAIL $RECEIVER:DETAIL $SUBJECT:DETAIL $SUBJECT:DETAIL
+$DATE $TIME [$cmp] RECEIVER VERB SUBJECT [$RECEIVER:DETAIL] [$RECEIVER:DETAIL] [$SUBJECT:DETAIL] [$SUBJECT:DETAIL]
 ```
 
 > An example with real data
@@ -173,7 +174,7 @@ $DATE $TIME [$cmp] RECEIVER VERB SUBJECT $RECEIVER:DETAIL $RECEIVER:DETAIL $SUBJ
 - `$SUBJECT:DETAIL` is the DETAIL of of SUBJECT
 - ... ETC.
 
-> An ordered bullet list describing DETAIL variables and any relevant formatting or contextual details. Don't forget to mention how absent or broken values will be represented! There is no need to explain header constants $DATE thru SUBJECT.
+> An ordered bullet list describing DETAIL variables and any relevant formatting or contextual details. Don't forget to mention how absent, error, or nil values will be represented for DETAILS and FINGERPRINT names. There is no need to explain header constants $DATE thru SUBJECT.
 
 _Example_:
 
@@ -184,11 +185,11 @@ Fired once for each outgoing message of form `msgPing` to a neighbor. Used to de
 `$DATE` `$TIME` `p2p` `PEER` `SEND` `PING` `$PEER:IP` `$PEER:PORT` `$PEER:ID` `$PING:TRANSFERRED_BYTES`
 
 ```
-2017/08/01 13:50:23 [p2p] PEER SEND PING 123.45.67.89 30303 7909d51011d8a153 252
+2017/08/01 13:50:23 [p2p] PEER SEND PING [123.45.67.89] [30303] [7909d51011d8a153] [252]
 ```
 
 - `123.45.67.89` is a DETAIL. It is the IPv4 address of the ping request
 - `30303` is a DETAIL. It is the v4 IP port of the peer sent the ping request
 - `7909d51011d8a153` is a DETAIL. It is the node ID of the peer sent the ping request
 - `252` is a DETAIL. It is the number of bytes transferred belonging to the ping request
-- Missing values are represented with `-`
+- Missing FINGERPRINT values are represented with `-`
