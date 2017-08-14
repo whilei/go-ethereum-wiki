@@ -1,13 +1,17 @@
 # mlog API
 
+* _Note_: this feature is forthcoming, and hasn't yet been included in a release.
+
+----
+
 `mlog` stands for "machine logging." To read the spec for mlog implementation
 and documenation, please visit the [mlog spec](./mlog-Spec) page.
 
 mlog has the following option flags:
 
-- `--mlog` (default:`kv`): specifies format in which mlog LINES should be structured; possible format values are `kv` (key-value), `json`, and `plain` (same as key-value, but with just values), as well as `off` to disable mlog entirely
-- `--mlog-dir` (default: `<datadir>/<chain-identity/mlogs`): directory to hold mlogs
-- `--mlog-components` (default: all available): comma-separated list of components which should be logged. For a list of available components, please see the [LINES reference section](#lines).
+- `--mlog` (default:`kv`): specifies format in which mlog lines should be structured; possible format values are `kv` (key-value), `json`, and `plain` (same as key-value, but with just values), as well as `off` to disable mlog entirely
+- `--mlog-dir` (default: `<datadir>/<chain-identity>/mlogs`): directory to hold mlogs
+- `--mlog-components` (default: all available): comma-separated list of components which should be logged. For a list of available components, please see the [lines reference section](#lines).
 
 Machine logging is enabled by default. To disable it, use `--mlog=off`.
 
@@ -35,11 +39,11 @@ lrwxr-xr-x 1 ia staff   37 Aug  1 13:49 geth.log -> geth.mh.ia.mlog.20170801-134
 
 A new mlog file is generated each time a geth node is run.
 
-#### LINE structure
+#### Line structure
 
-A LINE is the result of a single event in the go-ethereum protocol. For brevity, the following structure documentation refers to `plain` and `kv`-formatted LINES. For notes on `json`-formatting, please refer to the section below.
+A line is the result of a single event in the go-ethereum protocol. For brevity, the following structure documentation refers to `plain` and `kv`-formatted lines. For notes on `json`-formatting, please refer to the section below.
 
-LINES are organized with a common structure:
+Lines are organized with a common structure:
 
 ```
 $DATE $TIME [$cmp] RECEIVER VERB SUBJECT $RECEIVER:DETAIL $RECEIVER:DETAIL $SUBJECT:DETAIL $SUBJECT:DETAIL
@@ -52,17 +56,17 @@ For example:
 2017/08/01 13:50:23 [discover] PING HANDLE FROM 123.45.67.89:30303 7909d51011d8a153 252
 ```
 
-LINE structure can be understood in three parts:
+Line structure can be understood in three parts:
 
 __Header__: `2017/08/01 13:50:23 [discover]`
 
 The first value is the __date__, of the form `%Y/%m/%d`. The second value is the __time__, of the form `%H:%M:%S`.
-The third value is the trace __component__ calling the log. The component name will always be in brackets. Header structure is the same for all `kv` and `plain` LINES, but is excluded from `json`-formatted LINES.
+The third value is the trace __component__ calling the log. The component name will always be in brackets. Header structure is the same for all `kv` and `plain` lines, but is excluded from `json`-formatted lines.
 
 __Fingerprint__: `PING HANDLE FROM`
 
-LINES are referred to and organized by their unique fingerprint pattern: `RECEIVER VERB SUBJECT`.
-For `json`-formatted LINES, this pattern will be present within the logged json objects as
+lines are referred to and organized by their unique fingerprint pattern: `RECEIVER VERB SUBJECT`.
+For `json`-formatted lines, this pattern will be present within the logged json objects as
 `"event": "receiver.subject.verb"`.
 
 
@@ -76,21 +80,21 @@ If formatting is set to __key-value__, DETAILS will include `owner.key=[$SOMEVAL
 from.udp_address=[123.45.67.89:30303] from.id=[7909d51011d8a153] ping.bytes_transferred=[252]
 ```
 
-_Note_: In this documentation, LINE variable names which represent dynamic values (eg. `$STRING`)
+_Note_: In this documentation, line variable names which represent dynamic values (eg. `$STRING`)
 are prefixed with `$`, while _constant_ values (eg. `SEND`) are _not_ prefixed.
 
 
-#### JSON-formatted LINE structure
+#### JSON-formatted line structure
 
 __Flatness__
 
-Each LINE logged in JSON format contains a single JSON object, which should be as "flat" as possible; instead of presenting:
+Each line logged in JSON format contains a single JSON object, which should be as "flat" as possible; instead of presenting:
 
 ```json
 {"node": {"ip": "1234asdf", "port": 3333}}
 ```
 
-the LINE will prefer a format like:
+the line will prefer a format like:
 
 ```json
 {"node.ip": "1234asdf", "node.port": 3333}
@@ -98,13 +102,13 @@ the LINE will prefer a format like:
 
 __Additional keys__
 
-Each JSON-formatted LINE contains two additional keys:
+Each JSON-formatted line contains two additional keys:
 
-- `"event"`: the 'fingerprint' of the LINE event. This, for example, may be used as the `json.event_key` value for Logstash.
+- `"event"`: the 'fingerprint' of the line event. This, for example, may be used as the `json.event_key` value for Logstash.
 - `"ts"`: the timestamp of the event. Note that this is the time at which the event was logged,
-not the time at which the LINE may be ingested by a log parsing program. The value will be in the form `2017-08-10T15:20:11.294317237-05:00`.
+not the time at which the line may be ingested by a log parsing program. The value will be in the form `2017-08-10T15:20:11.294317237-05:00`.
 
-# LINES
+# Lines reference
 
 | Component | Description |
 | --- | --- |
