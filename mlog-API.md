@@ -46,14 +46,14 @@ A line is the result of a single event in the go-ethereum protocol. For brevity,
 Lines are organized with a common structure:
 
 ```
-$DATE $TIME [$cmp] RECEIVER VERB SUBJECT $RECEIVER:DETAIL $RECEIVER:DETAIL $SUBJECT:DETAIL $SUBJECT:DETAIL
+$DATE $TIME [$cmp] RECEIVER VERB SUBJECT [$RECEIVER:DETAIL] [$RECEIVER:DETAIL] [$SUBJECT:DETAIL] [$SUBJECT:DETAIL]
 ```
 
 where the number and types of details vary for different lines.
 
 For example:
 ```
-2017/08/01 13:50:23 [discover] PING HANDLE FROM 123.45.67.89:30303 7909d51011d8a153 252
+2017/08/01 13:50:23 [discover] PING HANDLE FROM [123.45.67.89:30303] [7909d51011d8a153] [252]
 ```
 
 Line structure can be understood in three parts:
@@ -86,9 +86,20 @@ are prefixed with `$`, while _constant_ values (eg. `SEND`) are _not_ prefixed.
 
 #### JSON-formatted line structure
 
+Each line logged in JSON format contains a single JSON object, and _is not_ prefixed by a timestamp or component prefix.
+
+__Additional keys__
+
+Each JSON-formatted line contains two additional keys:
+
+- `"event"`: the 'fingerprint' of the line event. This, for example, may be used as the `json.event_key` value for Logstash.
+- `"ts"`: the timestamp of the event. Note that this is the time at which the event was logged,
+not the time at which the line may be ingested by a log parsing program. The value will be in the form `2017-08-10T15:20:11.294317237-05:00`.
+
+
 __Flatness__
 
-Each line logged in JSON format contains a single JSON object, which should be as "flat" as possible; instead of presenting:
+The JSON line details should be as "flat" as possible; instead of presenting:
 
 ```json
 {"node": {"ip": "1234asdf", "port": 3333}}
@@ -99,14 +110,6 @@ the line will prefer a format like:
 ```json
 {"node.ip": "1234asdf", "node.port": 3333}
 ```
-
-__Additional keys__
-
-Each JSON-formatted line contains two additional keys:
-
-- `"event"`: the 'fingerprint' of the line event. This, for example, may be used as the `json.event_key` value for Logstash.
-- `"ts"`: the timestamp of the event. Note that this is the time at which the event was logged,
-not the time at which the line may be ingested by a log parsing program. The value will be in the form `2017-08-10T15:20:11.294317237-05:00`.
 
 # Lines reference
 
