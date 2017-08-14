@@ -15,10 +15,10 @@ The `mlog` implementation will begin with a focus on peer discovery, within pack
 There should be a boolean flag to enable/disable `mlog` logging:
 
 ```
---mlog=true
+--mlog=off
 ```
 
-The default setting should be `true`; passing `--mlog=false` will disable it.
+The default setting should be `true`; passing `--mlog=off` will disable it.
 
 ### Levels
 
