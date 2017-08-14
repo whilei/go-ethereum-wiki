@@ -11,7 +11,7 @@ mlog has the following option flags:
 
 - `--mlog` (default:`kv`): specifies format in which mlog lines should be structured; possible format values are `kv` (key-value), `json`, and `plain` (same as key-value, but with just values), as well as `off` to disable mlog entirely
 - `--mlog-dir` (default: `<datadir>/<chain-identity>/mlogs`): directory to hold mlogs
-- `--mlog-components` (default: all available): comma-separated list of components which should be logged. For a list of available components, please see the [lines reference section](#lines).
+- `--mlog-components` (default: all available): comma-separated list of components which should be logged. For a list of available components, please see the [lines reference section](#lines-reference).
 
 Machine logging is enabled by default. To disable it, use `--mlog=off`.
 
