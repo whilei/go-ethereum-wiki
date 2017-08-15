@@ -648,13 +648,13 @@ _4 detail values_:
 
 
 
-#### MINER COMMIT UNClE
+#### MINER COMMIT UNCLE
 Called when the miner commits an uncle.
 If $COMMIT_UNCLE is non-nil, uncle is not committed.
 
 __Key value__:
 ```
-2017/08/15 14:50:23 [miner] MINER COMMIT UNClE commit.block_number=[$BIGINT] uncle.hash=[$STRING] commit.error=[$STRING_OR_NULL]
+2017/08/15 14:50:23 [miner] MINER COMMIT UNCLE commit.block_number=[$BIGINT] uncle.hash=[$STRING] commit.error=[$STRING_OR_NULL]
 ```
 
 __JSON__:
@@ -664,7 +664,7 @@ __JSON__:
 
 __Plain__:
 ```
-2017/08/15 14:50:23 [miner] MINER COMMIT UNClE [$BIGINT] [$STRING] [$STRING_OR_NULL]
+2017/08/15 14:50:23 [miner] MINER COMMIT UNCLE [$BIGINT] [$STRING] [$STRING_OR_NULL]
 ```
 
 _3 detail values_:
