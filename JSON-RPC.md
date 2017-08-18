@@ -93,11 +93,11 @@ Currently [cpp-ethereum](https://github.com/ethereumproject/cpp-ethereum) and [g
 
 The following methods have a extra default block parameter:
 
-- [eth_getBalance](#eth_getbalance)
-- [eth_getCode](#eth_getcode)
-- [eth_getTransactionCount](#eth_gettransactioncount)
-- [eth_getStorageAt](#eth_getstorageat)
-- [eth_call](#eth_call)
+- [eth_getBalance](#eth-getbalance)
+- [eth_getCode](#eth-getcode)
+- [eth_getTransactionCount](#eth-gettransactioncount)
+- [eth_getStorageAt](#eth-getstorageat)
+- [eth_call](#eth-call)
 
 When requests are made that act on the state of ethereum, the last default block parameter determines the height of the block.
 
@@ -920,7 +920,7 @@ params: [{
 
 `DATA`, 32 Bytes - the transaction hash, or the zero hash if the transaction is not yet available.
 
-Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract address, after the transaction was mined, when you created a contract.
+Use [eth_getTransactionReceipt](#eth-gettransactionreceipt) to get the contract address, after the transaction was mined, when you created a contract.
 
 ##### Example
 ```js
@@ -1014,7 +1014,7 @@ Makes a call or transaction, which won't be added to the blockchain and returns 
 
 ##### Parameters
 
-See [eth_call](#eth_call) parameters, expect that all properties are optional.
+See [eth_call](#eth-call) parameters, expect that all properties are optional.
 
 ##### Returns
 
@@ -1130,7 +1130,7 @@ params: [
 
 ##### Returns
 
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 ##### Example
 ```js
@@ -1138,7 +1138,7 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x1b4", true],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
 ***
 
@@ -1222,7 +1222,7 @@ params: [
 
 ##### Returns
 
-See [eth_getBlockByHash](#eth_gettransactionbyhash)
+See [eth_getBlockByHash](#eth-gettransactionbyhash)
 
 ##### Example
 ```js
@@ -1230,7 +1230,7 @@ See [eth_getBlockByHash](#eth_gettransactionbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":[0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b, "0x0"],"id":1}'
 ```
 
-Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Result see [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 ***
 
@@ -1253,7 +1253,7 @@ params: [
 
 ##### Returns
 
-See [eth_getBlockByHash](#eth_gettransactionbyhash)
+See [eth_getBlockByHash](#eth-gettransactionbyhash)
 
 ##### Example
 ```js
@@ -1261,7 +1261,7 @@ See [eth_getBlockByHash](#eth_gettransactionbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Result see [eth_getTransactionByHash](#eth-gettransactionbyhash)
 
 ***
 
@@ -1341,7 +1341,7 @@ params: [
 
 ##### Returns
 
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 ##### Example
 ```js
@@ -1349,7 +1349,7 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Note**: An uncle doesn't contain individual transactions.
 
@@ -1374,7 +1374,7 @@ params: [
 
 ##### Returns
 
-See [eth_getBlockByHash](#eth_getblockbyhash)
+See [eth_getBlockByHash](#eth-getblockbyhash)
 
 **Note**: An uncle doesn't contain individual transactions.
 
@@ -1384,7 +1384,7 @@ See [eth_getBlockByHash](#eth_getblockbyhash)
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
-Result see [eth_getBlockByHash](#eth_getblockbyhash)
+Result see [eth_getBlockByHash](#eth-getblockbyhash)
 
 ***
 
@@ -1549,7 +1549,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSerpent","params":["/
 #### eth_newFilter
 
 Creates a filter object, based on filter options, to notify when the state changes (logs).
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 ##### Parameters
 
@@ -1590,7 +1590,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 #### eth_newBlockFilter
 
 Creates a filter in the node, to notify when a new block arrives.
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 ##### Parameters
 None
@@ -1617,7 +1617,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 #### eth_newPendingTransactionFilter
 
 Creates a filter in the node, to notify when new pending transactions arrive.
-To check if the state has changed, call [eth_getFilterChanges](#eth_getfilterchanges).
+To check if the state has changed, call [eth_getFilterChanges](#eth-getfilterchanges).
 
 ##### Parameters
 None
@@ -1644,7 +1644,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 #### eth_uninstallFilter
 
 Uninstalls a filter with given id. Should always be called when watch is no longer needed.
-Additonally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth_getfilterchanges) for a period of time.
+Additonally Filters timeout when they aren't requested with [eth_getFilterChanges](#eth-getfilterchanges) for a period of time.
 
 
 ##### Parameters
