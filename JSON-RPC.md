@@ -40,6 +40,14 @@ geth --rpc --rpc-cors-domain "http://localhost:3000"
 
 The JSON RPC can also be started from the [geth console](https://github.com/ethereumproject/go-ethereum/wiki/JavaScript-Console) using the `admin.startRPC(addr, port)` command.
 
+Not all RPC API's are enabled by default. To enable specific APIs, use the `--rpc-api` flag:
+
+```bash
+geth --rpc --rpc-api="admin,debug,eth,miner"
+```
+
+For a list of available APIs, use `geth help | grep rpc-api`.
+
 
 ### C++
 
