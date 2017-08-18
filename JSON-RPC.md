@@ -566,6 +566,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}
 }
 ```
 
+***
+
 #### eth_getBalance
 
 Returns the balance of the account of given address.
