@@ -4,6 +4,12 @@
 
 ----
 
+### Quick links
+
+- [Line reference](#lines-reference)
+
+### Overview
+
 `mlog` stands for "machine logging." To read the spec for mlog implementation
 and documenation, please visit the [mlog spec](./mlog-Spec) page.
 
@@ -16,7 +22,7 @@ mlog has the following option flags:
 Machine logging is enabled by default. To disable it, use `--mlog=off`.
 
 
-#### Directory and files
+### Directory and files
 
 Machine log files are automatically generated in the `/mlogs` subdirectory of the chain data directory of the running geth instance, for example:
 
@@ -39,9 +45,17 @@ lrwxr-xr-x 1 ia staff   37 Aug  1 13:49 geth.log -> geth.mh.ia.mlog.20170801-134
 
 A new mlog file is generated each time a geth node is run.
 
-#### Line structure
+### Line structure
 
-A line is the result of a single event in the go-ethereum protocol. For brevity, the following structure documentation refers to `plain` and `kv`-formatted lines. For notes on `json`-formatting, please refer to the section below.
+A line is the result of a single event in the go-ethereum protocol.
+
+There are __three__ available formats:
+
+- Key-value (aka _kv_): default
+- Plain
+- JSON
+
+#### Key-value & Plain
 
 Lines are organized with a common structure:
 
@@ -53,15 +67,19 @@ where the number and types of details vary for different lines.
 
 For example:
 ```
-2017/08/01 13:50:23 [discover] PING HANDLE FROM from.udp_address=123.45.67.89:30303 from.id=7909d51011d8a153 ping.bytes_transferred=252
+2017-08-24T17:17:39Z [discover] PING HANDLE FROM from.udp_address=123.45.67.89:30303 from.id=7909d51011d8a153 ping.bytes_transferred=252
 ```
 
-##### Line structure can be understood in three parts:
+_Note_: In this documentation, line variable names which represent dynamic values (eg. `$STRING`)
+are prefixed with `$`, while _constant_ values (eg. `SEND`) are _not_ prefixed.
 
-__Header__: `2017/08/01 13:50:23 [discover]`
+Line structure can be understood in three parts:
 
-The first value is the __date__, of the form `%Y/%m/%d`. The second value is the __time__, of the form `%H:%M:%S`.
-The third value is the trace __component__ calling the log. The component name will always be in brackets. Header structure is the same for all `kv` and `plain` lines, but is excluded from `json`-formatted lines.
+__Header__: `2017-08-24T17:17:39Z [discover]`
+
+The first value is the __date__ in UTC ISO8601 format; `%Y-%m-%dT%H:%M:%SZ`.
+
+The second value is the trace __component__ calling the log. The component name will always be in brackets. Header structure is the same for all `kv` and `plain` lines, but is excluded from `json`-formatted lines.
 
 __Fingerprint__: `PING HANDLE FROM`
 
@@ -80,13 +98,58 @@ If formatting is set to __key-value__, DETAILS will include `owner.key=$SOMEVALU
 from.udp_address=123.45.67.89:30303 from.id=7909d51011d8a153 ping.bytes_transferred=252
 ```
 
-_Note_: In this documentation, line variable names which represent dynamic values (eg. `$STRING`)
-are prefixed with `$`, while _constant_ values (eg. `SEND`) are _not_ prefixed.
+An example configuration for parsing key-value logs using Filebeat with an ELK (Elasticsearch, Logstash, Kibana) stack might look something like this:
+
+```yml
+# filebeath.geth.mlog.json
+filebeat.prospectors:
+- input_type: log
+  paths:
+  # can also use wildcards, eg. *.log
+    - /Users/ia/Library/EthereumClassic/mlogs/geth.log
+  symlinks: true
+output.logstash:
+  hosts: ["localhost:5043"]
+```
+
+```conf
+# logstash-kv.conf
+input {
+    beats {
+        port => "5043"
+    }
+}
+# The filter part of this file is commented out to indicate that it is
+# optional.
+filter {
+    date {
+        match => [ "logdate", "yyyy-MM-ddTHH:mm:ssZ"]
+    }
+    grok {
+        match => { "message" => "\[%{WORD:component}\] %{WORD:receiver} %{WORD:verb} %{WORD:subject}" }
+    }
+    mutate {
+        convert => {
+            "SERVER.PEER_COUNT" => "integer"
+        }
+    }
+}
+output {
+    stdout { }
+    elasticsearch {
+        hosts => "localhost:9200"
+    }
+}
+```
 
 
-#### JSON-formatted line structure
+#### JSON
 
-Each line logged in JSON format contains a single JSON object, and _is not_ prefixed by a timestamp or component prefix.
+Each line logged in JSON format contains a single JSON object, and _is not_ prefixed by a timestamp or component prefix. For example:
+
+```json
+{"event":"state.create.object","object.new":"string","object.prev":"string","ts":"2017-08-24T13:49:03.787138646-05:00"}
+```
 
 __Additional keys__
 
@@ -109,6 +172,36 @@ the line will prefer a format like:
 
 ```json
 {"node.ip": "1234asdf", "node.port": 3333}
+```
+
+An example configuration for parsing JSON logs using Filebeat with an ELK (Elasticsearch, Logstash, Kibana) stack might look something like this:
+
+```yml
+# filebeat.geth.mlog.json.yml
+filebeat.prospectors:
+- input_type: log
+  paths:
+    - /Users/ia/Library/EthereumClassic/mlogs/geth.log
+  symlinks: true
+  json.message_key: event
+  json.keys_under_root: true
+output.logstash:
+  hosts: ["localhost:5043"]
+```
+
+```conf
+# logstash-json.conf
+input {
+    beats {
+        port => "5043"
+    }
+}
+output {
+    stdout { }
+    elasticsearch {
+        hosts => "localhost:9200"
+    }
+}
 ```
 
 # Lines reference
